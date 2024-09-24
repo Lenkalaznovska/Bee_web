@@ -27,21 +27,26 @@ main {
 .menu-background {
   background-image: url("images/menu.jpg"); /* Obrázek pozadí v menu */
   background-size: cover;
-  background-position: left left; /* Posun obrázku více vlevo */
+  background-position: bottom right; /* Posun obrázku více vlevo */
   background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Styl pro hlavní nadpis - Med s 3D efektem */
+/* Styl pro hlavní nadpis - Včelařství a Pletený Újezd pod ním */
 .main-heading {
   font-size: 3.5em;
   color: #8b4513; /* Světle hnědá barva */
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
   text-align: center;
-  margin: 1000px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.main-heading span {
+  display: block; /* Zajištění rozdělení nadpisu na dvě řádky */
 }
 
 /* Styl pro nadpisy sekcí */
@@ -124,15 +129,15 @@ section {
 /* Scroll to Top Button */
 .scroll-to-top {
   position: fixed; /* Fixed positioning */
-  bottom: 20px; /* Distance from the bottom */
+  bottom: 60px; /* Distance from the bottom, zvětšeno pro více prostoru */
   right: 20px; /* Distance from the right */
   display: none; /* Initially hidden */
   z-index: 1000; /* Make sure it appears above other elements */
 }
 
 .scroll-to-top img {
-  width: 100px; /* Adjust size of the icon */
-  height: 100px; /* Adjust size of the icon */
+  width: 90px; /* Smaller size for mobile */
+  height: 90px; /* Smaller size for mobile */
 }
 
 .scroll-to-top.show {
