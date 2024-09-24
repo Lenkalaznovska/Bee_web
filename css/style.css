@@ -1,0 +1,140 @@
+/* Centrum stránky */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5e8c7; /* Barva pozadí stejná jako barva v menu */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Menu a pozadí */
+.menu-header {
+  width: 100%;
+  position: relative;
+  background-color: #f5e8c7; /* Jemná, přírodní barva */
+  padding-bottom: 20px;
+}
+
+.menu-background {
+  background-image: url("images/menu.jpg"); /* Obrázek pozadí v menu */
+  background-size: cover;
+  background-position: left left; /* Posun obrázku více vlevo */
+  background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styl pro hlavní nadpis - Med s 3D efektem */
+.main-heading {
+  font-size: 3.5em;
+  color: #8b4513; /* Světle hnědá barva */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
+  text-align: center;
+  margin: 1000px;
+}
+
+/* Styl pro nadpisy sekcí */
+h2 {
+  color: #8b4513; /* Světle hnědá přírodní barva */
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Obalení textu a stínování - jednotný vzhled sekcí */
+.text-container {
+  background-color: #fffaf0; /* Světlé pozadí pro text */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
+  margin-bottom: 20px;
+}
+
+/* Styl pro text */
+section {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  line-height: 1.6;
+  text-align: center; /* Vycentrování textu */
+}
+
+/* Obrázky v galerii */
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.gallery-image:hover {
+  transform: scale(1.1); /* Zvětšení obrázku při najetí myší */
+}
+
+/* Kontaktní údaje - obalení sekce "Kontaktujte nás" ve stejném stylu */
+.contact .text-container {
+  background-color: #fffaf0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
+}
+
+/* Styl pro patičku */
+.footer {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1em;
+}
+
+/* Responsivní design */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2.5em;
+  }
+
+  .gallery-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 2em;
+  }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed; /* Fixed positioning */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Make sure it appears above other elements */
+}
+
+.scroll-to-top img {
+  width: 100px; /* Adjust size of the icon */
+  height: 100px; /* Adjust size of the icon */
+}
+
+.scroll-to-top.show {
+  display: block; /* Show button when scrolled down */
+}
