@@ -1,7 +1,7 @@
 /* Centrum stránky */
 body {
     font-family: "Arial", sans-serif;
-    background-color: #f5e8c7;
+    background-color: #f5e8c7; /* Barva pozadí stejná jako barva v menu */
     color: #333;
     margin: 0;
     padding: 0;
@@ -10,180 +10,137 @@ body {
     align-items: center;
 }
 
-main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
 /* Menu a pozadí */
 .menu-header {
     width: 100%;
     position: relative;
-    background-color: #f5e8c7;
+    background-color: #f5e8c7; /* Jemná, přírodní barva */
     padding-bottom: 20px;
 }
 
 .menu-background {
-    background-image: url("images/menu.jpg");
+    background-image: url("images/menu.jpg"); /* Obrázek pozadí v menu */
     background-size: cover;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    height: 300px; /* Zvýšení výšky */
+    background-position: bottom right; /* Posun obrázku více vlevo */
+    background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
+    height: 300px; /* Zvětšení výšky menu */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Styl pro navigaci */
-.navbar {
-    position: absolute;
-    bottom: 20px;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Centrování položek */
-}
-
-.navbar li {
-    margin: 0 30px; /* Zvýšení mezery mezi položkami */
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #8b4513;
-    font-weight: bold;
-    font-size: 1.2em; /* Zvýšení velikosti písma */
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-/* Styl pro hlavní nadpis */
+/* Styl pro hlavní nadpis - Včelařství a Pletený Újezd pod ním */
 .main-heading {
-    font-size: 4em; /* Zvýšení velikosti hlavního nadpisu */
-    color: #8b4513;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    font-size: 3.5em;
+    color: #8b4513; /* Světle hnědá barva */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
     text-align: center;
     margin: 0;
     line-height: 1.2;
 }
 
 .main-heading span {
-    display: block;
+    display: block; /* Zajištění rozdělení nadpisu na dvě řádky */
+}
+
+/* Navigační menu */
+.navbar {
+    margin-top: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #8b4513; /* Světle hnědá barva */
+    font-weight: bold;
 }
 
 /* Styl pro nadpisy sekcí */
 h2 {
-    color: #8b4513;
-    font-size: 2.5em; /* Zvýšení velikosti nadpisu sekce */
+    color: #8b4513; /* Světle hnědá přírodní barva */
+    font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Obalení textu a stínování */
+/* Obalení textu a stínování - jednotný vzhled sekcí */
 .text-container {
-    background-color: #fffaf0;
-    padding: 30px; /* Zvýšení paddingu */
+    background-color: #fffaf0; /* Světlé pozadí pro text */
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    margin-bottom: 30px; /* Zvýšení mezery mezi sekcemi */
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Stínování pro přidání hloubky */
+    max-width: 800px;
+    margin: 20px auto; /* Vycentrování sekcí */
 }
 
-.text-container:hover {
-    transform: translateY(-5px);
-}
-
-/* Obrázky v galerii */
+/* Styl pro obrázky v sekci Okolí */
 .image-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 10px; /* Mezera mezi obrázky */
 }
 
 .gallery-image {
-    width: 100%;
-    max-width: 500px;
-    transition: transform 0.3s ease;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    width: 300px;
+    height: auto; /* Udržení poměru stran */
+    border-radius: 10px; /* Zaoblení rohů */
 }
 
-.gallery-image:hover {
-    transform: scale(1.1);
-}
-
-/* Tlačítko pro objednávku */
+/* Styl pro tlačítko pro objednávku medu */
 .cta-button {
-    display: inline-block;
-    background-color: #8b4513;
+    display: block;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    background-color: #8b4513; /* Hnědá barva */
     color: #fff;
-    padding: 15px 30px; /* Zvýšení velikosti tlačítka */
-    text-decoration: none;
+    font-size: 1.2em;
+    border: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
-    margin: 20px auto;
-    font-size: 1.2em; /* Zvýšení velikosti písma */
+    text-decoration: none; /* Zrušení podtržení */
+    margin: 20px auto; /* Vycentrování tlačítka */
+    transition: background-color 0.3s; /* Plynulý přechod barvy */
 }
 
 .cta-button:hover {
-    background-color: #704a3a;
+    background-color: #5a3d2b; /* Tmavší hnědá barva po najetí myší */
 }
 
 /* Styl pro patičku */
 .footer {
-    background-color: #8b4513;
-    color: #fff;
     text-align: center;
-    padding: 15px 0; /* Zvýšení paddingu */
+    background-color: #f5e8c7; /* Barva pozadí patičky */
+    padding: 10px;
     width: 100%;
 }
 
-/* Scroll to top button */
+/* Scroll to top */
 .scroll-to-top {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #8b4513;
-    color: #fff;
-    border: none;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8b4513; /* Hnědá barva */
     border-radius: 50%;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    display: none; /* Hidden by default */
+    display: none; /* Skryto ve výchozím nastavení */
+    transition: opacity 0.3s;
 }
 
-/* Show the scroll to top button on scroll */
-.scroll-to-top.show {
+.scroll-to-top img {
+    width: 30px;
+}
+
+/* Zobrazit tlačítko pro návrat nahoru */
+.show {
     display: block;
-}
-
-/* Animace pro posun */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Animace pro fadeIn */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
