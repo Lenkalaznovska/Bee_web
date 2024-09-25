@@ -72,82 +72,41 @@ main {
 /* Styl pro hlavní nadpis */
 .main-heading {
     font-size: 4em; /* Zvýšení velikosti nadpisu */
-    color: #8b4513; /* Světle hnědá barva */
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    margin: 0;
+    color: #8b4513; /* Světlá hnědá barva */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Stín pro nadpis */
 }
 
-/* Styl pro nadpisy sekcí */
-h2 {
-    color: #8b4513; /* Světle hnědá přírodní barva */
-    font-size: 2.5em; /* Zvýšení velikosti nadpisu */
-    margin-bottom: 20px;
-    transition: color 0.3s ease; /* Efekt přechodu pro nadpis */
-}
-
-/* Textové kontejnery */
+/* Styl pro textové kontejnery */
 .text-container {
-    background-color: #fffaf0; /* Světlé pozadí pro text */
-    padding: 40px; /* Zvýšení paddingu */
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
-    margin-bottom: 40px; /* Zvýšení vzdálenosti mezi sekcemi */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Animace přechodu */
-    opacity: 0; /* Skrytí obsahu při načtení */
-    transform: translateY(20px); /* Posunutí dolů */
-}
-
-/* Animace při scrollování */
-.text-container.visible {
-    opacity: 1; /* Zobrazit obsah */
-    transform: translateY(0); /* Vrátit na původní pozici */
-}
-
-/* Styl pro tlačítko kontaktu */
-.contact-button {
-    background-color: #8b4513;
-    color: #fff;
-    padding: 15px 30px; /* Zvýšení velikosti tlačítka */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.5em; /* Zvýšení velikosti textu */
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Přidání efektu transformace */
-}
-
-.contact-button:hover {
-    background-color: #a0522d; /* Změna barvy při najetí */
-    transform: scale(1.1); /* Zvětšení tlačítka při najetí */
-}
-
-/* Obrázky v galerii */
-.image-container {
-    display: flex;
-    justify-content: center; /* Vycentrování obrázků */
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.gallery-image {
-    width: 100%;
-    max-width: 300px; /* Zmenšení maximální šířky obrázku */
-    transition: transform 0.3s ease;
-    margin: 10px; /* Přidání mezery mezi obrázky */
-}
-
-.gallery-image:hover {
-    transform: scale(1.1); /* Zvětšení obrázku při najetí myší */
-}
-
-/* Styl pro kontaktní informace */
-.contact {
-    background-color: #f0fff0; /* Světle zelené pozadí pro kontakt */
-    padding: 40px; /* Padding pro kontakt */
+    padding: 40px; /* Padding pro sekce */
     border-radius: 10px; /* Zaoblení rohů */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stínování pro lepší vzhled */
     margin-bottom: 40px; /* Vzdálenost od ostatních sekcí */
+    background-color: #ffffff; /* Bílá barva pozadí sekcí */
+}
+
+/* Styl pro sekce */
+h2 {
+    font-size: 2.5em; /* Zvýšení velikosti nadpisů sekcí */
+    margin-bottom: 20px; /* Vzdálenost pod nadpisem */
+}
+
+/* Styl pro galerie */
+.image-container {
+    display: flex;
+    justify-content: center; /* Vycentrování obrázků */
+    gap: 20px; /* Vzdálenost mezi obrázky */
+}
+
+.gallery-image {
+    width: 300px; /* Šířka obrázků */
+    height: auto; /* Automatická výška */
+    border-radius: 10px; /* Zaoblení rohů */
+    transition: transform 0.3s; /* Efekt přechodu pro zoom */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Zvýšení obrázku při najetí */
 }
 
 /* Styl pro zápatí */
@@ -156,8 +115,6 @@ h2 {
     color: #fff;
     text-align: center;
     padding: 20px;
-    position: relative; /* Možnost pozicování */
-    bottom: 0; /* Umístění na spodek */
     width: 100%;
 }
 
@@ -179,6 +136,10 @@ h2 {
 @media (max-width: 768px) {
     .main-heading {
         font-size: 2.5em; /* Menší velikost nadpisu na mobilu */
+    }
+
+    .navigation a {
+        font-size: 1em; /* Menší písmo v navigaci */
     }
 
     .contact-button {
