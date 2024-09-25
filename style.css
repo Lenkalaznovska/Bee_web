@@ -1,7 +1,7 @@
 /* Základní stylování */
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f3e7c7; /* Světlé, přírodní pozadí */
+  background-color: #f3e7c7; /* Přírodní pozadí */
   color: #4a4a4a;
   margin: 0;
   padding: 0;
@@ -10,114 +10,73 @@ body {
   align-items: center;
 }
 
-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-}
-
-/* Nadpisy */
+/* Nadpisy a navigace */
 h1, h2 {
   font-family: 'Playfair Display', serif;
-  color: #8b5a2b; /* Teplá hnědá barva */
-  text-align: center;
+  color: #8b5a2b;
 }
 
-.main-heading {
-  font-size: 3.5em;
-  color: #8b4513;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+header nav ul {
+  list-style-type: none;
   margin: 0;
-  line-height: 1.2;
+  padding: 0;
 }
 
-.main-heading span {
-  display: block;
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
 }
 
-h2 {
-  font-size: 2.2em;
-  margin-bottom: 20px;
+header nav ul li a {
+  text-decoration: none;
+  color: #8b5a2b;
+  font-weight: bold;
 }
 
 /* Textové kontejnery */
 .text-container {
-  background-color: #fffaf0; /* Světlé krémové pozadí */
+  background-color: #fffaf0;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
-  transition: transform 0.3s ease;
 }
 
-.text-container:hover {
-  transform: translateY(-10px);
-}
-
-/* Sekce */
-section {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* Obrázky v galerii */
-.image-container {
+/* Produkt sekce */
+.product-highlight {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.gallery-image {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.gallery-image:hover {
-  transform: scale(1.05);
-}
-
-/* Navigační menu a pozadí */
-.menu-header {
-  width: 100%;
-  position: relative;
-  background-color: #f3e7c7;
-  padding-bottom: 20px;
-}
-
-.menu-background {
-  background-image: url("images/menu.jpg");
-  background-size: cover;
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  height: 250px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Styl pro patičku */
-.footer {
-  text-align: center;
-  padding: 15px 0;
-  font-size: 1em;
-}
-
-/* Styl pro kontaktní údaje */
-.contact .text-container {
-  background-color: #fffaf0;
-  padding: 20px;
+.product-highlight img {
+  max-width: 100%;
+  width: 300px;
   border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Scroll-to-top tlačítko */
+.product-details {
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Call to Action tlačítko */
+.cta-button {
+  background-color: #8b4513;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a85c31;
+}
+
+/* Styl pro tlačítko scrollování nahoru */
 .scroll-to-top {
   position: fixed;
   bottom: 60px;
@@ -128,57 +87,21 @@ section {
   transition: opacity 0.5s ease, bottom 0.3s ease;
 }
 
-.scroll-to-top img {
-  width: 70px;
-  height: 70px;
-}
-
 .scroll-to-top.show {
   display: block;
   opacity: 1;
-  bottom: 80px;
-}
-
-.scroll-to-top.hide {
-  opacity: 0;
-  bottom: 60px;
 }
 
 /* Responsivní design */
 @media (max-width: 768px) {
-  .main-heading {
-    font-size: 2.8em;
+  .product-highlight {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .gallery-image {
-    max-width: 100%;
-  }
-
-  .text-container {
-    padding: 20px;
-  }
-
-  /* Upraví scroll-to-top tlačítko pro mobilní zařízení */
-  .scroll-to-top img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .scroll-to-top {
-    bottom: 50px;
-    right: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-heading {
-    font-size: 2.2em;
-  }
-
-  /* Pro menší displeje */
-  .scroll-to-top img {
-    width: 40px;
-    height: 40px;
+  header nav ul li {
+    display: block;
+    margin-bottom: 10px;
   }
 
   .scroll-to-top {
