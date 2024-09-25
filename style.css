@@ -54,39 +54,44 @@ main {
 /* Styl pro nadpisy sekcí */
 h2 {
     color: #8b4513; /* Světle hnědá přírodní barva */
-    font-size: 2em;
+    font-size: 2.5em; /* Zvýšení velikosti nadpisu */
     margin-bottom: 20px;
+    transition: color 0.3s ease; /* Efekt přechodu pro nadpis */
 }
 
-/* Obalení textu a stínování - jednotný vzhled sekcí */
 .text-container {
     background-color: #fffaf0; /* Světlé pozadí pro text */
-    padding: 20px;
+    padding: 30px; /* Zvýšení paddingu */
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
     margin-bottom: 20px;
     transition: transform 0.3s ease;
+    opacity: 0; /* Skrytí obsahu při načtení */
+    transform: translateY(20px); /* Posunutí dolů */
 }
 
-.text-container:hover {
-    transform: scale(1.02); /* Zvětšení sekce při najetí */
+/* Animace při scrollování */
+.text-container.visible {
+    opacity: 1; /* Zobrazit obsah */
+    transform: translateY(0); /* Vrátit na původní pozici */
 }
 
 /* Styl pro tlačítko objednávky */
 .order-button {
     background-color: #8b4513;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Zvýšení velikosti tlačítka */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1.2em; /* Zvýšení velikosti textu */
     margin-top: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Přidání efektu transformace */
 }
 
 .order-button:hover {
     background-color: #a0522d; /* Změna barvy při najetí */
+    transform: scale(1.05); /* Zvětšení tlačítka při najetí */
 }
 
 /* Obrázky v galerii */
@@ -111,7 +116,7 @@ h2 {
 /* Styl pro kontaktní informace */
 .contact {
     background-color: #f0fff0; /* Světle zelené pozadí pro kontakt */
-    padding: 20px;
+    padding: 30px; /* Zvýšení paddingu */
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
     margin-bottom: 20px;
@@ -141,4 +146,19 @@ h2 {
 
 .scroll-to-top:hover {
     background-color: #a0522d; /* Změna barvy při najetí */
+}
+
+/* Media Queries pro responzivitu */
+@media (max-width: 768px) {
+    .gallery-image {
+        max-width: 100%; /* Přizpůsobení šířky pro menší obrazovky */
+    }
+
+    .text-container {
+        padding: 20px; /* Zmenšení paddingu pro menší obrazovky */
+    }
+
+    h2 {
+        font-size: 2em; /* Zmenšení nadpisu pro menší obrazovky */
+    }
 }
