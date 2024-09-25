@@ -1,14 +1,13 @@
 /* Centrum stránky */
 body {
     font-family: "Arial", sans-serif;
-    background-color: #f5e8c7; /* Barva pozadí stejná jako barva v menu */
+    background-color: #f5e8c7;
     color: #333;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.6;
 }
 
 main {
@@ -21,53 +20,58 @@ main {
 .menu-header {
     width: 100%;
     position: relative;
-    background-color: #f5e8c7; /* Jemná, přírodní barva */
+    background-color: #f5e8c7;
     padding-bottom: 20px;
 }
 
 .menu-background {
-    background-image: url("images/menu.jpg"); /* Obrázek pozadí v menu */
+    background-image: url("images/menu.jpg");
     background-size: cover;
-    background-position: bottom right; /* Posun obrázku více vlevo */
-    background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
-    height: 250px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    height: 300px; /* Zvýšení výšky */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 1s ease; /* Fade-in effect */
-    position: relative;
 }
 
-nav {
+/* Styl pro navigaci */
+.navbar {
     position: absolute;
     bottom: 20px;
 }
 
-nav ul {
+.navbar ul {
     list-style: none;
+    padding: 0;
     display: flex;
-    gap: 20px;
+    justify-content: center; /* Centrování položek */
 }
 
-nav a {
-    color: #8b4513;
+.navbar li {
+    margin: 0 30px; /* Zvýšení mezery mezi položkami */
+}
+
+.navbar a {
     text-decoration: none;
+    color: #8b4513;
     font-weight: bold;
+    font-size: 1.2em; /* Zvýšení velikosti písma */
 }
 
-nav a:hover {
+.navbar a:hover {
     text-decoration: underline;
 }
 
-/* Hlavní nadpis - Včelařství a Pletený Újezd pod ním */
+/* Styl pro hlavní nadpis */
 .main-heading {
-    font-size: 3.5em;
-    color: #8b4513; /* Světle hnědá barva */
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3);
+    font-size: 4em; /* Zvýšení velikosti hlavního nadpisu */
+    color: #8b4513;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     margin: 0;
     line-height: 1.2;
-    animation: slideIn 1s ease; /* Slide-in effect */
 }
 
 .main-heading span {
@@ -76,32 +80,24 @@ nav a:hover {
 
 /* Styl pro nadpisy sekcí */
 h2 {
-    color: #8b4513; /* Světle hnědá přírodní barva */
-    font-size: 2em;
+    color: #8b4513;
+    font-size: 2.5em; /* Zvýšení velikosti nadpisu sekce */
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Obalení textu a stínování - jednotný vzhled sekcí */
+/* Obalení textu a stínování */
 .text-container {
-    background-color: #fffaf0; /* Světlé pozadí pro text */
-    padding: 20px;
+    background-color: #fffaf0;
+    padding: 30px; /* Zvýšení paddingu */
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
-    margin-bottom: 20px;
-    transition: transform 0.3s ease; /* Transition for hover effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px; /* Zvýšení mezery mezi sekcemi */
+    transition: transform 0.3s ease;
 }
 
 .text-container:hover {
-    transform: translateY(-5px); /* Elevation effect on hover */
-}
-
-/* Styl pro text */
-section {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    text-align: center; /* Vycentrování textu */
+    transform: translateY(-5px);
 }
 
 /* Obrázky v galerii */
@@ -117,27 +113,11 @@ section {
     max-width: 500px;
     transition: transform 0.3s ease;
     margin-bottom: 20px;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
 }
 
 .gallery-image:hover {
-    transform: scale(1.1); /* Zvětšení obrázku při najetí myší */
-}
-
-/* Sekce s hodnocením */
-.testimonials {
-    background-color: #f9e1d1; /* Jemná barva pozadí pro sekci s hodnocením */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.testimonial {
-    margin: 10px 0;
-}
-
-.testimonial p {
-    font-style: italic;
+    transform: scale(1.1);
 }
 
 /* Tlačítko pro objednávku */
@@ -145,11 +125,12 @@ section {
     display: inline-block;
     background-color: #8b4513;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Zvýšení velikosti tlačítka */
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
     margin: 20px auto;
+    font-size: 1.2em; /* Zvýšení velikosti písma */
 }
 
 .cta-button:hover {
@@ -158,10 +139,10 @@ section {
 
 /* Styl pro patičku */
 .footer {
-    background-color: #8b4513; /* Tmavě hnědá barva */
+    background-color: #8b4513;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0; /* Zvýšení paddingu */
     width: 100%;
 }
 
