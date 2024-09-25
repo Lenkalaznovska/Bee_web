@@ -1,54 +1,45 @@
-/* Centrum stránky */
+/* Obecné styly */
 body {
-    font-family: "Arial", sans-serif;
-    background-color: #f5e8c7; /* Barva pozadí stránky */
-    color: #333;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #f5e8d9; /* Světle hnědé pozadí */
 }
 
-main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
+/* Hlavní nadpis */
+.main-heading {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    color: #8b4513; /* Hnědá barva */
 }
 
-/* Menu a pozadí */
-.menu-header {
-    width: 100%;
-    position: relative;
-    background-color: rgba(245, 232, 199, 0.8); /* Transparentní pozadí */
-    padding-bottom: 20px;
-}
-
+/* Hlavička s pozadím */
 .menu-background {
-    background-image: url("images/menu.jpg");
+    background-image: url('images/honey_background.jpg'); /* Pozadí s obrázkem */
     background-size: cover;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 20px 0;
+    position: relative;
 }
 
 /* Navigační menu */
 .navigation {
-    margin-top: -40px; /* Upravíme pozici menu na dolní okraj obrázku */
+    margin-top: -30px; /* Upravíme pozici menu na dolní okraj obrázku */
+    padding: 10px 0;
+    background-color: rgba(245, 232, 199, 0.8); /* Transparentní pozadí */
+    border-radius: 5px; /* Zaoblení rohů */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stínování pro hloubku */
 }
 
 .navigation ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center; /* Zarovnání na střed */
 }
 
 .navigation li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -56,119 +47,97 @@ main {
     text-decoration: none;
     color: #8b4513;
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 1.1em; /* Velikost písma */
+    transition: color 0.3s, transform 0.3s; /* Přechod při hover */
 }
 
 .navigation a:hover {
     color: #ffcc00;
+    transform: scale(1.1); /* Zvýšení velikosti při najetí myši */
 }
 
-/* Styl pro nadpisy sekcí */
-h2 {
-    color: #8b4513;
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Obalení textu a stínování - jednotný vzhled sekcí */
+/* Sekce */
 .text-container {
-    background-color: #fffaf0;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
+    background-color: #ffffff; /* Bílá barva */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Odstup mezi sekcemi */
 }
 
-/* Styl pro text */
-section {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-    line-height: 1.6;
+h2 {
+    color: #8b4513; /* Hnědá barva */
     text-align: center;
 }
 
-/* Obrázky v galerii */
+/* Galerie */
 .image-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 20px; /* Vzdálenost mezi obrázky */
 }
 
 .gallery-image {
-    width: 100%;
-    max-width: 500px;
-    transition: transform 0.3s ease;
-    margin-bottom: 20px;
+    width: 300px; /* Šířka obrázků */
+    height: auto;
+    border-radius: 5px;
 }
 
-.gallery-image:hover {
-    transform: scale(1.05);
-}
-
-/* Kontakt sekce */
+/* Kontaktní sekce */
 .contact {
-    background-color: #fffaf0;
-    border-radius: 10px;
+    background-color: #f5e8d9; /* Pozadí stejné jako tělo */
     padding: 20px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
 }
 
-/* Footer */
-.footer {
+.contact p {
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-    background-color: #f5e8c7; /* Barva pozadí patičky stejná jako barva stránky */
 }
 
-.footer-content {
-    color: #8b4513;
+/* Tlačítko pro objednání */
+.contact a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8b4513; /* Hnědá barva */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Scroll to Top Button */
+.contact a:hover {
+    background-color: #ffcc00; /* Barva při hover */
+}
+
+/* Zápatí */
+.footer {
+    background-color: #f5e8d9; /* Stejná barva jako pozadí stránky */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    border-top: 5px solid #8b4513; /* Hnědá linie */
+}
+
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 100;
+    display: none; /* Skryté, dokud není potřeba */
+    background-color: rgba(139, 69, 19, 0.8); /* Poloprůhledné hnědé pozadí */
+    border-radius: 50%;
+    padding: 10px;
 }
 
-.scroll-to-top img {
-    width: 50px;
-}
-
-/* Styl pro tlačítko objednat */
-.order-button {
-    background-color: #ffcc00;
-    color: #8b4513;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-}
-
-.order-button:hover {
-    background-color: #8b4513;
-    color: #ffcc00;
-}
-
-/* Responzivní styl */
+/* Responzivní styly */
 @media (max-width: 768px) {
-    .navigation li {
-        display: block;
-        margin: 10px 0;
+    .navigation ul {
+        flex-direction: column; /* Sloupcové uspořádání pro mobil */
     }
-
-    .main-heading {
-        font-size: 2.5em;
-    }
-
+    
     .gallery-image {
-        max-width: 90%;
+        width: 100%; /* Obrázky na šířku obrazovky */
     }
 }
