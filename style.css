@@ -1,7 +1,7 @@
 /* Centrum stránky */
 body {
     font-family: "Arial", sans-serif;
-    background-color: #f5e8c7;
+    background-color: #f5e8c7; /* Barva pozadí stránky */
     color: #333;
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ main {
 .menu-header {
     width: 100%;
     position: relative;
-    background-color: #f5e8c7;
+    background-color: rgba(245, 232, 199, 0.8); /* Transparentní pozadí */
     padding-bottom: 20px;
 }
 
@@ -36,27 +36,15 @@ main {
     justify-content: center;
 }
 
-.main-heading {
-    font-size: 3.5em;
-    color: #8b4513;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.main-heading span {
-    display: block;
-}
-
 /* Navigační menu */
 .navigation {
-    margin-top: 20px;
+    margin-top: -40px; /* Upravíme pozici menu na dolní okraj obrázku */
 }
 
 .navigation ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .navigation li {
@@ -133,7 +121,7 @@ section {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-    border-top: 2px solid #8b4513;
+    background-color: #f5e8c7; /* Barva pozadí patičky stejná jako barva stránky */
 }
 
 .footer-content {
@@ -161,6 +149,7 @@ section {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
 .order-button:hover {
