@@ -1,111 +1,208 @@
-/* Základní stylování */
+/* Centrum stránky */
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f3e7c7; /* Přírodní pozadí */
-  color: #4a4a4a;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    font-family: "Arial", sans-serif;
+    background-color: #f5e8c7; /* Barva pozadí stejná jako barva v menu */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
 }
 
-/* Nadpisy a navigace */
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-  color: #8b5a2b;
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-header nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Menu a pozadí */
+.menu-header {
+    width: 100%;
+    position: relative;
+    background-color: #f5e8c7; /* Jemná, přírodní barva */
+    padding-bottom: 20px;
 }
 
-header nav ul li {
-  display: inline;
-  margin-right: 20px;
+.menu-background {
+    background-image: url("images/menu.jpg"); /* Obrázek pozadí v menu */
+    background-size: cover;
+    background-position: bottom right; /* Posun obrázku více vlevo */
+    background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease; /* Fade-in effect */
+    position: relative;
 }
 
-header nav ul li a {
-  text-decoration: none;
-  color: #8b5a2b;
-  font-weight: bold;
+nav {
+    position: absolute;
+    bottom: 20px;
 }
 
-/* Textové kontejnery */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #8b4513;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hlavní nadpis - Včelařství a Pletený Újezd pod ním */
+.main-heading {
+    font-size: 3.5em;
+    color: #8b4513; /* Světle hnědá barva */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+    animation: slideIn 1s ease; /* Slide-in effect */
+}
+
+.main-heading span {
+    display: block;
+}
+
+/* Styl pro nadpisy sekcí */
+h2 {
+    color: #8b4513; /* Světle hnědá přírodní barva */
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Obalení textu a stínování - jednotný vzhled sekcí */
 .text-container {
-  background-color: #fffaf0;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+    background-color: #fffaf0; /* Světlé pozadí pro text */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Transition for hover effect */
 }
 
-/* Produkt sekce */
-.product-highlight {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.text-container:hover {
+    transform: translateY(-5px); /* Elevation effect on hover */
 }
 
-.product-highlight img {
-  max-width: 100%;
-  width: 300px;
-  border-radius: 10px;
+/* Styl pro text */
+section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center; /* Vycentrování textu */
 }
 
-.product-details {
-  max-width: 600px;
-  text-align: left;
+/* Obrázky v galerii */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-/* Call to Action tlačítko */
+.gallery-image {
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.gallery-image:hover {
+    transform: scale(1.1); /* Zvětšení obrázku při najetí myší */
+}
+
+/* Sekce s hodnocením */
+.testimonials {
+    background-color: #f9e1d1; /* Jemná barva pozadí pro sekci s hodnocením */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial {
+    margin: 10px 0;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+/* Tlačítko pro objednávku */
 .cta-button {
-  background-color: #8b4513;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    background-color: #8b4513;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 20px auto;
 }
 
 .cta-button:hover {
-  background-color: #a85c31;
+    background-color: #704a3a;
 }
 
-/* Styl pro tlačítko scrollování nahoru */
+/* Styl pro patičku */
+.footer {
+    background-color: #8b4513; /* Tmavě hnědá barva */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Scroll to top button */
 .scroll-to-top {
-  position: fixed;
-  bottom: 60px;
-  right: 20px;
-  z-index: 1000;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease, bottom 0.3s ease;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: none; /* Hidden by default */
 }
 
+/* Show the scroll to top button on scroll */
 .scroll-to-top.show {
-  display: block;
-  opacity: 1;
+    display: block;
 }
 
-/* Responsivní design */
-@media (max-width: 768px) {
-  .product-highlight {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Animace pro posun */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-  header nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .scroll-to-top {
-    bottom: 40px;
-    right: 10px;
-  }
+/* Animace pro fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
