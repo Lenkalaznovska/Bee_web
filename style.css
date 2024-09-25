@@ -120,11 +120,13 @@ h2 {
 
 /* Styl pro zápatí */
 .footer {
-    background-color: #8b4513; /* Tmavě hnědá barva */
-    color: #fff;
+    background-color: #f5e8c7; /* Jemná barva pozadí */
+    color: #8b4513; /* Hnědá barva textu */
     text-align: center;
     padding: 20px;
     width: 100%;
+    border-top: 5px solid #8b4513; /* Hnědá linie nahoře */
+    position: relative; /* Aby se vešlo na stránku */
 }
 
 /* Tlačítko pro návrat na začátek */
@@ -139,6 +141,17 @@ h2 {
     padding: 10px 15px;
     cursor: pointer;
     display: none; /* Skryté při načtení */
+    z-index: 1000; /* Aby bylo nad ostatními prvky */
+}
+
+/* Zobrazení tlačítka při scrollování */
+window.onscroll = function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopButton.style.display = 'block'; // Zobrazit tlačítko
+    } else {
+        scrollToTopButton.style.display = 'none'; // Skrýt tlačítko
+    }
 }
 
 /* Responsive design */
