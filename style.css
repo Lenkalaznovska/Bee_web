@@ -10,6 +10,38 @@ body {
     align-items: center;
 }
 
+/* Styl pro navigaci */
+.navigation {
+    background-color: #8b4513; /* Tmavě hnědá barva */
+    width: 100%;
+    position: sticky; /* Fixace menu */
+    top: 0; /* Fixace na vrcholu */
+    z-index: 1000; /* Zajištění, že bude nad ostatními prvky */
+}
+
+.navigation ul {
+    list-style: none; /* Zrušení standardního seznamu */
+    display: flex;
+    justify-content: center; /* Vycentrování menu */
+    padding: 15px 0; /* Padding pro menu */
+    margin: 0;
+}
+
+.navigation li {
+    margin: 0 20px; /* Mezery mezi položkami */
+}
+
+.navigation a {
+    color: #fff; /* Barva textu */
+    text-decoration: none; /* Zrušení podtržení */
+    font-size: 1.2em; /* Velikost textu */
+    transition: color 0.3s ease; /* Efekt přechodu pro odkazy */
+}
+
+.navigation a:hover {
+    color: #ffd700; /* Změna barvy při najetí */
+}
+
 /* Vycentrování obsahu */
 main {
     width: 100%;
@@ -23,7 +55,6 @@ main {
     width: 100%;
     position: relative;
     background-color: #f5e8c7; /* Jemná, přírodní barva */
-    padding-bottom: 20px;
 }
 
 .menu-background {
@@ -31,24 +62,20 @@ main {
     background-size: cover;
     background-position: bottom right; /* Posun obrázku více vlevo */
     background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
-    height: 250px;
+    height: 300px; /* Zvýšení výšky */
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Stín pro lepší hloubku */
 }
 
 /* Styl pro hlavní nadpis */
 .main-heading {
-    font-size: 3.5em;
+    font-size: 4em; /* Zvýšení velikosti nadpisu */
     color: #8b4513; /* Světle hnědá barva */
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     margin: 0;
-    line-height: 1.2;
-}
-
-.main-heading span {
-    display: block; /* Zajištění rozdělení nadpisu na dvě řádky */
 }
 
 /* Styl pro nadpisy sekcí */
@@ -59,13 +86,14 @@ h2 {
     transition: color 0.3s ease; /* Efekt přechodu pro nadpis */
 }
 
+/* Textové kontejnery */
 .text-container {
     background-color: #fffaf0; /* Světlé pozadí pro text */
-    padding: 30px; /* Zvýšení paddingu */
+    padding: 40px; /* Zvýšení paddingu */
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    margin-bottom: 40px; /* Zvýšení vzdálenosti mezi sekcemi */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animace přechodu */
     opacity: 0; /* Skrytí obsahu při načtení */
     transform: translateY(20px); /* Posunutí dolů */
 }
@@ -76,37 +104,37 @@ h2 {
     transform: translateY(0); /* Vrátit na původní pozici */
 }
 
-/* Styl pro tlačítko objednávky */
-.order-button {
+/* Styl pro tlačítko kontaktu */
+.contact-button {
     background-color: #8b4513;
     color: #fff;
-    padding: 12px 24px; /* Zvýšení velikosti tlačítka */
+    padding: 15px 30px; /* Zvýšení velikosti tlačítka */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.2em; /* Zvýšení velikosti textu */
+    font-size: 1.5em; /* Zvýšení velikosti textu */
     margin-top: 20px;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Přidání efektu transformace */
 }
 
-.order-button:hover {
+.contact-button:hover {
     background-color: #a0522d; /* Změna barvy při najetí */
-    transform: scale(1.05); /* Zvětšení tlačítka při najetí */
+    transform: scale(1.1); /* Zvětšení tlačítka při najetí */
 }
 
 /* Obrázky v galerii */
 .image-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Vycentrování obrázků */
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .gallery-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 300px; /* Zmenšení maximální šířky obrázku */
     transition: transform 0.3s ease;
-    margin-bottom: 20px;
+    margin: 10px; /* Přidání mezery mezi obrázky */
 }
 
 .gallery-image:hover {
@@ -116,49 +144,48 @@ h2 {
 /* Styl pro kontaktní informace */
 .contact {
     background-color: #f0fff0; /* Světle zelené pozadí pro kontakt */
-    padding: 30px; /* Zvýšení paddingu */
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
-    margin-bottom: 20px;
+    padding: 40px; /* Padding pro kontakt */
+    border-radius: 10px; /* Zaoblení rohů */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stínování pro lepší vzhled */
+    margin-bottom: 40px; /* Vzdálenost od ostatních sekcí */
 }
 
-/* Styl pro patičku */
+/* Styl pro zápatí */
 .footer {
-    background-color: #8b4513; /* Tmavě hnědá barva pro patičku */
+    background-color: #8b4513; /* Tmavě hnědá barva */
     color: #fff;
-    padding: 10px 0;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Možnost pozicování */
+    bottom: 0; /* Umístění na spodek */
     width: 100%;
 }
 
-/* Tlačítko pro scrollování nahoru */
+/* Tlačítko pro návrat na začátek */
 .scroll-to-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #8b4513;
+    background-color: #8b4513; /* Tmavě hnědá barva */
     color: #fff;
     border: none;
-    border-radius: 50%;
+    border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: none; /* Skryté při načtení */
 }
 
-.scroll-to-top:hover {
-    background-color: #a0522d; /* Změna barvy při najetí */
-}
-
-/* Media Queries pro responzivitu */
+/* Responsive design */
 @media (max-width: 768px) {
-    .gallery-image {
-        max-width: 100%; /* Přizpůsobení šířky pro menší obrazovky */
+    .main-heading {
+        font-size: 2.5em; /* Menší velikost nadpisu na mobilu */
     }
 
-    .text-container {
-        padding: 20px; /* Zmenšení paddingu pro menší obrazovky */
+    .contact-button {
+        font-size: 1.2em; /* Menší tlačítko */
     }
 
     h2 {
-        font-size: 2em; /* Zmenšení nadpisu pro menší obrazovky */
+        font-size: 2em; /* Menší velikost nadpisu sekce */
     }
 }
