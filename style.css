@@ -1,14 +1,13 @@
 /* Centrum stránky */
 body {
     font-family: "Arial", sans-serif;
-    background-color: #f5e8c7; /* Barva pozadí stejná jako barva v menu */
+    background-color: #f5e8c7; /* Barva pozadí */
     color: #333;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: background-color 0.3s ease; /* Přechod pro pozadí */
 }
 
 main {
@@ -21,7 +20,7 @@ main {
 .menu-header {
     width: 100%;
     position: relative;
-    background-color: #f5e8c7; /* Jemná, přírodní barva */
+    background-color: #f5e8c7;
     padding-bottom: 20px;
 }
 
@@ -34,10 +33,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeIn 1s ease; /* Animace pro zobrazení */
 }
 
-/* Styl pro hlavní nadpis - Včelařství a Pletený Újezd pod ním */
+/* Styl pro hlavní nadpis */
 .main-heading {
     font-size: 3.5em;
     color: #8b4513;
@@ -45,11 +43,6 @@ main {
     text-align: center;
     margin: 0;
     line-height: 1.2;
-    transition: transform 0.3s; /* Přechod pro nadpis */
-}
-
-.main-heading:hover {
-    transform: scale(1.05); /* Zvětšení nadpisu při najetí myší */
 }
 
 .main-heading span {
@@ -64,18 +57,18 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Obalení textu a stínování - jednotný vzhled sekcí */
+/* Obalení textu a stínování */
 .text-container {
     background-color: #fffaf0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
-    transition: transform 0.3s; /* Přechod pro sekce */
+    transition: transform 0.3s ease;
 }
 
 .text-container:hover {
-    transform: translateY(-5px); /* Posun sekce při najetí myší */
+    transform: translateY(-5px); /* Vytvoření efektu "pohybujícího se" */
 }
 
 /* Styl pro text */
@@ -106,12 +99,20 @@ section {
     transform: scale(1.1);
 }
 
-/* Kontaktní údaje - obalení sekce "Kontaktujte nás" ve stejném stylu */
-.contact .text-container {
-    background-color: #fffaf0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+/* Styl pro tlačítko objednávky */
+.order-button {
+    background-color: #8b4513; /* Hnědá barva */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #6f3d0e; /* Tmavší hnědá při najetí */
 }
 
 /* Styl pro patičku */
@@ -145,7 +146,6 @@ section {
     right: 20px;
     display: none;
     z-index: 1000;
-    transition: opacity 0.3s ease; /* Přechod pro tlačítko */
 }
 
 .scroll-to-top img {
@@ -155,14 +155,4 @@ section {
 
 .scroll-to-top.show {
     display: block;
-}
-
-/* Animace pro pozadí a menu */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
