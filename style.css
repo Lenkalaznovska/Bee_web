@@ -1,7 +1,7 @@
-/* Centrum stránky */
+/* General Styles */
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f5e8c7; /* Barva pozadí stejná jako barva v menu */
+  font-family: "Open Sans", sans-serif;
+  background-color: #f6efd9; /* Light, natural beige */
   color: #333;
   margin: 0;
   padding: 0;
@@ -10,106 +10,126 @@ body {
   align-items: center;
 }
 
+h1, h2 {
+  font-family: "Playfair Display", serif; /* Soft, elegant serif for headers */
+  color: #6b4226; /* Earthy brown */
+}
+
+a {
+  color: #d18f27; /* Honey gold */
+}
+
 main {
   width: 100%;
   max-width: 1200px;
   margin: 20px auto;
 }
 
-/* Menu a pozadí */
+/* Header */
 .menu-header {
-  width: 100%;
   position: relative;
-  background-color: #f5e8c7; /* Jemná, přírodní barva */
+  width: 100%;
+  background-color: #e6d8b9;
   padding-bottom: 20px;
 }
 
 .menu-background {
-  background-image: url("images/menu.jpg"); /* Obrázek pozadí v menu */
+  background-image: url("images/menu.jpg");
   background-size: cover;
-  background-position: bottom right; /* Posun obrázku více vlevo */
-  background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
-  height: 250px;
+  background-position: center;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Styl pro hlavní nadpis - Včelařství a Pletený Újezd pod ním */
 .main-heading {
-  font-size: 3.5em;
-  color: #8b4513; /* Světle hnědá barva */
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
+  font-size: 3em;
   text-align: center;
-  margin: 0;
-  line-height: 1.2;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .main-heading span {
-  display: block; /* Zajištění rozdělení nadpisu na dvě řádky */
+  color: #e2a32e; /* Gold tone for highlights */
 }
 
-/* Styl pro nadpisy sekcí */
+/* Section Headings */
 h2 {
-  color: #8b4513; /* Světle hnědá přírodní barva */
-  font-size: 2em;
+  font-size: 2.2em;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-/* Obalení textu a stínování - jednotný vzhled sekcí */
+/* Text Content */
 .text-container {
-  background-color: #fffaf0; /* Světlé pozadí pro text */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
-  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
 }
 
-/* Styl pro text */
+.text-container:hover {
+  transform: scale(1.02); /* Subtle zoom on hover */
+}
+
 section {
   padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-  line-height: 1.6;
-  text-align: center; /* Vycentrování textu */
+  text-align: center;
+  line-height: 1.7;
 }
 
-/* Obrázky v galerii */
+/* Gallery Images */
 .image-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  gap: 20px;
 }
 
 .gallery-image {
   width: 100%;
-  max-width: 500px;
-  transition: transform 0.3s ease;
-  margin-bottom: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .gallery-image:hover {
-  transform: scale(1.1); /* Zvětšení obrázku při najetí myší */
+  transform: scale(1.05); /* Subtle zoom effect */
+  filter: brightness(110%);
 }
 
-/* Kontaktní údaje - obalení sekce "Kontaktujte nás" ve stejném stylu */
-.contact .text-container {
-  background-color: #fffaf0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
+/* Scroll-to-Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  display: none;
+  z-index: 1000;
 }
 
-/* Styl pro patičku */
+.scroll-to-top img {
+  width: 60px;
+  height: 60px;
+}
+
+.scroll-to-top.show {
+  display: block;
+}
+
+/* Footer */
 .footer {
   text-align: center;
-  padding: 15px 0;
+  padding: 20px 0;
+  background-color: #e6d8b9;
   font-size: 1em;
+  color: #6b4226;
 }
 
-/* Responsivní design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .main-heading {
     font-size: 2.5em;
@@ -124,22 +144,4 @@ section {
   .main-heading {
     font-size: 2em;
   }
-}
-
-/* Scroll to Top Button */
-.scroll-to-top {
-  position: fixed; /* Fixed positioning */
-  bottom: 60px; /* Distance from the bottom, zvětšeno pro více prostoru */
-  right: 20px; /* Distance from the right */
-  display: none; /* Initially hidden */
-  z-index: 1000; /* Make sure it appears above other elements */
-}
-
-.scroll-to-top img {
-  width: 90px; /* Smaller size for mobile */
-  height: 90px; /* Smaller size for mobile */
-}
-
-.scroll-to-top.show {
-  display: block; /* Show button when scrolled down */
 }
