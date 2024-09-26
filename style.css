@@ -1,3 +1,12 @@
+/* :root pro barevné schéma a velikosti písma */
+:root {
+    --primary-color: #5d3c1e; /* Hnědá barva */
+    --secondary-color: #e6e0cf; /* Světle hnědá barva */
+    --background-color: #f9f9f9; /* Světle šedé pozadí */
+    --text-color: #333; /* Tmavě šedý text */
+    --footer-background: #5d3c1e; /* Barva pozadí patičky */
+}
+
 /* Reset a obecné styly */
 * {
     margin: 0;
@@ -7,9 +16,9 @@
 
 /* Použití přírodních barev */
 body {
-    background: linear-gradient(to bottom, #f9f9f9, #e6e0cf);
+    background: linear-gradient(to bottom, var(--background-color), var(--secondary-color));
     font-family: 'Roboto', sans-serif;
-    color: #333;
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -54,9 +63,9 @@ body {
     padding: 40px 20px;
     max-width: 800px;
     margin: 40px auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -72,8 +81,8 @@ body {
 h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #5d3c1e; /* Hnědá barva */
-    border-bottom: 2px solid #5d3c1e; /* Linka pod nadpisem */
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
 }
 
@@ -96,9 +105,9 @@ p {
 .gallery-image {
     width: 300px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s; /* Efekt při hoveru */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery-image:hover {
@@ -106,33 +115,21 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* CTA sekce */
-.cta {
-    padding: 40px 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #5d3c1e; /* Barva CTA tlačítka */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #7a5a42; /* Efekt hoveru pro CTA tlačítko */
-}
-
 /* Kontakt */
 .contact {
     padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact p {
+    margin-bottom: 15px;
 }
 
 /* Patička */
 .footer {
-    background-color: #5d3c1e; /* Barva footeru */
+    background-color: var(--footer-background);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -143,7 +140,7 @@ p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #5d3c1e;
+    background: var(--primary-color);
     border-radius: 50%;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -151,7 +148,7 @@ p {
 }
 
 .scroll-to-top:hover {
-    background: #7a5a42; /* Barva hoveru pro scroll to top */
+    background: #7a5a42;
 }
 
 /* Media Queries pro responzivní design */
