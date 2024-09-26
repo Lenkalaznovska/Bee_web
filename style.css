@@ -1,6 +1,6 @@
 /* Reset a obecné styly */
 :root {
-    --main-bg-color: #f9f9f9;
+    --main-bg-color: #f9f9f9; /* Světlá barva pozadí stránky */
     --primary-color: #5d3c1e; /* Hnědá barva */
     --secondary-color: #e7d7b6; /* Světlá barva */
     --highlight-color: #f6e9c1; /* Světlý akcent */
@@ -17,7 +17,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color); /* Pozadí celé stránky */
     line-height: 1.6;
 }
 
@@ -62,7 +62,7 @@ body {
     padding: 40px 20px;
     max-width: 800px;
     margin: 40px auto;
-    background: var(--highlight-color);
+    background: var(--highlight-color); /* Bílá pozadí pro sekce */
     border-radius: 8px;
     box-shadow: 0 4px 10px var(--shadow-color);
     animation: fadeIn 0.5s ease-in-out; /* Přidání animace */
@@ -153,4 +153,21 @@ p {
 /* Scroll to Top */
 .scroll-to-top {
     position: fixed;
-    bottom: 20px; /*
+    bottom: 20px; /* Vzdálenost od spodní části */
+    right: 20px; /* Vzdálenost od pravé části */
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 12px; /* Zmenšení paddingu */
+    box-shadow: 0 4px 10px var(--shadow-color);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.scroll-to-top:hover {
+    background-color: #444; /* Ztmavení barvy při hoveru */
+}
+
+.scroll-to-top img {
+    width: 30px; /* Zmenšení velikosti ikony */
+    height: auto;
+}
