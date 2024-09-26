@@ -16,11 +16,19 @@
                     <span>Pletený Újezd</span>
                 </h1>
             </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#about">O nás</a></li>
+                    <li><a href="#product">Náš med</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main>
-        <section class="about text-container">
+        <section id="about" class="about text-container">
             <h2>O našem včelařství</h2>
             <p>
                 Naše včelařství se nachází ve Středních Čechách, v malebné obci
@@ -30,16 +38,9 @@
                 přírodou a pečlivá péče o včelstva jsou pro nás základem udržitelného
                 zemědělství a zdravého životního stylu.
             </p>
-            <p>
-                Láska k včelám je pro nás srdeční záležitostí. Snažíme se o co
-                nejšetrnější přístup, aby naše včelstva žila v přirozeném prostředí a
-                mohla plnit svou důležitou roli opylovačů. Včely jsou nepostradatelnou
-                součástí našeho ekosystému, a jejich práce významně přispívá k
-                zachování biodiverzity, která prospívá nejen nám, ale i celé přírodě.
-            </p>
         </section>
 
-        <section class="product text-container">
+        <section id="product" class="product text-container">
             <h2>Náš med a jeho přínosy</h2>
             <p>
                 Náš med je 100% přírodní, bez přidaných látek a chemikálií. Z každé
@@ -48,27 +49,13 @@
                 Med má přirozené antibakteriální vlastnosti, podporuje imunitu a
                 napomáhá v boji proti nachlazení.
             </p>
-            <p>
-                Naše včely opylují místní květiny a stromy, což nejen zlepšuje
-                biodiverzitu v našem okolí, ale také přispívá ke vzniku lahodného a
-                čistého medu. Díky pečlivé péči o včelstva nabízíme různé druhy medu,
-                které jsou odrazem sezónních květin a stromů, jež naše včely
-                navštěvují. Každá kapka našeho medu je výsledkem harmonického soužití
-                s přírodou.
-            </p>
-            <p>
-                Konzumace medu nejen obohacuje vaše jídlo, ale zároveň přináší zdraví
-                tělu i duši. Med je od pradávna znám jako přírodní zdroj energie,
-                posiluje organismus a pomáhá udržet tělo ve skvělé kondici.
-            </p>
-            <p class="order-info">
-                <strong>Objednejte si náš med!</strong> Pro více informací a objednávky nás
-                kontaktujte telefonicky nebo e-mailem. Včelaření je naše vášeň a
-                chceme, aby se náš med dostal k vám co nejdříve!
-            </p>
+            <div class="order-info">
+                <h3>Objednejte si med</h3>
+                <p>Pro objednání nás kontaktujte na telefonním čísle nebo e-mailem.</p>
+            </div>
         </section>
 
-        <section class="gallery text-container">
+        <section id="gallery" class="gallery text-container">
             <h2>Naše včely a med</h2>
             <div class="image-container">
                 <img src="images/bee.jpg" alt="Včela" class="gallery-image" />
@@ -76,7 +63,7 @@
             </div>
         </section>
 
-        <section class="contact text-container">
+        <section id="contact" class="contact text-container">
             <h2>Kontaktujte nás</h2>
             <p>Včelař: Marek Lážnovský</p>
             <p>Adresa: Pletený Újezd</p>
@@ -94,6 +81,12 @@
             <p>© 2024 Včelařství Pletený Újezd. Všechna práva vyhrazena.</p>
         </footer>
     </main>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent">
+        <p>Naše webové stránky používají cookies, abychom zajistili nejlepší zážitek na našich stránkách. <a href="#privacy-policy">Zjistěte více</a></p>
+        <button id="acceptCookies">Souhlasím</button>
+    </div>
 
     <!-- Scroll to Top Button -->
     <a href="#" class="scroll-to-top">
