@@ -3,14 +3,17 @@
     --brown: #5d3c1e;
     --honey-gold: #daa520;
     --green: #6b8e23;
+    --footer-bg: #333;
+    --light-bg: #f9f9f9;
 }
 
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    background-color: var(--light-bg);
     color: #333;
     line-height: 1.6;
+    text-align: center; /* Centering text globally */
 }
 
 /* Menu */
@@ -24,6 +27,8 @@ body {
     background: url('images/menu.jpg') no-repeat center center/cover;
     height: 300px;
     transition: filter 0.5s;
+    margin: 0; /* Ensuring no white strip */
+    padding: 0;
 }
 
 .menu-background:hover {
@@ -85,6 +90,7 @@ h2 {
 
 .order-button:hover {
     background-color: var(--green);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 3D effect */
 }
 
 /* Gallery */
@@ -107,12 +113,12 @@ h2 {
 
 .gallery-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced 3D shadow */
 }
 
 /* Footer */
 .footer {
-    background-color: #333;
+    background-color: var(--footer-bg);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -123,15 +129,16 @@ h2 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--brown);
+    background-color: var(--brown); /* Same color as footer */
     padding: 10px;
     border-radius: 50%;
     display: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .scroll-to-top:hover {
     background-color: var(--green);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add 3D shadow effect */
 }
 
 /* Responsive Styles */
@@ -147,5 +154,10 @@ h2 {
     .gallery-image {
         width: 100%;
         max-width: 300px;
+    }
+
+    .menu-background {
+        background-size: cover;
+        margin: 0; /* Ensures no white strip */
     }
 }
