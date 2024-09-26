@@ -10,25 +10,32 @@ body {
     color: #333;
     background-color: #f9f9f9;
     line-height: 1.6;
-    text-align: center;
 }
 
 .menu-header {
-    background-color: #ffcc33;
-    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
 }
 
 .menu-background {
-    background-image: url('images/menu.jpg'); /* Pozadí pro hlavičku */
-    background-size: cover;
-    background-position: center;
-    padding: 60px 0;
-    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.menu-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 .main-heading {
     font-size: 36px;
-    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .main-heading span {
@@ -39,8 +46,10 @@ body {
 .text-container {
     padding: 40px 20px;
     max-width: 800px;
-    margin: 0 auto;
-    animation: fadeIn 1s ease-in-out; /* Animace */
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -97,16 +106,6 @@ p {
 .scroll-to-top img {
     width: 40px;
     height: 40px;
-}
-
-/* Animace */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 /* Responzivní design */
