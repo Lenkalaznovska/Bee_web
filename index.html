@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pletený Újezd včelařství a prodej medu. Vysoce kvalitní přírodní med ze Středních Čech.">
     <title>Pletený Újezd Včelařství</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,6 +14,7 @@
 <body>
     <header>
         <div class="logo">
+            <img src="images/logo.png" alt="Logo Včelařství" class="logo-img">
             <h1>Pletený Újezd Včelařství</h1>
             <p>Čistý, přírodní med přímo od včelaře</p>
         </div>
@@ -38,15 +40,25 @@
         <div class="container">
             <h2>O našem včelařství</h2>
             <p>Naše včelařství se nachází ve Středních Čechách, v malebné obci Pletený Újezd u Kladna. Včelaření zde má dlouhou tradici a je nedílnou součástí našeho života. Naše práce s včelami není jen o výrobě medu, ale je pro nás vyjádřením hlubokého respektu k přírodě.</p>
-            <p>Láska k včelám je pro nás srdeční záležitostí. Snažíme se o co nejšetrnější přístup, aby naše včelstva žila v přirozeném prostředí a mohla plnit svou důležitou roli opylovačů. Včely jsou nepostradatelnou součástí našeho ekosystému, a jejich práce významně přispívá k zachování biodiverzity, která prospívá nejen nám, ale i celé přírodě.</p>
+            <img src="images/bees-about.jpg" alt="Včely" class="about-image">
         </div>
     </section>
 
     <section id="products" class="products">
         <div class="container">
             <h2>Náš med a jeho přínosy</h2>
-            <p>Náš med je 100% přírodní, bez přidaných látek a chemikálií. Z každé sklenice našeho medu cítíte čistotu přírody Středních Čech. Je bohatý na vitamíny, minerály a antioxidanty, které prospívají našemu zdraví. Med má přirozené antibakteriální vlastnosti, podporuje imunitu a napomáhá v boji proti nachlazení.</p>
-            <p>Naše včely opylují místní květiny a stromy, což přispívá ke vzniku lahodného a čistého medu. Nabízíme různé druhy medu, odraz sezónních květin a stromů, které naše včely navštěvují.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/honey-flower.jpg" alt="Květový med" class="product-img">
+                    <h3>Květový med</h3>
+                    <p>Lehký a sladký med z květů jarních rostlin. Ideální pro přímou konzumaci a do čaje.</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/honey-forest.jpg" alt="Lesní med" class="product-img">
+                    <h3>Lesní med</h3>
+                    <p>Sytý a aromatický med s hlubokou chutí lesa. Skvělý na pečivo i do dezertů.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -65,6 +77,9 @@
 
     <footer>
         <p>&copy; 2024 Včelařství Pletený Újezd. Všechna práva vyhrazena.</p>
+        <a href="#home" class="scroll-to-top">
+            <img src="images/scroll-top.png" alt="Scroll to top" class="scroll-icon">
+        </a>
     </footer>
 
     <script src="script.js"></script>
