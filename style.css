@@ -1,68 +1,90 @@
-/* Centrum stránky */
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f5e8c7; /* Barva pozadí stejná jako barva v menu */
-  color: #333;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
+/* Header styling */
+header {
+    background-color: #ffcc33;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
-/* Menu a pozadí */
-.menu-header {
-  width: 100%;
-  position: relative;
-  background-color: #f5e8c7; /* Jemná, přírodní barva */
-  padding-bottom: 20px;
+header h1 {
+    font-size: 36px;
 }
 
-.menu-background {
-  background-image: url("images/menu.jpg"); /* Obrázek pozadí v menu */
-  background-size: cover;
-  background-position: bottom right; /* Posun obrázku více vlevo */
-  background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Styl pro hlavní nadpis - Včelařství a Pletený Újezd pod ním */
-.main-heading {
-  font-size: 3.5em;
-  color: #8b4513; /* Světle hnědá barva */
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 4px 4px 15px rgba(0, 0, 0, 0.3); /* Vylepšené stínování */
-  text-align: center;
-  margin: 0;
-  line-height: 1.2;
-}
-.main-heading span {
-  display: block; /* Zajištění rozdělení nadpisu na dvě řádky */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-/* Styl pro nadpisy sekcí */
-/* Scroll to Top Button */
-.scroll-to-top {
-  position: fixed; /* Fixed positioning */
-  bottom: 60px; /* Distance from the bottom, zvětšeno pro více prostoru */
-  right: 20px; /* Distance from the right */
-  display: none; /* Initially hidden */
-  z-index: 1000; /* Make sure it appears above other elements */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.scroll-to-top img {
-  width: 90px; /* Smaller size for mobile */
-  height: 90px; /* Smaller size for mobile */
+/* Hero section */
+.hero {
+    background-image: url('path-to-hero-image.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    color: #fff;
+    text-align: center;
 }
 
-.scroll-to-top.show {
-  display: block; /* Show button when scrolled down */
+.hero h2 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.btn {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* About, Products, and Contact sections */
+.about, .products, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
 }
