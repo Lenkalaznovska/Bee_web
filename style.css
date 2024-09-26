@@ -20,9 +20,14 @@ body {
 }
 
 .menu-background {
+    background: url('images/menu.jpg') no-repeat center center/cover;
     width: 100%;
-    height: auto;
-    filter: brightness(0.8); /* Ztmavení pozadí pro lepší kontrast */
+    height: 300px; /* Změna výšky pro lepší vzhled */
+    transition: filter 0.5s;
+}
+
+.menu-background:hover {
+    filter: brightness(0.7); /* Efekt ztmavení při hoveru */
 }
 
 .menu-content {
@@ -30,14 +35,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
 }
 
 .main-heading {
     font-size: 36px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
@@ -54,6 +56,16 @@ body {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; /* Přidání animace */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 h2 {
