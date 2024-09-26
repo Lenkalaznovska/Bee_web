@@ -1,185 +1,72 @@
-/* Obecné styly */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0ede6; /* Jemnější světlá barva pozadí */
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-/* Hlavní nadpis */
-.main-heading {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 0;
-    color: #8b4513; /* Hnědá barva */
-}
-
-.main-heading span {
-    color: #6a8e55; /* Zelený odstín pro spojení s přírodou */
-}
-
-/* Hlavička s pozadím */
-.menu-background {
-    background-image: url('images/honey_background.jpg'); /* Pozadí s obrázkem */
-    background-size: cover;
+.menu-header {
+    background: #ffcc00; /* barva pozadí pro header */
     padding: 20px 0;
-    position: relative;
+    text-align: center;
 }
 
-/* Navigační menu */
-.navigation {
-    margin-top: -30px; /* Upravíme pozici menu na dolní okraj obrázku */
-    padding: 10px 0;
-    background-color: rgba(245, 232, 199, 0.8); /* Transparentní pozadí */
-    border-radius: 5px; /* Zaoblení rohů */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stínování pro hloubku */
-}
-
-.navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Zarovnání na střed */
-}
-
-.navigation li {
-    margin: 0 15px;
-}
-
-.navigation a {
-    text-decoration: none;
-    color: #6a8e55;
-    font-weight: bold;
-    font-size: 1.1em; /* Velikost písma */
-    transition: color 0.3s, transform 0.3s; /* Přechod při hover */
-}
-
-.navigation a:hover {
-    color: #f6b042; /* Zlatý tón medu pro marketingovou přitažlivost */
-    transform: scale(1.1); /* Zvýšení velikosti při najetí myši */
-}
-
-/* Sekce */
-.text-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-image: url('images/nature_texture.png'); /* Jemná textura pozadí */
+.menu-background {
+    background-image: url('images/honey_image.png');
     background-size: cover;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Odstup mezi sekcemi */
+    background-position: center;
+}
+
+.main-heading {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #8b4513; /* Hnědá barva */
-    text-align: center;
-    font-family: 'Cursive', serif; /* Ručně psaný styl */
+    color: #d19c00;
+    margin-bottom: 15px;
 }
 
-/* Galerie */
 .image-container {
     display: flex;
-    justify-content: center;
-    gap: 40px; /* Větší mezery mezi obrázky */
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .gallery-image {
-    width: 300px; /* Šířka obrázků */
-    height: auto;
-    border-radius: 15px; /* Větší zaoblení rohů */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Stínování pro hloubku */
+    width: 48%; /* Šířka obrázků pro responsivní design */
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-/* Kontaktní sekce */
+@media (max-width: 600px) {
+    .gallery-image {
+        width: 100%; /* Na malých zařízeních budou obrázky široké 100% */
+    }
+}
+
 .contact {
-    background-color: #f5e8d9; /* Pozadí stejné jako tělo */
-    padding: 20px;
-    border-radius: 5px;
+    background: #e8e8e8;
+    padding: 15px;
+    border-radius: 8px;
 }
 
-.contact p {
-    text-align: center;
-}
-
-.contact a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #8b4513; /* Hnědá barva */
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.contact a:hover {
-    background-color: #ffcc00; /* Barva při hover */
-}
-
-/* Tlačítko pro objednání */
-.order-button {
-    background-color: #f6b042;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.order-button:hover {
-    background-color: #d18a00;
-}
-
-/* Zápatí */
-.footer {
-    background-color: #f5e8d9; /* Stejná barva jako pozadí stránky */
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    border-top: 2px solid #e2d5c0; /* Jemné oddělení */
-}
-
-.footer p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #8b4513;
-}
-
-/* Tlačítko pro skrolování nahoru */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #f6b042;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-.scroll-to-top img {
-    width: 30px;
-    height: 30px;
-}
-
-.scroll-to-top:hover {
-    background-color: #d18a00;
-}
-
-/* Mobilní zobrazení */
-@media screen and (max-width: 768px) {
-    .navigation ul {
-        flex-direction: column;
-    }
-
-    .image-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .main-heading {
-        font-size: 2em;
-    }
+.placeholder {
+    color: #888;
+    font-style: italic;
 }
