@@ -1,14 +1,12 @@
-/* Root Variables for Color Management */
+/* Root Variables for Consistency */
 :root {
-    --background-color: #f9f9f9;
-    --text-color: #333;
-    --heading-color: #5d3c1e; /* Brown color for headings */
+    --main-background: #f9f9f9; /* Light background */
+    --footer-background: #333; /* Dark footer */
     --button-bg-color: #5d3c1e; /* Button background color */
-    --button-hover-color: #7a5a42; /* Button hover color */
-    --footer-background: #333; /* Footer background color */
+    --text-color: #333; /* Text color */
 }
 
-/* Reset and General Styles */
+/* Reset and general styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +16,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--main-background);
     line-height: 1.6;
 }
 
@@ -32,12 +30,12 @@ body {
 .menu-background {
     background: url('images/menu.jpg') no-repeat center center/cover;
     width: 100%;
-    height: 300px;
+    height: 300px; /* Adjusted height for better appearance */
     transition: filter 0.5s;
 }
 
 .menu-background:hover {
-    filter: brightness(0.7);
+    filter: brightness(0.7); /* Darkening effect on hover */
 }
 
 .menu-content {
@@ -48,31 +46,27 @@ body {
 }
 
 .main-heading {
-    font-size: 40px; /* Increased size for more impact */
+    font-size: 36px;
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s; /* Added transition for hover effect */
-}
-
-.main-heading:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    text-align: center; /* Center text */
 }
 
 .main-heading span {
     display: block;
-    font-size: 28px; /* Increased for emphasis */
+    font-size: 24px;
 }
 
-/* Section Styling */
+/* Sections */
 .text-container {
     padding: 40px 20px;
     max-width: 800px;
     margin: 40px auto;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.5s ease-in-out;
-    text-align: center; /* Center text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+    text-align: center; /* Center all text */
 }
 
 @keyframes fadeIn {
@@ -85,17 +79,11 @@ body {
 }
 
 h2 {
-    font-size: 32px; /* Increased size for section headings */
+    font-size: 28px;
     margin-bottom: 20px;
-    color: var(--heading-color);
-    border-bottom: 2px solid var(--heading-color);
+    color: #5d3c1e; /* Brown color */
+    border-bottom: 2px solid #5d3c1e; /* Underline */
     padding-bottom: 10px;
-    text-transform: uppercase; /* Added uppercase for emphasis */
-    transition: color 0.3s; /* Added transition for color change */
-}
-
-h2:hover {
-    color: var(--button-hover-color); /* Change color on hover */
 }
 
 p {
@@ -112,6 +100,7 @@ p {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    flex-wrap: wrap; /* Allow images to wrap in smaller screens */
 }
 
 .gallery-image {
@@ -119,7 +108,7 @@ p {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Effect on hover */
 }
 
 .gallery-image:hover {
@@ -127,12 +116,17 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Contact */
+.contact {
+    padding: 40px 20px;
+}
+
 /* Footer */
 .footer {
     background-color: var(--footer-background);
     color: #fff;
     padding: 20px;
-    text-align: center;
+    text-align: center; /* Center footer text */
 }
 
 /* Scroll to Top Button */
@@ -140,49 +134,37 @@ p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    border-radius: 50%;
-    transition: transform 0.3s, background-color 0.3s;
-    background-color: var(--button-bg-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 15px; /* Increased padding for a larger button */
+    background-color: transparent; /* Original image without background */
+    border: none;
+    transition: transform 0.3s; /* Smooth scaling */
+    z-index: 1000;
 }
 
 .scroll-to-top img {
-    width: 50px; /* Increased size of button */
+    width: 50px; /* Size of the scroll button */
     height: auto;
 }
 
-/* Visual Effects on Scroll Button */
 .scroll-to-top:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1); /* Scale on hover */
 }
 
-/* When Scroll Button is over the Footer */
-.scroll-to-top.footer-active {
-    background-color: var(--footer-background); /* Match footer */
-}
-
-/* Media Queries for Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
+    .text-container {
+        padding: 30px 15px;
+    }
+
+    .gallery-image {
+        width: 90%; /* Full width on smaller screens */
+        max-width: 300px; /* Limit max size */
+    }
+
     .main-heading {
-        font-size: 28px; /* Adjusted size for smaller screens */
+        font-size: 28px;
     }
 
     h2 {
         font-size: 24px;
-    }
-
-    .gallery-image {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .image-container {
-        flex-direction: column; /* Stack images on smaller screens */
-        align-items: center; /* Center images */
-    }
-
-    .text-container {
-        padding: 20px 10px; /* Adjusted padding */
     }
 }
