@@ -55,7 +55,7 @@ body {
 }
 
 .main-heading:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .main-heading span {
@@ -70,7 +70,7 @@ body {
     margin: 40px auto;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
     text-align: center; /* Center text */
 }
@@ -91,6 +91,11 @@ h2 {
     border-bottom: 2px solid var(--heading-color);
     padding-bottom: 10px;
     text-transform: uppercase; /* Added uppercase for emphasis */
+    transition: color 0.3s; /* Added transition for color change */
+}
+
+h2:hover {
+    color: var(--button-hover-color); /* Change color on hover */
 }
 
 p {
@@ -122,12 +127,6 @@ p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact */
-.contact {
-    padding: 40px 20px;
-    text-align: center; /* Center text */
-}
-
 /* Footer */
 .footer {
     background-color: var(--footer-background);
@@ -143,12 +142,13 @@ p {
     right: 20px;
     border-radius: 50%;
     transition: transform 0.3s, background-color 0.3s;
-    background-color: var(--background-color); /* Default background */
-    border: 3px solid transparent; /* Default border */
+    background-color: var(--button-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px; /* Increased padding for a larger button */
 }
 
 .scroll-to-top img {
-    width: 40px; /* Reduced size of button */
+    width: 50px; /* Increased size of button */
     height: auto;
 }
 
@@ -160,7 +160,6 @@ p {
 /* When Scroll Button is over the Footer */
 .scroll-to-top.footer-active {
     background-color: var(--footer-background); /* Match footer */
-    border-color: var(--footer-background); /* Match footer */
 }
 
 /* Media Queries for Responsive Design */
