@@ -8,8 +8,10 @@ window.addEventListener('scroll', () => {
         // Change button style based on position
         if (window.scrollY + scrollToTopBtn.offsetHeight > document.body.offsetHeight - 100) {
             scrollToTopBtn.classList.add('footer-active'); // Match footer color
+            scrollToTopBtn.style.background = 'var(--primary-color)'; // Match footer color
         } else {
             scrollToTopBtn.classList.remove('footer-active'); // Revert to default
+            scrollToTopBtn.style.background = 'transparent'; // Revert background
         }
     } else {
         scrollToTopBtn.style.display = 'none';
