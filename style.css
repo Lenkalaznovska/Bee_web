@@ -1,12 +1,3 @@
-/* :root pro barevné schéma a velikosti písma */
-:root {
-    --primary-color: #5d3c1e; /* Hnědá barva */
-    --secondary-color: #e6e0cf; /* Světle hnědá barva */
-    --background-color: #f9f9f9; /* Světle šedé pozadí */
-    --text-color: #333; /* Tmavě šedý text */
-    --footer-background: #5d3c1e; /* Barva pozadí patičky */
-}
-
 /* Reset a obecné styly */
 * {
     margin: 0;
@@ -14,30 +5,38 @@
     box-sizing: border-box;
 }
 
-/* Použití přírodních barev */
+/* Root Nastavení pro centrální řízení barev a velikostí */
+:root {
+    --primary-color: #5d3c1e; /* Hlavní barva */
+    --footer-background: #333; /* Barva pozadí patičky */
+    --background-color: #f9f9f9; /* Barva pozadí stránky */
+    --button-hover-color: #7a5a42; /* Barva pro hover efekt */
+}
+
+/* Obecné styly pro tělo stránky */
 body {
-    background: linear-gradient(to bottom, var(--background-color), var(--secondary-color));
     font-family: 'Roboto', sans-serif;
-    color: var(--text-color);
+    color: #333;
+    background-color: var(--background-color);
     line-height: 1.6;
 }
 
-/* Centrum obsahu */
-.centered {
-    text-align: center;
-}
-
-/* Parallax efekt a styl headeru */
+/* Menu */
 .menu-header {
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
-.parallax {
+.menu-background {
     background: url('images/menu.jpg') no-repeat center center/cover;
-    height: 300px;
-    background-attachment: fixed;
+    width: 100%;
+    height: 300px; 
+    transition: filter 0.5s;
+}
+
+.menu-background:hover {
+    filter: brightness(0.7); 
 }
 
 .menu-content {
@@ -48,25 +47,26 @@ body {
 }
 
 .main-heading {
-    font-size: 48px;
+    font-size: 36px;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .main-heading span {
     display: block;
-    font-size: 36px;
+    font-size: 24px;
 }
 
-/* Text a kontejnery */
+/* Sekce */
 .text-container {
     padding: 40px 20px;
     max-width: 800px;
     margin: 40px auto;
-    background: rgba(255, 255, 255, 0.9);
+    background: #fff;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out; 
+    text-align: center; /* Centered text */
 }
 
 @keyframes fadeIn {
@@ -81,7 +81,7 @@ body {
 h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--primary-color); 
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
 }
@@ -105,9 +105,9 @@ p {
 .gallery-image {
     width: 300px;
     height: auto;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 .gallery-image:hover {
@@ -118,13 +118,6 @@ p {
 /* Kontakt */
 .contact {
     padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.contact p {
-    margin-bottom: 15px;
 }
 
 /* Patička */
@@ -140,29 +133,32 @@ p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: transparent; /* Transparentní pozadí */
+    border: none;
+    cursor: pointer;
     transition: background 0.3s;
 }
 
-.scroll-to-top:hover {
-    background: #7a5a42;
+.scroll-to-top img {
+    width: 40px; /* Zmenšení velikosti tlačítka */
+    height: auto;
 }
 
-/* Media Queries pro responzivní design */
-@media (max-width: 768px) {
-    .main-heading {
-        font-size: 36px;
-    }
+/* Barva tlačítka při hoveru a změně pozice */
+.scroll-to-top:hover {
+    background: var(--button-hover-color); /* Barva při hoveru */
+}
 
-    h2 {
-        font-size: 24px;
-    }
+/* Změna barvy pozadí tlačítka podle pozice */
+body {
+    --scroll-button-bg-color: var(--background-color); /* Default barva */
+}
 
-    .gallery-image {
-        width: 100%;
-        max-width: 250px;
-    }
+.scroll-to-top {
+    background-color: var(--scroll-button-bg-color); /* Barva tlačítka */
+}
+
+/* Změna barvy tlačítka při blízkosti patičky */
+.footer .scroll-to-top:hover {
+    background-color: var(--footer-background); /* Barva když je blízko footeru */
 }
