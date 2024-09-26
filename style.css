@@ -1,9 +1,9 @@
+/* Reset a obecné styly */
 :root {
-    --primary-color: #8B5A2B; /* Přírodní hnědá */
-    --secondary-color: #D3B89A; /* Světle hnědá */
-    --background-color: #FAF0E6; /* Světle krémová */
-    --text-color: #333; /* Tmavý text */
-    --hover-color: #FFCC00; /* Zlatá barva */
+    --main-bg-color: #f9f9f9;
+    --primary-color: #5d3c1e; /* Hnědá barva */
+    --secondary-color: #e7d7b6; /* Světlá barva */
+    --highlight-color: #f6e9c1; /* Světlý akcent */
 }
 
 * {
@@ -14,8 +14,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: #333;
+    background-color: var(--main-bg-color);
     line-height: 1.6;
 }
 
@@ -29,12 +29,12 @@ body {
 .menu-background {
     background: url('images/menu.jpg') no-repeat center center/cover;
     width: 100%;
-    height: 300px; 
+    height: 300px; /* Změna výšky pro lepší vzhled */
     transition: filter 0.5s;
 }
 
 .menu-background:hover {
-    filter: brightness(0.8); 
+    filter: brightness(0.7); /* Efekt ztmavení při hoveru */
 }
 
 .menu-content {
@@ -45,14 +45,14 @@ body {
 }
 
 .main-heading {
-    font-size: 48px; /* Zvýšení velikosti nadpisu */
+    font-size: 36px;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .main-heading span {
     display: block;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 /* Sekce */
@@ -60,15 +60,11 @@ body {
     padding: 40px 20px;
     max-width: 800px;
     margin: 40px auto;
-    background: var(--secondary-color);
-    border-radius: 15px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.5s ease-in-out; 
+    background: var(--highlight-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; /* Přidání animace */
     text-align: center; /* Vycentrování textu */
-}
-
-.text-container:hover {
-    transform: scale(1.03); /* Efekt zvětšení při hoveru */
 }
 
 @keyframes fadeIn {
@@ -81,16 +77,11 @@ body {
 }
 
 h2 {
-    font-size: 36px; /* Zvýšení velikosti nadpisu */
+    font-size: 28px;
     margin-bottom: 20px;
-    color: var(--primary-color); 
-    border-bottom: 3px solid var(--primary-color); 
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
-    transition: color 0.3s; /* Přechod barvy při hoveru */
-}
-
-h2:hover {
-    color: var(--hover-color); /* Změna barvy při hoveru */
 }
 
 p {
@@ -113,77 +104,47 @@ p {
     width: 300px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Efekt při hoveru */
 }
 
 .gallery-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Kontakt */
 .contact {
     padding: 40px 20px;
-    background-color: var(--secondary-color);
-    border-radius: 15px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Vycentrování textu */
 }
 
 /* Patička */
 .footer {
     background-color: var(--primary-color);
     color: #fff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Scroll to Top Button */
+/* Scroll to Top */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--primary-color);
-    color: white;
+    background: transparent; /* Bez barvy kolem */
     border-radius: 50%;
-    width: 70px; /* Zvýšení velikosti tlačítka */
-    height: 70px; /* Zvýšení velikosti tlačítka */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
 .scroll-to-top:hover {
-    background-color: var(--hover-color);
+    transform: scale(1.1);
 }
 
-/* Animace pro scroll button */
-.scroll-to-top img {
-    width: 35px; /* Zvýšení velikosti ikony */
-    height: 35px; /* Zvýšení velikosti ikony */
-}
-
-/* Média dotazy pro responsivitu */
-@media (max-width: 768px) {
-    .image-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
+/* Média dotazy pro responzivní design */
+@media (max-width: 600px) {
     .gallery-image {
-        width: 90%; /* Zmenšení šířky pro mobil */
-    }
-
-    .text-container, .contact {
-        padding: 20px;
-    }
-
-    .scroll-to-top {
-        width: 60px; /* Zmenšení velikosti tlačítka na mobilu */
-        height: 60px; /* Zmenšení velikosti tlačítka na mobilu */
+        width: 100%; /* Přizpůsobení na mobilních zařízeních */
     }
 }
