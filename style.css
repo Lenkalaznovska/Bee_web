@@ -177,4 +177,13 @@ p {
         width: 100%;
         max-width: 300px;
     }
+
+    .image-container {
+        flex-direction: column; /* Stack images on smaller screens */
+        align-items: center; /* Center images */
+    }
+
+    .text-container {
+        padding: 20px 10px; /* Adjusted padding */
+    }
 }
