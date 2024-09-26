@@ -12,6 +12,7 @@ body {
     line-height: 1.6;
 }
 
+/* Menu */
 .menu-header {
     position: relative;
     overflow: hidden;
@@ -21,6 +22,7 @@ body {
 .menu-background {
     width: 100%;
     height: auto;
+    filter: brightness(0.8); /* Ztmavení pozadí pro lepší kontrast */
 }
 
 .menu-content {
@@ -43,6 +45,7 @@ body {
     font-size: 24px;
 }
 
+/* Sekce */
 .text-container {
     padding: 40px 20px;
     max-width: 800px;
@@ -62,6 +65,7 @@ p {
     margin-bottom: 15px;
 }
 
+/* Galerie */
 .gallery {
     padding: 40px 20px;
 }
@@ -85,10 +89,12 @@ p {
     transform: scale(1.05);
 }
 
+/* Kontakt */
 .contact {
     padding: 40px 20px;
 }
 
+/* Patička */
 .footer {
     background-color: #333;
     color: #fff;
@@ -96,31 +102,27 @@ p {
     text-align: center;
 }
 
+/* Scroll to Top */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
+    z-index: 1000;
 }
 
-.scroll-to-top img {
-    width: 40px;
-    height: 40px;
-}
-
-/* Responzivní design */
+/* Media Queries pro responzivní design */
 @media (max-width: 768px) {
-    .image-container {
-        flex-direction: column;
-        align-items: center;
+    .main-heading {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 24px;
     }
 
     .gallery-image {
         width: 100%;
         max-width: 300px;
-    }
-
-    .main-heading {
-        font-size: 30px;
     }
 }
