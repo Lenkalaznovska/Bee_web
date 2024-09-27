@@ -15,3 +15,19 @@ window.addEventListener('scroll', () => {
         scrollToTopButton.style.display = 'none';
     }
 });
+
+// Zobrazení cookies lišty, pokud souhlas nebyl udělen
+window.addEventListener('load', () => {
+    const cookieConsent = document.getElementById('cookieConsent');
+    const acceptCookies = document.getElementById('acceptCookies');
+    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+
+    if (!cookiesAccepted) {
+        cookieConsent.style.display = 'block';
+    }
+
+    acceptCookies.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieConsent.style.display = 'none';
+    });
+});
