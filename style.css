@@ -51,7 +51,7 @@ body {
     font-size: 48px; /* Zvětšení velikosti nadpisu */
     color: #fff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    animation: float 2s infinite; /* Přidání pohybu nadpisu */
+    animation: float 2.5s infinite; /* Zpomalení pohybu nadpisu */
 }
 
 @keyframes float {
@@ -85,6 +85,10 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.text-container:hover {
+    transform: translateY(-5px); /* Pohyb při hoveru nad sekcí */
 }
 
 h2 {
@@ -154,7 +158,7 @@ p {
 .footer {
     background-color: var(--highlight-color); /* Světlá medová barva */
     color: #5d3c1e; /* Tmavší barva pro text */
-    padding: 20px; /* Zmenšení paddingu */
+    padding: 25px; /* Lehce zvětšené padding */
     text-align: center;
 }
 
@@ -162,12 +166,12 @@ p {
 .scroll-to-top {
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 25px; /* Posunutí o 5px níže */
     background-color: transparent; /* Ponechání originálního obrázku */
     border: none;
     cursor: pointer;
-    width: 60px; /* Zvětšení velikosti */
-    height: 60px; /* Zvětšení velikosti */
+    width: 70px; /* Zvětšení velikosti */
+    height: 70px; /* Zvětšení velikosti */
 }
 
 .scroll-to-top img {
