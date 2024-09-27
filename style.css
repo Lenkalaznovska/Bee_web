@@ -15,7 +15,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #5d3c1e; /* Tmavší hnědá pro text */
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color); /* Pozadí celé stránky */
     line-height: 1.6;
 }
 
@@ -130,7 +130,19 @@ body {
     transition: transform 0.3s ease; /* Plynulý přechod */
 }
 
-/* Responsive */
+/* Animace pro sekce při scrollování */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivní design */
 @media (max-width: 768px) {
     .text-container {
         padding: 20px 15px; /* Menší padding na mobilních zařízeních */
@@ -144,4 +156,9 @@ body {
     .gallery-image {
         width: 100%; /* Přizpůsobení šířky obrázku na mobilních */
     }
+}
+
+/* Zpoždění animace pro sekce při scrollování */
+.section-visible {
+    animation: fadeIn 0.8s forwards; /* Plynulé zobrazení sekcí */
 }
