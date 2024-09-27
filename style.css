@@ -1,10 +1,10 @@
 /* Reset a obecné styly */ 
 :root {
-    --main-bg-color: #fbf7e6; /* Ještě světlejší pozadí celé stránky */
+    --main-bg-color: #f6f1e7; /* Ještě světlejší pozadí celé stránky */
     --primary-color: #5d3c1e; /* Hnědá barva */
     --secondary-color: #e7d7b6; /* Světlá barva */
-    --highlight-color: #f9e5b8; /* Světlá medová barva */
-    --section-bg-color: #f4d9a5; /* Lehce tmavší pozadí pro sekce */
+    --highlight-color: #f6e9c1; /* Světlý akcent */
+    --section-bg-color: #e7d7b6; /* Lehce tmavší pozadí pro sekce */
     --shadow-color: rgba(0, 0, 0, 0.2);
     --link-color: #007BFF; /* Modrá barva pro odkazy */
     --transition-speed: 0.3s; /* Rychlost přechodů */
@@ -78,7 +78,13 @@ body {
     transform: translateY(-10px); /* Vystupující efekt */
     opacity: 0; /* Počáteční průhlednost */
     animation-fill-mode: forwards; /* Udržení koncového stavu animace */
-    transition: background-color var(--transition-speed); /* Přechod pro hover efekt */
+    transition: background-color var(--transition-speed), transform var(--transition-speed); /* Přechod pro hover efekt */
+}
+
+.text-container:hover {
+    background: #f6d47a; /* Změna barvy pozadí při hoveru */
+    transform: translateY(-5px) scale(1.05); /* Pohyb a zvětšení při hoveru nad sekcí */
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7); /* Zvýšení stínu při hoveru */
 }
 
 @keyframes slideIn {
@@ -90,12 +96,6 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.text-container:hover {
-    background: #f6d47a; /* Změna barvy pozadí při hoveru */
-    transform: translateY(-5px); /* Pohyb při hoveru nad sekcí */
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7); /* Zvýšení stínu při hoveru */
 }
 
 h2 {
