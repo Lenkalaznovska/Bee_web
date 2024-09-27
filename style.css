@@ -65,9 +65,9 @@ body {
 
 /* Sekce */
 .text-container {
-    padding: 30px 20px; /* Zmenšení paddingu */
+    padding: 40px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
     max-width: 900px;
-    margin: 30px auto; /* Zmenšení mezery kolem sekcí */
+    margin: 50px auto; /* Zvýšení mezery kolem sekcí */
     background: var(--highlight-color);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5); /* Zlatavé stínování */
@@ -105,13 +105,13 @@ p {
 
 /* Galerie */
 .gallery {
-    padding: 30px 20px; /* Zmenšení paddingu */
+    padding: 40px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
 }
 
 .image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px; /* Zmenšení mezery mezi obrázky */
+    gap: 20px; /* Zvětšení mezery mezi obrázky */
 }
 
 .gallery-image {
@@ -132,7 +132,7 @@ p {
     background: var(--highlight-color);
     border: 2px solid var(--primary-color);
     border-radius: 10px;
-    padding: 20px; /* Zmenšení paddingu */
+    padding: 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
     animation: fadeIn 0.8s ease-in-out;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
 }
@@ -151,14 +151,14 @@ p {
 
 /* Kontakt */
 .contact {
-    padding: 30px 20px; /* Zmenšení paddingu */
+    padding: 40px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
 }
 
 /* Patička */
 .footer {
     background-color: var(--highlight-color); /* Světlá medová barva */
     color: #5d3c1e; /* Tmavší barva pro text */
-    padding: 25px; /* Lehce zvětšené padding */
+    padding: 40px; /* Zvýšení paddingu pro více prostoru */
     text-align: center;
 }
 
@@ -166,7 +166,7 @@ p {
 .scroll-to-top {
     position: fixed;
     right: 20px;
-    bottom: 25px; /* Posunutí o 5px níže */
+    bottom: 40px; /* Posunutí o 5px níže */
     background-color: transparent; /* Ponechání originálního obrázku */
     border: none;
     cursor: pointer;
@@ -192,6 +192,6 @@ p {
         font-size: 28px; /* Zmenšení velikosti nadpisu na mobilu */
     }
     .text-container, .gallery, .order-section, .contact {
-        padding: 20px; /* Zmenšení paddingu */
+        padding: 30px; /* Zmenšení paddingu pro mobil */
     }
 }
