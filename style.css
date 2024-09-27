@@ -72,7 +72,7 @@ body {
     margin: 50px auto; /* Zvýšení mezery kolem sekcí */
     background: var(--section-bg-color); /* Lehce tmavší pozadí pro sekce */
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5); /* Zlatavé stínování */
+    box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
     animation: slideIn 0.5s ease-in-out; /* Vylepšená animace příjezdu */
     text-align: center;
     transform: translateY(-10px); /* Vystupující efekt */
@@ -83,8 +83,8 @@ body {
 
 .text-container:hover {
     background: #f6d47a; /* Změna barvy pozadí při hoveru */
-    transform: translateY(-5px) scale(1.05); /* Pohyb a zvětšení při hoveru nad sekcí */
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7); /* Zvýšení stínu při hoveru */
+    transform: translateY(-15px) scale(1.05); /* Pohyb nahoru a zvětšení při hoveru nad sekcí */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Zvýšení stínu při hoveru */
 }
 
 @keyframes slideIn {
