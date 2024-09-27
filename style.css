@@ -99,6 +99,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px; /* Větší mezera mezi obrázky */
+    flex-wrap: wrap; /* Zajištění, že se obrázky přizpůsobí obrazovce */
 }
 
 .gallery-image {
@@ -183,6 +184,12 @@ h2 {
 
     .gallery-image {
         width: 100%; /* Přizpůsobení šířky obrázku na mobilních */
+        max-width: 300px; /* Maximální šířka pro desktop */
+    }
+    
+    .image-container {
+        flex-direction: column; /* Přizpůsobení uspořádání pro mobilní zařízení */
+        align-items: center; /* Vycentrování obrázků */
     }
 }
 
@@ -194,5 +201,9 @@ h2 {
 /* Efekt přiblížení sekcí */
 .text-container:hover {
     transform: scale(1.02); /* Mírné zvětšení sekce při najetí myší */
-    transition: transform 0.3s ease; /* Hladký přechod */
+}
+
+/* Styl pro nadpisy sekcí */
+h2, h3 {
+    margin: 20px 0; /* Vzdálenosti nad a pod nadpisy */
 }
