@@ -3,6 +3,7 @@
     --main-bg-color: #fce5b8; /* Velmi světle medová barva */
     --primary-color: #5d3c1e; /* Hnědá barva */
     --section-bg-color: #e7d7b6; /* Lehce tmavší pozadí pro sekce */
+    --highlight-color: #ffd700; /* Zlatá barva */
     --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -17,7 +18,6 @@ body {
     color: #5d3c1e; /* Tmavší hnědá pro text */
     background-color: var(--main-bg-color); /* Pozadí celé stránky */
     line-height: 1.6;
-    text-align: center; /* Vycentrování textu */
 }
 
 /* Menu */
@@ -44,7 +44,6 @@ body {
     font-size: 48px; /* Zvětšení velikosti nadpisu */
     color: #fff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    animation: slideDown 0.8s ease; /* Animace pro nadpis */
 }
 
 /* Sekce */
@@ -80,6 +79,13 @@ body {
     transform: translateY(0);
 }
 
+/* Nadpisy v sekcích */
+.text-container h2 {
+    text-align: center; /* Vycentrování textu */
+    text-decoration: underline; /* Podtržení */
+    text-decoration-color: var(--highlight-color); /* Zlatá barva */
+}
+
 /* Galerie */
 .image-container {
     display: flex;
@@ -97,12 +103,18 @@ body {
 /* Kontaktní sekce */
 .contact a {
     color: var(--primary-color);
-    text-decoration: none;
+    text-decoration: none; /* Bez podtržení */
 }
 
-.contact a:hover {
-    text-decoration: underline; /* Podtržení při hoveru */
-    font-weight: bold; /* Zvýraznění při hoveru */
+/* Stylování odkazů */
+a {
+    color: var(--primary-color);
+    text-decoration: underline; /* Podtržení pro odkazy */
+}
+
+/* Zvýraznění objednání medu */
+.order-section p {
+    font-weight: bold; /* Zvýraznění textu */
 }
 
 /* Footer */
@@ -118,7 +130,7 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    display: none; /* Skrýt výchozí */
+    display: none;
     background-color: #fff;
     border: none;
     border-radius: 50%;
@@ -135,18 +147,6 @@ body {
 .text-container:hover {
     transform: scale(1.02); /* Zvětšení při hoveru */
     transition: transform 0.3s ease; /* Plynulý přechod */
-}
-
-/* Animace pro nadpis */
-@keyframes slideDown {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 /* Animace pro sekce při scrollování */
