@@ -1,19 +1,15 @@
-// Smooth scroll to top functionality
-const scrollToTopButton = document.getElementById('scrollToTop');
+// Scroll to top functionality with animation
+const scrollToTopButton = document.querySelector('.scroll-to-top');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
+    if (window.pageYOffset > 200) {
         scrollToTopButton.style.display = 'flex';
-        scrollToTopButton.style.opacity = '1';
     } else {
-        scrollToTopButton.style.opacity = '0';
-        setTimeout(() => {
-            scrollToTopButton.style.display = 'none';
-        }, 300);
+        scrollToTopButton.style.display = 'none';
     }
 });
 
-scrollToTopButton.addEventListener('click', (event) => {
+scrollToTopButton.addEventListener('click', function (event) {
     event.preventDefault();
     window.scrollTo({
         top: 0,
