@@ -166,12 +166,25 @@ p {
 .scroll-to-top {
     position: fixed;
     right: 20px;
-    bottom: 40px; /* Posunutí o 5px níže */
+    bottom: 45px; /* Posunutí o 5px níže */
     background-color: transparent; /* Ponechání originálního obrázku */
     border: none;
     cursor: pointer;
     width: 70px; /* Zvětšení velikosti */
     height: 70px; /* Zvětšení velikosti */
+    animation: pulse 1.5s infinite; /* Pulzující efekt */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Zvětšení při pulzování */
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .scroll-to-top img {
