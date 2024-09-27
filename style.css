@@ -1,6 +1,6 @@
-/* Reset a obecné styly */
+/* Reset a obecné styly */ 
 :root {
-    --main-bg-color: #f9f9f9;
+    --main-bg-color: #f5e0b3; /* Velmi lehké světlé medové pozadí */
     --primary-color: #5d3c1e; /* Hnědá barva */
     --secondary-color: #e7d7b6; /* Světlá barva */
     --highlight-color: #f6e9c1; /* Světlý akcent */
