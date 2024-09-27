@@ -39,15 +39,28 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* Animace pro nadpis */
 .main-heading {
     font-size: 48px; /* Zvětšení velikosti nadpisu */
     color: #fff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    animation: slideDown 0.8s ease forwards; /* Přidání animace */
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Sekce */
 .text-container {
-    padding: 35px 30px; /* Zmenšení horního paddingu */
+    padding: 40px 30px; /* Zmenšení horního paddingu */
     max-width: 900px;
     margin: 50px auto; /* Zvýšení mezery kolem sekcí */
     background: var(--section-bg-color); /* Lehce tmavší pozadí pro sekce */
