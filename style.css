@@ -73,9 +73,6 @@ body {
     background: var(--section-bg-color); /* Lehce tmavší pozadí pro sekce */
     border-radius: 10px;
     box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
-    animation: slideIn 0.5s ease-in-out; /* Vylepšená animace příjezdu */
-    text-align: center;
-    transform: translateY(-10px); /* Vystupující efekt */
     opacity: 0; /* Počáteční průhlednost */
     animation-fill-mode: forwards; /* Udržení koncového stavu animace */
     transition: background-color var(--transition-speed), transform var(--transition-speed); /* Přechod pro hover efekt */
@@ -87,15 +84,66 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Zvýšení stínu při hoveru */
 }
 
-@keyframes slideIn {
+/* Animace pro příchod sekcí z různých stran */
+@keyframes slideInFromLeft {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Příjezd ze spodu */
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Přiřazení animací */
+.section1 {
+    animation: slideInFromLeft 0.8s ease-in-out; /* Přijíždí zleva */
+}
+
+.section2 {
+    animation: slideInFromRight 0.8s ease-in-out; /* Přijíždí zprava */
+}
+
+.section3 {
+    animation: slideInFromTop 0.8s ease-in-out; /* Přijíždí shora */
+}
+
+.section4 {
+    animation: slideInFromBottom 0.8s ease-in-out; /* Přijíždí zespodu */
 }
 
 h2 {
@@ -211,34 +259,5 @@ a:hover {
 }
 
 .scroll-to-top:hover {
-    transform: scale(1.1); /* Efekt zvětšení */
-}
-
-/* Hover efekty pro tlačítka */
-button {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
-}
-
-button:hover {
-    background-color: #4a2a15; /* Tmavší odstín při hoveru */
-    transform: translateY(-3px); /* Zvednutí tlačítka při hoveru */
-}
-
-/* Media Queries pro responzivní design */
-@media (max-width: 768px) {
-    .main-heading {
-        font-size: 36px; /* Zmenšení velikosti nadpisu na mobilu */
-    }
-    h2 {
-        font-size: 28px; /* Zmenšení velikosti nadpisu na mobilu */
-    }
-    .text-container, .gallery, .order-section, .contact {
-        padding: 30px; /* Zmenšení paddingu pro mobil */
-    }
+    transform: scale(1.1); /* Efekt zvětšení při hoveru */
 }
