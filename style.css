@@ -5,6 +5,7 @@
     --secondary-color: #e7d7b6; /* Světlá barva */
     --highlight-color: #f6e9c1; /* Světlý akcent */
     --shadow-color: rgba(0, 0, 0, 0.2);
+    --link-color: #007BFF; /* Modrá barva pro odkazy */
     --transition-speed: 0.3s; /* Rychlost přechodů */
 }
 
@@ -65,7 +66,7 @@ body {
 
 /* Sekce */
 .text-container {
-    padding: 40px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
+    padding: 45px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
     max-width: 900px;
     margin: 50px auto; /* Zvýšení mezery kolem sekcí */
     background: var(--highlight-color);
@@ -74,6 +75,8 @@ body {
     animation: fadeIn 0.5s ease-in-out;
     text-align: center;
     transform: translateY(-10px); /* Vystupující efekt */
+    opacity: 0; /* Počáteční průhlednost */
+    animation-fill-mode: forwards; /* Udržení koncového stavu animace */
 }
 
 @keyframes fadeIn {
@@ -103,6 +106,16 @@ p {
     margin-bottom: 15px; /* Zmenšení mezery pod odstavci */
 }
 
+/* Odkazy */
+a {
+    color: var(--link-color); /* Modrá barva pro odkazy */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Podtržení při hoveru */
+}
+
 /* Galerie */
 .gallery {
     padding: 40px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
@@ -123,8 +136,8 @@ p {
 }
 
 .gallery-image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Menší efekt zvětšení */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Objednání medu - zvýraznění textu */
@@ -166,7 +179,7 @@ p {
 .scroll-to-top {
     position: fixed;
     right: 20px;
-    bottom: 45px; /* Posunutí o 5px níže */
+    bottom: 50px; /* Posunutí o 5px níže */
     background-color: transparent; /* Ponechání originálního obrázku */
     border: none;
     cursor: pointer;
