@@ -1,13 +1,12 @@
 /* Reset a obecné styly */
 :root {
-    --main-bg-color: #f2f4ec; /* Jemně zelenkavá pro přírodní pocit */
-    --primary-color: #5a3b1e; /* Tmavší hnědá */
-    --secondary-color: #e8dcc0; /* Světlá krémová barva */
-    --highlight-color: #f6e9c1; /* Zlatavý akcent */
-    --link-color: #3a6e39; /* Zelená pro odkazy */
-    --transition-speed: 0.4s; /* Plynulejší přechody */
-    --shadow-color: rgba(0, 0, 0, 0.15); /* Jemnější stín */
-    --border-radius: 12px; /* Obecný radius pro zaoblení */
+    --main-bg-color: #f9f9f9;
+    --primary-color: #5d3c1e; /* Hnědá barva */
+    --secondary-color: #e7d7b6; /* Světlá barva */
+    --highlight-color: #f6e9c1; /* Světlý akcent */
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --link-color: #007BFF; /* Modrá barva pro odkazy */
+    --transition-speed: 0.3s; /* Rychlost přechodů */
 }
 
 * {
@@ -17,8 +16,8 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    color: #5d3c1e; /* Tmavší hnědá pro text */
     background-color: var(--main-bg-color);
     line-height: 1.6;
 }
@@ -33,15 +32,13 @@ body {
 .menu-background {
     background: url('images/menu.jpg') no-repeat center center/cover;
     width: 100%;
-    height: 400px;
-    transform: translateY(-10px);
-    transition: transform var(--transition-speed), opacity var(--transition-speed);
-    opacity: 0.95; /* Jemná průhlednost */
+    height: 400px; /* Zvětšení výšky pro lepší vzhled */
+    transition: transform var(--transition-speed);
+    transform: translateY(-10px); /* Vystupující efekt */
 }
 
 .menu-background:hover {
-    transform: translateY(-5px);
-    opacity: 1;
+    transform: translateY(-5px); /* Zmenšení vystupujícího efektu při hoveru */
 }
 
 .menu-content {
@@ -52,10 +49,10 @@ body {
 }
 
 .main-heading {
-    font-size: 48px;
+    font-size: 48px; /* Zvětšení velikosti nadpisu */
     color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    animation: float 3s ease-in-out infinite;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    animation: float 2.5s infinite; /* Zpomalení pohybu nadpisu */
 }
 
 @keyframes float {
@@ -69,106 +66,112 @@ body {
 
 /* Sekce */
 .text-container {
-    padding: 50px 30px;
-    margin: 40px auto;
+    padding: 45px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
+    max-width: 900px;
+    margin: 50px auto; /* Zvýšení mezery kolem sekcí */
     background: var(--highlight-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 8px 30px var(--shadow-color);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.6s ease forwards;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5); /* Zlatavé stínování */
+    animation: fadeIn 0.5s ease-in-out;
     text-align: center;
+    transform: translateY(-10px); /* Vystupující efekt */
+    opacity: 0; /* Počáteční průhlednost */
+    animation-fill-mode: forwards; /* Udržení koncového stavu animace */
 }
 
 @keyframes fadeIn {
-    0% {
+    from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(10px);
     }
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 .text-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Pohyb při hoveru nad sekcí */
 }
 
 h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 20px; /* Zmenšení mezery pod nadpisem */
     color: var(--primary-color);
-    border-bottom: 4px solid var(--primary-color);
-    padding-bottom: 10px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px; /* Zmenšení paddingu */
 }
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Zmenšení mezery pod odstavci */
+}
+
+/* Odkazy */
+a {
+    color: var(--link-color); /* Modrá barva pro odkazy */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Podtržení při hoveru */
 }
 
 /* Galerie */
 .gallery {
-    padding: 40px 30px;
+    padding: 40px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
 }
 
 .image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 20px; /* Zvětšení mezery mezi obrázky */
 }
 
 .gallery-image {
     width: 100%;
     height: 300px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 6px 15px var(--shadow-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .gallery-image:hover {
-    transform: scale(1.08);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Menší efekt zvětšení */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Objednání medu */
+/* Objednání medu - zvýraznění textu */
 .order-section {
     background: var(--highlight-color);
-    border: 3px solid var(--primary-color);
-    border-radius: var(--border-radius);
-    padding: 30px;
-    box-shadow: 0 6px 25px var(--shadow-color);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-}
-
-.order-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
+    animation: fadeIn 0.8s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
 }
 
 .order-section h3 {
-    font-size: 34px;
+    font-size: 36px;
     color: var(--primary-color);
 }
 
 .order-section p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;
+    line-height: 1.6;
     font-weight: bold;
 }
 
 /* Kontakt */
 .contact {
-    padding: 40px 30px;
+    padding: 40px 30px; /* Zvýšení paddingu pro vzdušnější vzhled */
 }
 
 /* Patička */
 .footer {
-    background-color: var(--highlight-color);
-    color: var(--primary-color);
-    padding: 40px;
+    background-color: var(--highlight-color); /* Světlá medová barva */
+    color: #5d3c1e; /* Tmavší barva pro text */
+    padding: 40px; /* Zvýšení paddingu pro více prostoru */
     text-align: center;
 }
 
@@ -176,13 +179,13 @@ p {
 .scroll-to-top {
     position: fixed;
     right: 20px;
-    bottom: 50px;
-    background-color: transparent;
+    bottom: 50px; /* Posunutí o 5px níže */
+    background-color: transparent; /* Ponechání originálního obrázku */
     border: none;
     cursor: pointer;
-    width: 60px;
-    height: 60px;
-    animation: pulse 2s infinite;
+    width: 70px; /* Zvětšení velikosti */
+    height: 70px; /* Zvětšení velikosti */
+    animation: pulse 1.5s infinite; /* Pulzující efekt */
 }
 
 @keyframes pulse {
@@ -190,7 +193,7 @@ p {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.1); /* Zvětšení při pulzování */
     }
     100% {
         transform: scale(1);
@@ -198,26 +201,23 @@ p {
 }
 
 .scroll-to-top img {
-    width: 100%;
+    width: 100%; /* Celá šířka ikony */
     height: auto;
 }
 
 .scroll-to-top:hover {
-    transform: scale(1.15);
+    transform: scale(1.1); /* Efekt zvětšení */
 }
 
 /* Media Queries pro responzivní design */
 @media (max-width: 768px) {
     .main-heading {
-        font-size: 36px;
+        font-size: 36px; /* Zmenšení velikosti nadpisu na mobilu */
     }
     h2 {
-        font-size: 28px;
+        font-size: 28px; /* Zmenšení velikosti nadpisu na mobilu */
     }
     .text-container, .gallery, .order-section, .contact {
-        padding: 30px;
+        padding: 30px; /* Zmenšení paddingu pro mobil */
     }
-    .gallery-image {
-        height: 250px;
-    }
-}
+} 
