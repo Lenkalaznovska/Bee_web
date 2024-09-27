@@ -4,8 +4,11 @@
     --primary-color: #5d3c1e; /* Hnědá barva */
     --secondary-color: #e7d7b6; /* Světlá barva */
     --highlight-color: #f6e9c1; /* Světlý akcent */
+    --accent-color: #ffd700; /* Zlatý akcent pro marketingový efekt */
     --shadow-color: rgba(0, 0, 0, 0.2);
-    --transition-speed: 0.3s; /* Rychlost přechodů */
+    --transition-speed: 0.3s;
+    --border-radius: 15px;
+    --scroll-btn-bg: linear-gradient(135deg, #5d3c1e, #ffd700);
 }
 
 * {
@@ -16,62 +19,32 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
     background-color: var(--main-bg-color);
+    color: #333;
     line-height: 1.8;
     background-image: url('images/bee_pattern.png');
     background-size: cover;
     background-attachment: fixed;
 }
 
-/* Menu */
-.menu-header {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-
-.menu-background {
-    background: url('images/menu.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 450px;
-    transition: filter var(--transition-speed), transform var(--transition-speed);
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px var(--shadow-color);
-    animation: backgroundMove 8s infinite alternate;
-}
-
-@keyframes backgroundMove {
-    from {
-        background-position: 100% 50%;
-    }
-    to {
-        background-position: 0 50%;
-    }
-}
-
-.menu-background:hover {
-    filter: brightness(0.7);
-    transform: translateY(-5px);
-}
-
-.menu-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
+/* Hlavní nadpis */
 .main-heading {
-    font-size: 48px;
-    color: #fff;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    font-size: 50px;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    animation: fadeInTitle 1.5s ease-in-out;
 }
 
-.main-heading span {
-    display: block;
-    font-size: 36px;
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Sekce */
@@ -80,7 +53,7 @@ body {
     max-width: 900px;
     margin: 60px auto;
     background: var(--highlight-color);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     animation: fadeUp 1.2s ease-in-out;
     text-align: center;
@@ -99,10 +72,10 @@ body {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 30px;
     color: var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
     padding-bottom: 15px;
     transition: transform 0.3s ease-in-out;
 }
@@ -113,78 +86,112 @@ h2:hover {
 
 p {
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 /* Galerie */
 .image-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .gallery-image {
     width: 100%;
     max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px var(--shadow-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(2deg);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Kontakty */
-.contact a {
-    color: var(--primary-color);
-    text-decoration: none;
-    border-bottom: 1px solid var(--primary-color);
-    transition: color 0.3s ease, border-color 0.3s ease;
+/* Objednávka - zvýraznění */
+.order-section {
+    background: var(--secondary-color);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--primary-color);
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeUp 0.8s ease-in-out;
 }
 
-.contact a:hover {
-    color: #000;
-    border-color: #000;
+.order-section h3 {
+    font-size: 30px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+.order-section p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Tlačítko Objednat */
+.contact-link {
+    background: var(--scroll-btn-bg);
+    padding: 15px 25px;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.contact-link:hover {
+    background: linear-gradient(135deg, #ffd700, #5d3c1e);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 .footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 30px;
     text-align: center;
-    padding: 20px 0;
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    box-shadow: 0 -4px 10px var(--shadow-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-/* Scroll to top button */
+/* Scroll to Top */
 .scroll-to-top {
     position: fixed;
-    bottom: 30px;
     right: 30px;
-    display: none;
-    background-color: var(--primary-color);
-    padding: 10px;
+    bottom: 30px;
+    background: var(--scroll-btn-bg);
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-speed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    transition: opacity var(--transition-speed);
-    z-index: 100;
 }
 
 .scroll-to-top img {
     width: 30px;
     height: 30px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ffd700, #5d3c1e);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .main-heading {
         font-size: 36px;
-    }
-
-    .main-heading span {
-        font-size: 24px;
     }
 
     .text-container {
