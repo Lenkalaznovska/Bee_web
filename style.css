@@ -18,7 +18,6 @@ body {
     color: #5d3c1e; /* Tmavší hnědá pro text */
     background-color: var(--main-bg-color); /* Pozadí celé stránky */
     line-height: 1.6;
-    text-align: center; /* Vycentrování textu */
 }
 
 /* Menu */
@@ -107,6 +106,13 @@ body {
     height: auto; /* Automatická výška pro udržení proporcí */
     border-radius: 10px;
     box-shadow: 0 5px 15px var(--shadow-color); /* Stín pro obrázky */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Plynulý přechod */
+}
+
+/* Efekt zvětšení a stínování při najetí myší */
+.gallery-image:hover {
+    transform: scale(1.05); /* Zvětšení obrázku při najetí */
+    box-shadow: 0 10px 30px var(--shadow-color); /* Zvýšení stínu při hoveru */
 }
 
 /* Kontaktní sekce */
@@ -145,6 +151,7 @@ h2 {
     background: none; /* Odebrání barvy kolem */
     border: none;
     border-radius: 50%;
+    box-shadow: none; /* Odebrání stínu */
     cursor: pointer;
 }
 
@@ -184,26 +191,10 @@ h2 {
 
     .gallery-image {
         width: 100%; /* Přizpůsobení šířky obrázku na mobilních */
-        max-width: 300px; /* Maximální šířka pro desktop */
-    }
-    
-    .image-container {
-        flex-direction: column; /* Přizpůsobení uspořádání pro mobilní zařízení */
-        align-items: center; /* Vycentrování obrázků */
     }
 }
 
 /* Zpoždění animace pro sekce při scrollování */
 .section-visible {
     animation: fadeIn 0.8s forwards; /* Plynulé zobrazení sekcí */
-}
-
-/* Efekt přiblížení sekcí */
-.text-container:hover {
-    transform: scale(1.02); /* Mírné zvětšení sekce při najetí myší */
-}
-
-/* Styl pro nadpisy sekcí */
-h2, h3 {
-    margin: 20px 0; /* Vzdálenosti nad a pod nadpisy */
 }
