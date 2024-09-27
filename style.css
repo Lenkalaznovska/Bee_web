@@ -186,6 +186,7 @@ a:hover {
     width: 70px; /* Zvětšení velikosti */
     height: 70px; /* Zvětšení velikosti */
     animation: pulse 1.5s infinite; /* Pulzující efekt */
+    display: none; /* Skrýt tlačítko ve výchozím stavu */
 }
 
 @keyframes pulse {
@@ -220,4 +221,4 @@ a:hover {
     .text-container, .gallery, .order-section, .contact {
         padding: 30px; /* Zmenšení paddingu pro mobil */
     }
-} 
+}
