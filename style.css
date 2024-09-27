@@ -1,9 +1,10 @@
 /* Reset a obecné styly */ 
 :root {
-    --main-bg-color: #f9f9f9;
+    --main-bg-color: #fbf7e6; /* Ještě světlejší pozadí celé stránky */
     --primary-color: #5d3c1e; /* Hnědá barva */
     --secondary-color: #e7d7b6; /* Světlá barva */
-    --highlight-color: #f9e5b8; /* Ještě světlejší medová barva */
+    --highlight-color: #f9e5b8; /* Světlá medová barva */
+    --section-bg-color: #f4d9a5; /* Lehce tmavší pozadí pro sekce */
     --shadow-color: rgba(0, 0, 0, 0.2);
     --link-color: #007BFF; /* Modrá barva pro odkazy */
     --transition-speed: 0.3s; /* Rychlost přechodů */
@@ -69,7 +70,7 @@ body {
     padding: 40px 30px; /* Zmenšení horního paddingu */
     max-width: 900px;
     margin: 50px auto; /* Zvýšení mezery kolem sekcí */
-    background: var(--highlight-color);
+    background: var(--section-bg-color); /* Lehce tmavší pozadí pro sekce */
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5); /* Zlatavé stínování */
     animation: slideIn 0.5s ease-in-out; /* Vylepšená animace příjezdu */
