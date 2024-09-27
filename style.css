@@ -92,6 +92,7 @@ body {
 
 .text-container:hover {
     transform: translateY(-5px); /* Pohyb při hoveru nad sekcí */
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.7); /* Zvýšení stínu při hoveru */
 }
 
 h2 {
@@ -171,7 +172,7 @@ a:hover {
 .footer {
     background-color: var(--highlight-color); /* Světlá medová barva */
     color: #5d3c1e; /* Tmavší barva pro text */
-    padding: 30px; /* Zmenšení dolního paddingu */
+    padding: 30px 30px 20px; /* Zmenšení dolního paddingu o 10px */
     text-align: center;
 }
 
@@ -179,7 +180,7 @@ a:hover {
 .scroll-to-top {
     position: fixed;
     right: 20px;
-    bottom: 60px; /* Posunutí dolů o 10px */
+    bottom: 50px; /* Posunutí dolů o 10px */
     background-color: transparent; /* Ponechání originálního obrázku */
     border: none;
     cursor: pointer;
@@ -222,7 +223,7 @@ button {
 }
 
 button:hover {
-    background-color: darken(var(--primary-color), 10%); /* Tmavší odstín při hoveru */
+    background-color: #4a2a15; /* Tmavší odstín při hoveru */
     transform: translateY(-3px); /* Zvednutí tlačítka při hoveru */
 }
 
