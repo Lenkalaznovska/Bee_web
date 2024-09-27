@@ -1,4 +1,4 @@
-/* Reset a obecné styly */ 
+/* Reset a obecné styly */
 :root {
     --main-bg-color: #fce5b8; /* Velmi světle medová barva */
     --primary-color: #5d3c1e; /* Hnědá barva */
@@ -47,7 +47,7 @@ body {
 
 /* Sekce */
 .text-container {
-    padding: 40px 30px; /* Zmenšení horního paddingu */
+    padding: 35px 30px; /* Zmenšení horního paddingu */
     max-width: 900px;
     margin: 50px auto; /* Zvýšení mezery kolem sekcí */
     background: var(--section-bg-color); /* Lehce tmavší pozadí pro sekce */
