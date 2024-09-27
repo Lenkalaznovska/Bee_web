@@ -1,34 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const scrollToTopButton = document.getElementById("scrollToTop");
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.text-container');
 
-    // Kontrola viditelnosti sekcí
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("in-view");
-                    observer.unobserve(entry.target); // Odstranění pozorování po zobrazení
-                }
-            });
-        },
-        { threshold: 0.1 } // Aktivace, když je 10% sekce viditelné
-    );
+    const options = {
+        root: null,
+        threshold: 0.1, // Aktivuje se, když 10% sekce je viditelných
+    };
 
-    sections.forEach((section) => {
-        observer.observe(section);
-    });
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible'); // Přidá třídu pro zobrazení
+                observer.unobserve(entry.target); // Přestane sledovat
+            }
+        });
+    };
 
-    // Scroll to top button
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            scrollToTopButton.style.display = "block";
-        } else {
-            scrollToTopButton.style.display = "none";
-        }
-    });
+    const observer = new IntersectionObserver(callback, options);
 
-    scrollToTopButton.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    sections.forEach(section => {
+        observer.observe(section); // Sleduje sekce
     });
 });
