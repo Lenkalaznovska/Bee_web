@@ -93,38 +93,48 @@ body {
 .text-container:hover {
     background: #f6d47a; /* Změna barvy pozadí při hoveru */
     transform: translateY(-15px) scale(1.05); /* Pohyb nahoru a zvětšení při hoveru nad sekcí */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Zvýšení stínu při hoveru */
 }
 
 /* Animace pro příchod sekcí z různých stran */
 @keyframes slideInFromLeft {
-    from {
+    0% {
         opacity: 0;
         transform: translateX(-100%);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
 @keyframes slideInFromRight {
-    from {
+    0% {
         opacity: 0;
         transform: translateX(100%);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
 
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes slideInFromBottom {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(100%);
     }
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -132,19 +142,19 @@ body {
 
 /* Přiřazení animací */
 .section1 {
-    animation: slideInFromLeft 0.8s ease-in-out; /* Přijíždí zleva */
+    animation: slideInFromLeft 0.8s ease-in-out forwards; /* Přijíždí zleva */
 }
 
 .section2 {
-    animation: slideInFromRight 0.8s ease-in-out; /* Přijíždí zprava */
+    animation: slideInFromRight 0.8s ease-in-out forwards; /* Přijíždí zprava */
 }
 
 .section3 {
-    animation: slideInFromTop 0.8s ease-in-out; /* Přijíždí shora */
+    animation: slideInFromTop 0.8s ease-in-out forwards; /* Přijíždí shora */
 }
 
 .section4 {
-    animation: slideInFromBottom 0.8s ease-in-out; /* Přijíždí zespodu */
+    animation: slideInFromBottom 0.8s ease-in-out forwards; /* Přijíždí zespodu */
 }
 
 h2 {
@@ -254,8 +264,9 @@ a:hover {
     }
 }
 
+/* Styl pro tlačítka */
 .scroll-to-top img {
-    width: 100%; /* Celá šířka tlačítka */
+    width: 100%; /* Šířka obrázku na 100% */
     border-radius: 50%; /* Kulaté tlačítko */
 }
 
