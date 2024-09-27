@@ -1,4 +1,4 @@
-/* Reset a obecné styly */
+/* Reset a obecné styly */ 
 :root {
     --main-bg-color: #f6f1e7; /* Ještě světlejší pozadí celé stránky */
     --primary-color: #5d3c1e; /* Hnědá barva */
@@ -53,150 +53,158 @@ body {
     font-size: 48px; /* Zvětšení velikosti nadpisu */
     color: #fff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    animation: float 2.5s infinite, fade-in 2s forwards; /* Přidání animací */
+    animation: float 2.5s infinite, slideInFromTop 0.8s ease-in-out; /* Přidání animace pro příchod nadpisu */
 }
 
 @keyframes float {
-    0% { transform: translatey(0px); }
-    50% { transform: translatey(-10px); }
-    100% { transform: translatey(0px); }
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
 }
 
-@keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Animace pro příchod nadpisu */
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Sekce */
 .text-container {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: var(--section-bg-color);
-    box-shadow: 0 4px 8px var(--shadow-color);
-    margin: 20px 0;
-    transition: transform var(--transition-speed), background-color var(--transition-speed);
+    padding: 40px 30px; /* Zmenšení horního paddingu */
+    max-width: 900px;
+    margin: 50px auto; /* Zvýšení mezery kolem sekcí */
+    background: var(--section-bg-color); /* Lehce tmavší pozadí pro sekce */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
+    opacity: 0; /* Počáteční průhlednost */
+    transform: translateY(30px); /* Počáteční pozice pro animaci */
+    animation: fadeInUp 0.5s forwards; /* Přidání animace pro příchod sekcí */
 }
 
-.text-container:hover {
-    transform: scale(1.02); /* Efekt přiblížení sekce k uživateli při hoveru */
-    background-color: var(--highlight-color); /* Změna barvy pozadí při hoveru */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Tlačítka a odkazy */
-a {
-    color: var(--link-color);
-    text-decoration: none;
-    transition: color var(--transition-speed);
+.section1 {
+    border: 2px solid var(--primary-color);
 }
 
-a:hover {
-    text-decoration: underline; /* Podtržení při hoveru */
-    color: darkorange; /* Změna barvy při hoveru */
+/* Hlavní styly pro sekce */
+h2 {
+    font-size: 30px; /* Zvětšení nadpisu sekce */
+    margin-bottom: 20px; /* Zvětšení mezery pod nadpisem */
+    color: var(--primary-color);
 }
 
-/* Galérie */
-.image-container {
+p {
+    margin-bottom: 15px; /* Zvětšení mezery mezi odstavci */
+    line-height: 1.8; /* Zvětšení výšky řádku */
+}
+
+/* Galerie */
+.gallery {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap; /* Zajištění, že obrázky budou v několika řadách */
+    gap: 15px; /* Zvětšení mezery mezi obrázky */
 }
 
 .gallery-image {
-    max-width: 300px; /* Max. šířka obrázků */
-    border-radius: 8px; /* Zaoblení rohů */
-    transition: transform var(--transition-speed);
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .gallery-image:hover {
     transform: scale(1.05); /* Efekt přiblížení při hoveru */
-    box-shadow: 0 4px 8px var(--shadow-color); /* Přidání stínu při hoveru */
+    box-shadow: 0 10px 30px var(--shadow-color);
 }
 
-/* Patička */
+/* Kontakt a patička */
 .footer {
     text-align: center;
     padding: 20px;
     background-color: var(--primary-color);
     color: #fff;
-    margin-top: 20px; /* Vytvoření mezery nad patičkou */
 }
 
-/* Scroll to top button */
-.scroll-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--primary-color);
-    color: white;
+.order-section {
+    background: var(--highlight-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+/* Tlačítka */
+button {
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover {
+    background: #48352b;
+    transform: translateY(-2px); /* Vystupující efekt pro tlačítka */
+}
+
+/* Scroll to Top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
-    transition: background-color var(--transition-speed);
-    z-index: 1000; /* Zajištění, aby bylo tlačítko nahoře */
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: background var(--transition-speed), transform var(--transition-speed);
 }
 
 .scroll-to-top:hover {
-    background-color: var(--highlight-color); /* Změna barvy tlačítka při hoveru */
+    background: #48352b;
+    transform: scale(1.1); /* Efekt přiblížení při hoveru */
 }
 
-/* Responsivní design */
+/* Responzivní styly */
 @media (max-width: 768px) {
-    .main-heading {
-        font-size: 36px; /* Menší velikost nadpisu na mobilních zařízeních */
+    .menu-content {
+        font-size: 36px; /* Zmenšení velikosti písma na mobilních zařízeních */
     }
 
     .text-container {
-        padding: 20px 10px; /* Menší padding na mobilních zařízeních */
+        padding: 20px 15px; /* Zmenšení paddingu na mobilních zařízeních */
     }
 
     .gallery-image {
-        max-width: 90%; /* Zvětšení šířky obrázků na mobilních zařízeních */
-    }
-
-    .image-container {
-        flex-direction: column; /* Obrázky se budou zobrazovat pod sebou */
-        align-items: center; /* Vycentrování obrázků */
-    }
-
-    .scroll-to-top {
-        bottom: 20px; /* Zmenšení mezery v mobilním zobrazení */
-        right: 20px; /* Zmenšení mezery v mobilním zobrazení */
+        width: 100%; /* Zvětšení obrázků na mobilních zařízeních */
+        height: auto; /* Automatická výška pro lepší proporce */
     }
 }
 
-/* Další styly pro sekce */
-.section1, .section2, .section3, .section4 {
-    border: 1px solid var(--shadow-color); /* Přidání okraje */
-    border-radius: 8px; /* Zaoblení rohů sekcí */
-}
-
-h2 {
-    font-size: 28px; /* Velikost nadpisu sekce */
-    color: var(--primary-color);
-    margin-bottom: 20px; /* Mezera pod nadpisem */
-    transition: color var(--transition-speed);
-}
-
-h2:hover {
-    color: darkorange; /* Změna barvy nadpisu při hoveru */
-}
-
-/* Animace pro sekce při načtení */
-.text-container {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slide-in 0.5s forwards; /* Animace při načtení */
-}
-
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 28px; /* Další zmenšení velikosti nadpisu pro mobil */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    button {
+        padding: 8px 16px; /* Zmenšení tlačítek pro mobil */
     }
 }
