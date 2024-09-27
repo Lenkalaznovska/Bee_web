@@ -61,7 +61,7 @@ body {
 
 /* Sekce */
 .text-container {
-    padding: 35px 30px; /* Zmenšení horního paddingu */
+    padding: 40px 30px; /* Zmenšení horního paddingu */
     max-width: 900px;
     margin: 50px auto; /* Zvýšení mezery kolem sekcí */
     background: var(--section-bg-color); /* Lehce tmavší pozadí pro sekce */
@@ -96,7 +96,6 @@ body {
 /* Galerie */
 .image-container {
     display: flex;
-    flex-wrap: wrap; /* Aby se obrázky vešly na menších obrazovkách */
     justify-content: center;
     gap: 20px; /* Větší mezera mezi obrázky */
 }
@@ -190,4 +189,9 @@ h2 {
     .gallery-image {
         width: 100%; /* Přizpůsobení šířky obrázku na mobilních */
     }
+}
+
+/* Zpoždění animace pro sekce při scrollování */
+.section-visible {
+    animation: fadeIn 0.8s forwards; /* Plynulé zobrazení sekcí */
 }
