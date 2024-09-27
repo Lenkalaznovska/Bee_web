@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.text-container');
+    const scrollToTopButton = document.getElementById('scrollToTop');
 
     const options = {
         root: null,
@@ -19,5 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => {
         observer.observe(section); // Sleduje sekce
+    });
+
+    // Scroll to top button functionality
+    window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    });
+
+    scrollToTopButton.addEventListener('click', () => {
+        document.body.scrollTop = 0; // Pro Safari
+        document.documentElement.scrollTop = 0; // Pro Chrome, Firefox, IE a Opera
     });
 });
