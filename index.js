@@ -1,30 +1,41 @@
-// Scroll to top button
-window.addEventListener('scroll', function() {
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-    if (window.pageYOffset > 300) {
-        scrollToTopBtn.style.display = 'block';
-    } else {
-        scrollToTopBtn.style.display = 'none';
-    }
-});
+/* Zpoždění animace pro sekce při scrollování */
+.section-visible {
+    animation: fadeIn 0.8s forwards; /* Plynulé zobrazení sekcí */
+}  index.js: document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.text-container');
+    const scrollToTopButton = document.getElementById('scrollToTop');
 
-document.getElementById('scrollToTop').addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+    const options = {
+        root: null,
+        threshold: 0.1, // Aktivuje se, když 10% sekce je viditelných
+    };
 
-// Animace pro zobrazení sekcí při skrolování
-const sections = document.querySelectorAll('.text-container');
-window.addEventListener('scroll', checkSections);
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible'); // Přidá třídu pro zobrazení
+                observer.unobserve(entry.target); // Přestane sledovat
+            }
+        });
+    };
 
-function checkSections() {
-    const triggerBottom = window.innerHeight / 5 * 4;
+    const observer = new IntersectionObserver(callback, options);
+
     sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < triggerBottom) {
-            section.classList.add('section-visible');
+        observer.observe(section); // Sleduje sekce
+    });
+
+    // Scroll to top button functionality
+    window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
         }
     });
-}
+
+    scrollToTopButton.addEventListener('click', () => {
+        document.body.scrollTop = 0; // Pro Safari
+        document.documentElement.scrollTop = 0; // Pro Chrome, Firefox, IE a Opera
+    });
+});
