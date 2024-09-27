@@ -1,9 +1,9 @@
 /* Reset a obecné styly */
 :root {
-    --main-bg-color: #f9f9f9;
+    --main-bg-color: #f6e9c1; /* Světle medová barva pozadí */
     --primary-color: #5d3c1e; /* Hnědá barva */
     --secondary-color: #e7d7b6; /* Světlá barva */
-    --highlight-color: #f6e9c1; /* Světlý akcent */
+    --highlight-color: #f9f9f9; /* Světlý akcent */
     --shadow-color: rgba(0, 0, 0, 0.2);
     --link-color: #007BFF; /* Modrá barva pro odkazy */
     --transition-speed: 0.3s; /* Rychlost přechodů */
