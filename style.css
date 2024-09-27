@@ -55,7 +55,7 @@ body {
     box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
     opacity: 0; /* Skryto při načtení */
     transform: translateY(50px); /* Skryto pod sekcí */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Plynulé zobrazení */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Plynulé zobrazení */
 }
 
 /* Animace pro zobrazení sekcí */
@@ -104,7 +104,6 @@ body {
     color: #5d3c1e; /* Tmavší hnědá pro text */
     text-align: center;
     padding: 20px 0; /* Vyvážení paddingu */
-    position: relative; /* Umožnění relativní pozice */
 }
 
 /* Scroll to top button */
@@ -129,4 +128,20 @@ body {
 .text-container:hover {
     transform: scale(1.02); /* Zvětšení při hoveru */
     transition: transform 0.3s ease; /* Plynulý přechod */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .text-container {
+        padding: 20px 15px; /* Menší padding na mobilních zařízeních */
+        margin: 30px auto; /* Zmenšení mezery kolem sekcí na mobilních */
+    }
+
+    .main-heading {
+        font-size: 32px; /* Menší nadpis na mobilních zařízeních */
+    }
+
+    .gallery-image {
+        width: 100%; /* Přizpůsobení šířky obrázku na mobilních */
+    }
 }
