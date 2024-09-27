@@ -180,7 +180,7 @@ a:hover {
 .scroll-to-top {
     position: fixed;
     right: 20px;
-    bottom: 50px; /* Posunutí dolů o 10px */
+    bottom: 40px; /* Posunutí dolů o 10px (z původních 50px) */
     background-color: transparent; /* Ponechání originálního obrázku */
     border: none;
     cursor: pointer;
