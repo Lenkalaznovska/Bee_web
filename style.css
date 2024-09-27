@@ -65,9 +65,9 @@ body {
 
 /* Sekce */
 .text-container {
-    padding: 30px 20px; /* Zmenšení paddingu */
+    padding: 25px 20px; /* Zmenšení paddingu o 5px nahoru a dolů */
     max-width: 900px;
-    margin: 30px auto; /* Zmenšení mezery kolem sekcí */
+    margin: 40px auto; /* Zvýšení mezery kolem sekcí */
     background: var(--highlight-color);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5); /* Zlatavé stínování */
@@ -151,7 +151,7 @@ p {
 
 /* Kontakt */
 .contact {
-    padding: 30px 20px; /* Zmenšení paddingu */
+    padding: 25px 20px; /* Zmenšení paddingu o 5px nahoru a dolů */
 }
 
 /* Patička */
@@ -166,7 +166,7 @@ p {
 .scroll-to-top {
     position: fixed;
     right: 20px;
-    bottom: 25px; /* Posunutí o 5px níže */
+    bottom: 30px; /* Posunutí o 5px níže */
     background-color: transparent; /* Ponechání originálního obrázku */
     border: none;
     cursor: pointer;
