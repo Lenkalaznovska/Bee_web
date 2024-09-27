@@ -70,11 +70,44 @@ body {
 /* Sekce */
 .text-container {
     padding: 40px 20px;
-    text-align: center;
+    text-align: center; /* Vycentrování textu */
     background-color: var(--section-bg-color);
     box-shadow: 0 4px 8px var(--shadow-color);
     margin: 20px 0;
     transition: transform var(--transition-speed), background-color var(--transition-speed);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slide-in var(--transition-speed) forwards; /* Animace při načtení */
+}
+
+.text-container:nth-child(odd) {
+    animation-name: slide-in-left; /* Animace zleva pro liché sekce */
+}
+
+.text-container:nth-child(even) {
+    animation-name: slide-in-right; /* Animace zprava pro sudé sekce */
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .text-container:hover {
@@ -105,7 +138,7 @@ a:hover {
 .gallery-image {
     max-width: 300px; /* Max. šířka obrázků */
     border-radius: 8px; /* Zaoblení rohů */
-    transition: transform var(--transition-speed);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* Přidání box-shadow do přechodu */
 }
 
 .gallery-image:hover {
@@ -177,26 +210,9 @@ h2 {
     color: var(--primary-color);
     margin-bottom: 20px; /* Mezera pod nadpisem */
     transition: color var(--transition-speed);
+    text-align: center; /* Vycentrování nadpisu */
 }
 
 h2:hover {
     color: darkorange; /* Změna barvy nadpisu při hoveru */
-}
-
-/* Animace pro sekce při načtení */
-.text-container {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slide-in 0.5s forwards; /* Animace při načtení */
-}
-
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
