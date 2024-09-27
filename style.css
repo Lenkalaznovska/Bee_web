@@ -36,7 +36,6 @@ body {
     height: 400px; /* Zvětšení výšky pro lepší vzhled */
     transition: transform var(--transition-speed);
     transform: translateY(-10px); /* Vystupující efekt */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Stín pro menu */
 }
 
 .menu-background:hover {
@@ -54,7 +53,7 @@ body {
     font-size: 48px; /* Zvětšení velikosti nadpisu */
     color: #fff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    animation: moveDown 3s infinite alternate; /* Animace pohybu hlavního nadpisu */
+    animation: moveDown 2s infinite alternate; /* Rychlejší animace pohybu hlavního nadpisu */
 }
 
 @keyframes moveDown {
@@ -62,7 +61,7 @@ body {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(10px);
+        transform: translateY(15px); /* Větší pohyb */
     }
 }
 
@@ -73,9 +72,9 @@ body {
 
 /* Sekce */
 .text-container {
-    padding: 30px 20px; /* Zmenšení paddingu */
+    padding: 20px 15px; /* Zmenšení paddingu */
     max-width: 900px; /* Zvětšení maximální šířky */
-    margin: 60px auto; /* Zvětšení mezery kolem sekcí */
+    margin: 30px auto; /* Zmenšení mezery kolem sekcí */
     background: var(--highlight-color);
     border-radius: 10px;
     border: 2px solid var(--gold-color); /* Zlaté rámování kolem sekcí */
@@ -103,14 +102,14 @@ body {
 
 h2 {
     font-size: 32px; /* Zvětšení velikosti nadpisu */
-    margin-bottom: 30px; /* Zvětšení mezery pod nadpisem */
+    margin-bottom: 15px; /* Zmenšení mezery pod nadpisem */
     color: var(--primary-color);
     border-bottom: 3px solid var(--gold-color); /* Zlaté podtržení */
-    padding-bottom: 15px;
+    padding-bottom: 10px; /* Zmenšení paddingu */
 }
 
 p {
-    margin-bottom: 20px; /* Zvětšení mezery pod odstavci */
+    margin-bottom: 15px; /* Zmenšení mezery pod odstavci */
     color: var(--dark-honey-color); /* Tmavší barva textu */
 }
 
@@ -144,7 +143,7 @@ p {
     background: var(--highlight-color); /* Světlejší pozadí pro zvýraznění */
     border: 2px solid var(--gold-color); /* Rám kolem sekce */
     border-radius: 10px; /* Zaoblení rohů */
-    padding: 30px 20px; /* Zmenšení paddingu */
+    padding: 20px 15px; /* Zmenšení paddingu */
     animation: slideIn 0.8s ease-in-out; /* Animace */
     box-shadow: 0 4px 20px var(--shadow-color); /* Stín pro efekt */
 }
@@ -163,7 +162,7 @@ p {
 
 /* Kontakt */
 .contact {
-    padding: 30px 20px; /* Zmenšení paddingu */
+    padding: 20px 15px; /* Zmenšení paddingu */
     background: var(--highlight-color); /* Stejná barva jako ostatní sekce */
 }
 
@@ -171,25 +170,68 @@ p {
 .footer {
     background-color: var(--highlight-color); /* Stejná barva jako sekce */
     color: var(--dark-honey-color); /* Tmavší barva textu */
-    padding: 20px; /* Zvětšení paddingu */
+    padding: 25px; /* Zvětšení paddingu */
     text-align: center;
 }
 
 /* Scroll to Top */
 .scroll-to-top {
-    position: fixed;
-    right: 20px; /* Přesunutí na pravou stranu */
-    bottom: 20px;
+    position: relative; /* Umístění do footeru */
+    margin-top: 20px; /* Mezery nad tlačítkem */
     cursor: pointer;
-    width: 70px; /* Zvětšení velikosti */
-    height: 70px; /* Zvětšení velikosti */
+    width: 60px; /* Zmenšení velikosti */
+    height: 60px; /* Zmenšení velikosti */
 }
 
 .scroll-to-top img {
-    width: 70px; /* Zvětšení velikosti ikony */
+    width: 60px; /* Zmenšení velikosti ikony */
     height: auto;
 }
 
 .scroll-to-top:hover {
     transform: scale(1.1);
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 36px; /* Zmenšení velikosti nadpisu na menších obrazovkách */
+    }
+
+    .text-container, .order-section, .contact {
+        padding: 15px; /* Další zmenšení paddingu */
+        margin: 20px auto; /* Zmenšení mezery kolem sekcí */
+    }
+
+    h2 {
+        font-size: 28px; /* Zmenšení velikosti nadpisu na menších obrazovkách */
+    }
+
+    .scroll-to-top {
+        width: 50px; /* Zmenšení velikosti tlačítka na menších obrazovkách */
+        height: 50px;
+    }
+
+    .scroll-to-top img {
+        width: 50px; /* Zmenšení velikosti ikony */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 28px; /* Dále zmenšení velikosti nadpisu */
+    }
+
+    h2 {
+        font-size: 24px; /* Dále zmenšení velikosti nadpisu */
+    }
+
+    .scroll-to-top {
+        width: 40px; /* Zmenšení velikosti tlačítka na nejmenších obrazovkách */
+        height: 40px;
+    }
+
+    .scroll-to-top img {
+        width: 40px; /* Zmenšení velikosti ikony */
+    }
 }
