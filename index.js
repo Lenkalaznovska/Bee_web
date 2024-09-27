@@ -1,17 +1,20 @@
-// Scroll to Top Button
+// Smooth scroll to top functionality
 const scrollToTopButton = document.getElementById('scrollToTop');
 
-// Zobrazení/skrývání tlačítka při scrollování
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopButton.style.display = 'block';
+    if (window.scrollY > 200) {
+        scrollToTopButton.style.display = 'flex';
+        scrollToTopButton.style.opacity = '1';
     } else {
-        scrollToTopButton.style.display = 'none';
+        scrollToTopButton.style.opacity = '0';
+        setTimeout(() => {
+            scrollToTopButton.style.display = 'none';
+        }, 300);
     }
 });
 
-// Funkce pro scrollování nahoru
-scrollToTopButton.addEventListener('click', () => {
+scrollToTopButton.addEventListener('click', (event) => {
+    event.preventDefault();
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
