@@ -1,4 +1,4 @@
-/* Reset a obecné styly */
+/* Reset a obecné styly */ 
 :root {
     --main-bg-color: #fce5b8; /* Velmi světle medová barva */
     --primary-color: #5d3c1e; /* Hnědá barva */
@@ -39,20 +39,20 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Animace pro nadpis */
 .main-heading {
     font-size: 48px; /* Zvětšení velikosti nadpisu */
     color: #fff;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    animation: slideDown 0.8s ease forwards; /* Přidání animace */
+    animation: slideDown 0.8s forwards; /* Animace nadpisu */
 }
 
+/* Animace pro nadpis */
 @keyframes slideDown {
-    from {
+    0% {
         transform: translateY(-50px);
         opacity: 0;
     }
-    to {
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
@@ -69,6 +69,7 @@ body {
     opacity: 0; /* Skryto při načtení */
     transform: translateY(50px); /* Skryto pod sekcí */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Plynulé zobrazení */
+    text-align: center; /* Vycentrování textu */
 }
 
 /* Animace pro zobrazení sekcí */
@@ -109,6 +110,12 @@ body {
 .contact a {
     color: var(--primary-color);
     text-decoration: none;
+}
+
+/* Zesílení odkazu pro objednání medu */
+.order-section {
+    font-weight: bold; /* Zvýraznění textu */
+    color: var(--primary-color); /* Barva textu */
 }
 
 /* Footer */
