@@ -45,7 +45,7 @@ body {
 .main-heading {
   font-size: 48px; /* Zvětšení velikosti nadpisu */
   color: #fff;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); /* Zvětšení blur radius */
   animation: slideDown 0.8s ease-out; /* Animace pro hlavní nadpis */
   font-weight: bold; /* Zesílení textu pro větší důraz */
 }
@@ -67,9 +67,7 @@ body {
   padding: 40px 30px; /* Zvýšení paddingu pro sekce */
   max-width: 900px;
   margin: 50px auto; /* Zvýšení mezery kolem sekcí */
-  background: var(
-    --section-bg-color
-  ); /* O něco světlejší velmi světlá medově hnědá pro sekce */
+  background: var(--section-bg-color); /* O něco světlejší velmi světlá medově hnědá pro sekce */
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
   opacity: 0; /* Skryto při načtení */
@@ -235,51 +233,13 @@ body {
 
 /* Část pro objednání medu */
 .order-section {
-  padding: 20px; /* Zvýšení paddingu pro část objednání */
-  background: #f0d9a0; /* Lehčí medově hnědá barva pro sekci objednání */
+  padding: 20px; /* Zvýšení paddingu pro vzdušnost */
+  border: 2px solid var(--highlight-color); /* Zlatá barva pro okraj */
   border-radius: 10px;
-  box-shadow: 0 10px 30px var(--shadow-color);
-  margin: 20px auto;
-  max-width: 800px; /* Maximální šířka sekce pro větší obrazovky */
-  text-align: center;
-  transition: padding 0.3s ease; /* Plynulý přechod pro padding */
+  background-color: var(--section-bg-color); /* Stejná barva jako sekce */
+  transition: background-color 0.3s ease; /* Plynulý přechod */
 }
 
-/* Větší nadpis pro část objednání */
-.order-section h2 {
-  font-size: 24px; /* Větší nadpis pro část objednání */
-  margin-bottom: 20px; /* Větší mezera pod nadpisem */
-}
-
-/* Mezery nad a pod textem */
-.order-section p {
-  margin: 20px 0; /* Mezery nad a pod textem */
-  color: var(--primary-color); /* Hnědá barva pro text */
-}
-
-/* Responsivní úprava pro zařízení menší než 750px */
-@media (max-width: 750px) {
-  .order-section p {
-    display: flex;
-    flex-direction: column; /* Rozdělení textu do dvou řádků */
-    line-height: 1.5; /* Zlepšení čitelnosti */
-    font-size: 16px; /* Velikost písma pro menší zařízení */
-  }
-}
-
-/* Odkaz pro objednání medu */
-.order-section a {
-  background: var(--highlight-color); /* Pozadí odkazu */
-  color: white; /* Barva textu odkazu */
-  font-weight: bold; /* Zvýraznění textu */
-  text-decoration: none; /* Bez podtržení */
-  border: 2px solid var(--link-color); /* Okraj kolem odkazu */
-  padding: 10px 20px; /* Padding kolem odkazu */
-  border-radius: 5px; /* Zaoblení rohů */
-  transition: background 0.3s ease; /* Plynulý přechod pro pozadí */
-}
-
-.order-section a:hover {
-  background: var(--link-color); /* Změna pozadí při hoveru */
-  color: white; /* Barva textu odkazu při hoveru */
+.order-section:hover {
+  background-color: rgba(231, 168, 59, 0.2); /* Osvětlení pozadí při hoveru */
 }
