@@ -73,7 +73,6 @@ body {
   transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   text-align: center;
-  animation: pulse 2s infinite; /* Přidání pulzujícího efektu */
 }
 
 .text-container h2 {
@@ -89,11 +88,15 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.02); /* Zvětšení sekce pro efekt dýchání */
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
   }
+}
+
+.text-container.pulsing {
+  animation: pulse 3s infinite;
 }
 
 /* Animace pro zobrazení sekcí */
@@ -119,23 +122,24 @@ body {
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Vycentrování galerie */
-  gap: 10px; /* Mezera mezi fotkami */
+  justify-content: space-between;
   margin: 20px 0;
+  padding: 10px; /* Opravený padding kolem galerie */
 }
 
 .gallery-image {
   width: calc(33.333% - 10px); /* Tři fotky vedle sebe */
-  height: 250px; /* Fixní výška pro všechny fotky */
-  object-fit: cover; /* Oříznout obrázek, aby se vešel do rozměrů */
+  height: 300px; /* Stejná výška fotek */
+  object-fit: cover; /* Aby byly fotky správně oříznuty */
   border-radius: 10px;
   box-shadow: 0 5px 15px var(--shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .gallery-image:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px var(--shadow-color);
+  filter: brightness(1.1);
 }
 
 /* Kontaktní sekce */
@@ -208,6 +212,12 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Flip card styles */
