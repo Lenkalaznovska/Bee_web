@@ -205,6 +205,59 @@ body {
   }
 }
 
+.image-container {
+  display: flex;
+  flex-wrap: wrap; /* Aby se obrázky vešly na menších obrazovkách */
+  justify-content: center;
+  gap: 20px; /* Větší mezera mezi obrázky */
+}
+
+/* Flip card styles */
+.flip-card {
+  background-color: transparent;
+  width: 300px; /* Šířka karty */
+  height: 400px; /* Výška karty */
+  perspective: 1000px; /* Perspektiva pro 3D efekt */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s; /* Plynulý přechod při otáčení */
+  transform-style: preserve-3d; /* Udržení 3D efektu */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Otočení karty při hoveru */
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Skrytí zadní strany */
+}
+
+.flip-card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0d9a0; /* Barva pozadí zadní strany */
+  color: var(--primary-color); /* Barva textu */
+  transform: rotateY(180deg); /* Otočení zadní strany */
+  padding: 20px; /* Padding pro zadní stranu */
+  border-radius: 10px; /* Zaoblení rohů */
+}
+
 /* Responsivní design */
 @media (max-width: 768px) {
   .text-container {
