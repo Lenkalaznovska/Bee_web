@@ -122,7 +122,6 @@ body {
 .image-container {
   display: flex; /* Použití flexboxu pro vodorovné uspořádání */
   justify-content: space-between; /* Prostor mezi obrázky */
-  flex-wrap: wrap; /* Přizpůsobení pro více řádků */
   margin: 0 auto; /* Vycentrování kontejneru */
   width: 90%; /* Šířka kontejneru pro zajištění centrálního zarovnání */
 }
@@ -131,7 +130,7 @@ body {
   width: 31%; /* Změněná šířka každé karty na 31% pro zvětšení obrázků */
   height: 400px; /* Fixní výška karty */
   perspective: 1000px; /* Perspektiva pro 3D efekt */
-  margin: 0 1%; /* Odstranění defaultního marginu a nastavení pro mezery */
+  margin: 0; /* Odstranění defaultního marginu */
 }
 
 .flip-card-inner {
@@ -221,43 +220,20 @@ body {
   width: 60px; /* Šířka tlačítka */
   height: 60px; /* Výška tlačítka */
   transition: transform 0.3s ease; /* Plynulý přechod */
-  animation: moveUp 1.5s infinite; /* Pulsing efekt */
+  animation: moveUp 1s infinite alternate; /* Plynulý pohyb nahoru */
 }
 
-/* Pulsing efekt pro scroll button */
+/* Plynulý pohyb nahoru */
 @keyframes moveUp {
-  0%,
+  0% {
+    transform: translateY(0);
+  }
   100% {
-    transform: translateY(0); /* Původní pozice */
-  }
-  50% {
-    transform: translateY(-10px); /* Vzestupná pozice */
+    transform: translateY(-30px); /* Pohyb nahoru o 30px */
   }
 }
 
-/* Media queries pro responzivitu */
-@media (max-width: 768px) {
-  .flip-card {
-    width: 100%; /* Plná šířka pro mobilní zařízení */
-    margin: 10px 0; /* Menší mezery mezi kartami */
-  }
-
-  .text-container {
-    padding: 30px 20px; /* Menší padding pro menší obrazovky */
-  }
-
-  .main-heading {
-    font-size: 40px; /* Menší velikost nadpisu pro mobilní zařízení */
-  }
-
-  .scroll-to-top {
-    bottom: 20px; /* Nižší pozice na mobilních zařízeních */
-    right: 20px; /* Nižší pozice na mobilních zařízeních */
-  }
-}
-
-@media (max-width: 480px) {
-  .main-heading {
-    font-size: 30px; /* Ještě menší velikost nadpisu pro malé obrazovky */
-  }
+/* Zobrazení tlačítka na hover */
+.scroll-to-top:hover {
+  transform: scale(1.1); /* Zvětšení při hoveru */
 }
