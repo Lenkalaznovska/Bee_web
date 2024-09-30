@@ -88,7 +88,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.01);
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
@@ -96,7 +96,7 @@ body {
 }
 
 .text-container.pulsing {
-  animation: pulse 2.5s infinite;
+  animation: pulse 3s infinite;
 }
 
 /* Animace pro zobrazení sekcí */
@@ -122,34 +122,24 @@ body {
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-  padding: 0;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 10px; /* Opravený padding kolem galerie */
 }
 
 .gallery-image {
-  width: calc(33.333% - 10px);
-  height: 200px;
-  object-fit: cover;
+  width: calc(33.333% - 10px); /* Tři fotky vedle sebe */
+  height: 300px; /* Stejná výška fotek */
+  object-fit: cover; /* Aby byly fotky správně oříznuty */
   border-radius: 10px;
   box-shadow: 0 5px 15px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  animation: rotateImage 5s infinite linear; /* Otáčení obrázků */
 }
 
 .gallery-image:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px var(--shadow-color);
   filter: brightness(1.1);
-}
-
-@keyframes rotateImage {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* Kontaktní sekce */
@@ -206,6 +196,28 @@ body {
 .scroll-to-top:active {
   animation: none;
   transform: scale(0.9);
+}
+
+.text-container:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Flip card styles */
@@ -266,8 +278,8 @@ body {
   }
 
   .gallery-image {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Fotky na 100 % šířky na malých obrazovkách */
+    max-width: 300px;
   }
 
   .scroll-to-top {
@@ -301,6 +313,15 @@ body {
 .order-section p {
   margin: 20px 0;
   color: var(--primary-color);
+}
+
+@media (max-width: 750px) {
+  .order-section p {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 16px;
+  }
 }
 
 .order-section a {
