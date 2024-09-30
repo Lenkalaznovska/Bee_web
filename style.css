@@ -1,8 +1,8 @@
 /* Reset a obecné styly */
 :root {
-  --main-bg-color: #f7e5b5; /* Ještě světlejší zlatavě medová barva pro pozadí */
+  --main-bg-color: #f7e5b5; /* Světlejší zlatavě medová barva pro pozadí */
   --primary-color: #4e3b2d; /* Tmavě hnědá pro text */
-  --section-bg-color: #f5e3c4; /* Světlejší velmi světlá medově hnědá pro sekce */
+  --section-bg-color: #f5e3c4; /* Světlejší medově hnědá pro sekce */
   --footer-bg-color: #f5e3c4; /* Stejná barva jako sekce pro footer */
   --highlight-color: #e7a83b; /* Zlatá barva pro podtržení */
   --link-color: #4e3b2d; /* Hnědá pro odkazy */
@@ -122,9 +122,9 @@ body {
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Mezera mezi fotkami */
-  gap: 10px;
-  margin: 20px 0; /* Menší padding kolem galerie */
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 10px; /* Opravený padding kolem galerie */
 }
 
 .gallery-image {
