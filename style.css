@@ -1,4 +1,4 @@
-/* Reset a obecné styly */ 
+/* Reset a obecné styly */
 :root {
   --main-bg-color: #f7e5b5; /* Světlejší zlatavě medová barva pro pozadí */
   --primary-color: #4e3b2d; /* Tmavě hnědá pro text */
@@ -135,10 +135,11 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 15px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  transform: rotateY(0deg);
 }
 
 .gallery-image:hover {
-  transform: scale(1.05);
+  transform: rotateY(360deg);
   box-shadow: 0 10px 30px var(--shadow-color);
   filter: brightness(1.1);
 }
