@@ -88,7 +88,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.02);
+    transform: scale(1.01); /* Zrychlené pulzování */
   }
   100% {
     transform: scale(1);
@@ -96,7 +96,7 @@ body {
 }
 
 .text-container.pulsing {
-  animation: pulse 5s infinite; /* Zpomalené pulzování */
+  animation: pulse 2.5s infinite; /* Zrychlené pulzování */
 }
 
 /* Animace pro zobrazení sekcí */
@@ -129,7 +129,7 @@ body {
 
 .gallery-image {
   width: calc(33.333% - 10px); /* Tři fotky vedle sebe */
-  height: 300px; /* Stejná výška fotek */
+  height: 200px; /* Nastavení na stejnou výšku fotek */
   object-fit: cover; /* Aby byly fotky správně oříznuty */
   border-radius: 10px;
   box-shadow: 0 5px 15px var(--shadow-color);
@@ -273,7 +273,7 @@ body {
 
   .gallery-image {
     width: 100%; /* Fotky na 100 % šířky na malých obrazovkách */
-    max-width: 300px;
+    height: auto; /* Zachování poměru stran */
   }
 
   .scroll-to-top {
