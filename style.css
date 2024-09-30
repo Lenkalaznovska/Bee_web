@@ -88,7 +88,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
   100% {
     transform: scale(1);
@@ -96,7 +96,7 @@ body {
 }
 
 .text-container.pulsing {
-  animation: pulse 3s infinite;
+  animation: pulse 5s infinite; /* Zpomalené pulzování */
 }
 
 /* Animace pro zobrazení sekcí */
@@ -122,9 +122,9 @@ body {
 .image-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0;
-  padding: 10px; /* Opravený padding kolem galerie */
+  justify-content: center;
+  gap: 5px; /* Menší mezera mezi obrázky */
+  padding: 0; /* Zmenšený padding kolem galerie */
 }
 
 .gallery-image {
@@ -212,12 +212,6 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
 }
 
 /* Flip card styles */
