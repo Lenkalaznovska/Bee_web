@@ -67,9 +67,7 @@ body {
   padding: 40px 30px; /* Zvýšení paddingu pro sekce */
   max-width: 900px;
   margin: 50px auto; /* Zvýšení mezery kolem sekcí */
-  background: var(
-    --section-bg-color
-  ); /* O něco světlejší velmi světlá medově hnědá pro sekce */
+  background: var(--section-bg-color); /* Světlejší medová barva pro sekce */
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
   opacity: 0; /* Skryto při načtení */
@@ -129,16 +127,15 @@ body {
 }
 
 /* Kontaktní sekce */
+.contact {
+  text-align: center; /* Vycentrování textu v sekci Kontaktujte nás */
+  padding: 40px 20px; /* Větší padding kolem textu pro vzdušnější vzhled */
+}
+
 .contact a {
   color: var(--link-color);
   text-decoration: none;
   font-weight: bold; /* Zvýraznění odkazů */
-}
-
-/* Kontaktní sekce */
-.contact {
-  text-align: center; /* Vycentrování textu v sekci Kontaktujte nás */
-  padding: 40px 20px; /* Větší padding kolem textu pro vzdušnější vzhled */
 }
 
 /* Footer */
@@ -187,31 +184,6 @@ body {
   transform: scale(0.9); /* Zmenšení při kliknutí */
 }
 
-/* Animace pro hover efekt */
-.text-container:hover {
-  transform: scale(1.02); /* Zvětšení při hoveru */
-  transition: transform 0.3s ease; /* Plynulý přechod */
-}
-
-/* Animace pro sekce při scrollování */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.image-container {
-  display: flex;
-  flex-wrap: wrap; /* Aby se obrázky vešly na menších obrazovkách */
-  justify-content: center;
-  gap: 20px; /* Větší mezera mezi obrázky */
-}
-
 /* Flip card styles */
 .flip-card {
   background-color: transparent;
@@ -258,81 +230,45 @@ body {
   border-radius: 10px; /* Zaoblení rohů */
 }
 
-/* Responsivní design */
-@media (max-width: 768px) {
-  .text-container {
-    padding: 20px; /* Menší padding na mobilních zařízeních */
-    margin: 30px auto; /* Zmenšení mezery kolem sekcí na mobilních */
-  }
-
-  .main-heading {
-    font-size: 6vw; /* Menší nadpis na mobilních zařízeních */
-  }
-
-  .gallery-image {
-    width: 90%; /* Přizpůsobení šířky obrázku na mobilních */
-    max-width: 300px; /* Maximální šířka pro větší zařízení */
-  }
-
-  .scroll-to-top {
-    bottom: 40px; /* Umístění výše pro mobilní zařízení */
-  }
-}
-
-/* Větší zařízení */
-@media (min-width: 769px) {
-  .scroll-to-top {
-    right: 50px; /* Umístění více do strany pro větší zařízení */
-  }
-}
-
 /* Část pro objednání medu */
-.order-section {
-  padding: 20px; /* Zvýšení paddingu pro část objednání */
-  background: #f0d9a0; /* Lehčí medově hnědá barva pro sekci objednání */
-  border-radius: 10px;
-  box-shadow: 0 10px 30px var(--shadow-color);
-  margin: 20px auto;
-  max-width: 800px; /* Maximální šířka sekce pro větší obrazovky */
+.order-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: var(--highlight-color); /* Zlatá barva pro tlačítko */
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: center;
-  transition: padding 0.3s ease; /* Plynulý přechod pro padding */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Plynulý přechod barvy pozadí */
+  margin-top: 20px; /* Marže nad tlačítkem */
 }
 
-/* Větší nadpis pro část objednání */
-.order-section h2 {
-  font-size: 24px; /* Větší nadpis pro část objednání */
-  margin-bottom: 20px; /* Větší mezera pod nadpisem */
+.order-button:hover {
+  background-color: #d89028; /* Ztmavení barvy při hoveru */
 }
 
-/* Mezery nad a pod textem */
-.order-section p {
-  margin: 20px 0; /* Mezery nad a pod textem */
-  color: var(--primary-color); /* Hnědá barva pro text */
-}
-
-/* Responsivní úprava pro zařízení menší než 750px */
-@media (max-width: 750px) {
-  .order-section p {
-    display: flex;
-    flex-direction: column; /* Rozdělení textu do dvou řádků */
-    line-height: 1.5; /* Zlepšení čitelnosti */
-    font-size: 16px; /* Velikost písma pro menší zařízení */
+/* Responsivní styly */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 40px; /* Menší nadpis na mobilech */
   }
-}
 
-/* Odkaz pro objednání medu */
-.order-section a {
-  background: var(--highlight-color); /* Pozadí odkazu */
-  color: white; /* Barva textu odkazu */
-  font-weight: bold; /* Zvýraznění textu */
-  text-decoration: none; /* Bez podtržení */
-  border: 2px solid var(--link-color); /* Okraj kolem odkazu */
-  padding: 10px 20px; /* Padding kolem odkazu */
-  border-radius: 5px; /* Zaoblení rohů */
-  transition: background 0.3s ease; /* Plynulý přechod pro pozadí */
-}
+  .menu-background {
+    height: 250px; /* Snížení výšky na mobilech */
+  }
 
-.order-section a:hover {
-  background: var(--link-color); /* Změna pozadí při hoveru */
-  color: white; /* Barva textu odkazu při hoveru */
+  .text-container {
+    padding: 30px 15px; /* Menší padding pro lepší čitelnost */
+  }
+
+  .image-container {
+    flex-direction: column; /* Obrázky pod sebou na menších zařízeních */
+  }
+
+  .flip-card {
+    width: 100%; /* Zvětšení šířky flip karty na mobilech */
+    height: auto; /* Automatická výška */
+  }
 }
