@@ -67,7 +67,9 @@ body {
   padding: 40px 30px; /* Zvýšení paddingu pro sekce */
   max-width: 900px;
   margin: 50px auto; /* Zvýšení mezery kolem sekcí */
-  background: var(--section-bg-color); /* O něco světlejší velmi světlá medově hnědá pro sekce */
+  background: var(
+    --section-bg-color
+  ); /* O něco světlejší velmi světlá medově hnědá pro sekce */
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
   opacity: 0; /* Skryto při načtení */
@@ -120,6 +122,7 @@ body {
 .image-container {
   display: flex; /* Použití flexboxu pro vodorovné uspořádání */
   justify-content: space-between; /* Prostor mezi obrázky */
+  flex-wrap: wrap; /* Přizpůsobení pro více řádků */
   margin: 0 auto; /* Vycentrování kontejneru */
   width: 90%; /* Šířka kontejneru pro zajištění centrálního zarovnání */
 }
@@ -128,7 +131,7 @@ body {
   width: 31%; /* Změněná šířka každé karty na 31% pro zvětšení obrázků */
   height: 400px; /* Fixní výška karty */
   perspective: 1000px; /* Perspektiva pro 3D efekt */
-  margin: 0; /* Odstranění defaultního marginu */
+  margin: 0 1%; /* Odstranění defaultního marginu a nastavení pro mezery */
 }
 
 .flip-card-inner {
@@ -204,54 +207,57 @@ body {
   padding: 20px 0; /* Vyvážení paddingu */
 }
 
-/* Sekce objednání */
-.order-section {
-  background-color: var(--section-bg-color); /* Pozadí sekce */
-  padding: 50px 20px; /* Padding kolem sekce */
-  text-align: center; /* Vycentrování textu */
-  box-shadow: 0 10px 30px var(--shadow-color); /* Stín pro 3D efekt */
-  border-radius: 10px; /* Zaoblení rohů */
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px; /* Umístění nad footer */
+  right: 30px;
+  display: none; /* Skryto na začátku */
+  justify-content: center;
+  align-items: center;
+  background: none; /* Bez pozadí */
+  border: none;
+  cursor: pointer;
+  width: 60px; /* Šířka tlačítka */
+  height: 60px; /* Výška tlačítka */
   transition: transform 0.3s ease; /* Plynulý přechod */
+  animation: moveUp 1.5s infinite; /* Pulsing efekt */
 }
 
-.order-section:hover {
-  transform: scale(1.02); /* Efekt zvětšení při najetí */
+/* Pulsing efekt pro scroll button */
+@keyframes moveUp {
+  0%,
+  100% {
+    transform: translateY(0); /* Původní pozice */
+  }
+  50% {
+    transform: translateY(-10px); /* Vzestupná pozice */
+  }
 }
 
-.order-container {
-  max-width: 800px; /* Maximální šířka kontejneru */
-  margin: 0 auto; /* Vycentrování kontejneru */
+/* Media queries pro responzivitu */
+@media (max-width: 768px) {
+  .flip-card {
+    width: 100%; /* Plná šířka pro mobilní zařízení */
+    margin: 10px 0; /* Menší mezery mezi kartami */
+  }
+
+  .text-container {
+    padding: 30px 20px; /* Menší padding pro menší obrazovky */
+  }
+
+  .main-heading {
+    font-size: 40px; /* Menší velikost nadpisu pro mobilní zařízení */
+  }
+
+  .scroll-to-top {
+    bottom: 20px; /* Nižší pozice na mobilních zařízeních */
+    right: 20px; /* Nižší pozice na mobilních zařízeních */
+  }
 }
 
-.order-container h2 {
-  font-size: 36px; /* Velikost nadpisu */
-  color: var(--primary-color); /* Barva nadpisu */
-  margin-bottom: 20px; /* Mezery pod nadpisem */
-}
-
-.order-container p {
-  font-size: 18px; /* Velikost textu */
-  color: var(--primary-color); /* Barva textu */
-  margin-bottom: 30px; /* Mezery pod textem */
-}
-
-.order-buttons {
-  display: flex; /* Flexbox pro vodorovné uspořádání */
-  justify-content: center; /* Vycentrování tlačítek */
-  gap: 20px; /* Prostor mezi tlačítky */
-}
-
-.order-button {
-  background-color: var(--highlight-color); /* Barva tlačítka */
-  color: #fff; /* Barva textu na tlačítku */
-  padding: 15px 25px; /* Padding kolem textu tlačítka */
-  border: none; /* Bez okraje */
-  border-radius: 5px; /* Zaoblení rohů */
-  font-size: 18px; /* Velikost textu */
-  text-decoration: none; /* Bez podtržení */
-  transition: background-color 0.3s ease; /* Plynulý přechod */
-}
-
-.order-button:hover {
-  background-color: #d69a25; /* Tmavší barva tlačítka při hoveru */
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 30px; /* Ještě menší velikost nadpisu pro malé obrazovky */
+  }
 }
