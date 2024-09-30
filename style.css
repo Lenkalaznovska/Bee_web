@@ -67,15 +67,25 @@ body {
   padding: 40px 30px; /* Zvýšení paddingu pro sekce */
   max-width: 900px;
   margin: 50px auto; /* Zvýšení mezery kolem sekcí */
-  background: var(
-    --section-bg-color
-  ); /* O něco světlejší velmi světlá medově hnědá pro sekce */
+  background: var(--section-bg-color); /* O něco světlejší velmi světlá medově hnědá pro sekce */
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
   opacity: 0; /* Skryto při načtení */
   transform: translateY(50px); /* Skryto pod sekcí */
   transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Plynulé zobrazení */
   text-align: center; /* Vycentrování textu */
+  animation: breathing 3s infinite; /* Efekt dýchání */
+}
+
+/* Efekt dýchání */
+@keyframes breathing {
+  0%,
+  100% {
+    transform: scale(1); /* Původní velikost */
+  }
+  50% {
+    transform: scale(1.02); /* Zvětšení pro efekt dýchání */
+  }
 }
 
 /* Podtržení nadpisu */
@@ -108,109 +118,17 @@ body {
 
 /* Galerie */
 .image-container {
-  display: flex;
-  flex-wrap: wrap; /* Aby se obrázky vešly na menších obrazovkách */
-  justify-content: center;
-  gap: 20px; /* Větší mezera mezi obrázky */
+  display: flex; /* Použití flexboxu pro vodorovné uspořádání */
+  justify-content: space-between; /* Prostor mezi obrázky */
+  margin: 0 auto; /* Vycentrování kontejneru */
+  width: 90%; /* Šířka kontejneru pro zajištění centrálního zarovnání */
 }
 
-.gallery-image {
-  width: 300px; /* Šířka obrázku */
-  height: auto; /* Automatická výška pro udržení proporcí */
-  border-radius: 10px;
-  box-shadow: 0 5px 15px var(--shadow-color); /* Stín pro obrázky */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Plynulý přechod */
-}
-
-.gallery-image:hover {
-  transform: scale(1.05); /* Zvětšení obrázku při najetí */
-  box-shadow: 0 10px 30px var(--shadow-color); /* Zvýšení stínu při hoveru */
-  filter: brightness(1.1); /* Zvýšení jasnosti obrázku při hoveru */
-}
-
-/* Kontaktní sekce */
-.contact a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-weight: bold; /* Zvýraznění odkazů */
-}
-
-/* Kontaktní sekce */
-.contact {
-  text-align: center; /* Vycentrování textu v sekci Kontaktujte nás */
-  padding: 40px 20px; /* Větší padding kolem textu pro vzdušnější vzhled */
-}
-
-/* Footer */
-.footer {
-  background-color: var(--footer-bg-color); /* Stejná barva jako sekce */
-  color: var(--primary-color); /* Tmavě hnědá pro text */
-  text-align: center;
-  padding: 20px 0; /* Vyvážení paddingu */
-}
-
-/* Scroll to top button */
-.scroll-to-top {
-  position: fixed;
-  bottom: 80px; /* Umístění nad footer */
-  right: 30px;
-  display: none; /* Skryto na začátku */
-  justify-content: center;
-  align-items: center;
-  background: none; /* Bez pozadí */
-  border: none;
-  cursor: pointer;
-  width: 60px; /* Šířka tlačítka */
-  height: 60px; /* Výška tlačítka */
-  transition: transform 0.3s ease; /* Plynulý přechod */
-  animation: moveUp 1s infinite alternate; /* Plynulý pohyb nahoru */
-}
-
-/* Plynulý pohyb nahoru */
-@keyframes moveUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-30px); /* Pohyb nahoru */
-  }
-}
-
-.scroll-to-top img {
-  width: 75px; /* Šířka ikony */
-  height: auto; /* Automatická výška pro udržení proporcí */
-}
-
-/* Animace pro kliknutí na tlačítko */
-.scroll-to-top:active {
-  animation: none; /* Zrušení animace pohybu při kliknutí */
-  transform: scale(0.9); /* Zmenšení při kliknutí */
-}
-
-/* Animace pro hover efekt */
-.text-container:hover {
-  transform: scale(1.02); /* Zvětšení při hoveru */
-  transition: transform 0.3s ease; /* Plynulý přechod */
-}
-
-/* Animace pro sekce při scrollování */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Flip card styles */
 .flip-card {
-  background-color: transparent;
-  width: 300px; /* Šířka karty */
-  height: 400px; /* Výška karty */
+  width: 31%; /* Změněná šířka každé karty na 31% pro zvětšení obrázků */
+  height: 400px; /* Fixní výška karty */
   perspective: 1000px; /* Perspektiva pro 3D efekt */
+  margin: 0; /* Odstranění defaultního marginu */
 }
 
 .flip-card-inner {
@@ -247,4 +165,93 @@ body {
   background-color: #f0d9a0; /* Barva pozadí zadní strany */
   color: var(--primary-color); /* Barva textu */
   transform: rotateY(180deg); /* Otočení zadní strany */
+}
+
+/* Galerie obrázků */
+.gallery-image {
+  width: 100%; /* 100% šířka pro zajištění konzistentního rozložení */
+  height: 100%; /* 100% výška pro zajištění konzistentního rozložení */
+  object-fit: cover; /* Zajištění, že obrázky zaplní prostor */
+  border-radius: 10px; /* Zaoblení rohů */
+  box-shadow: 0 5px 15px var(--shadow-color); /* Stín pro obrázky */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Plynulý přechod */
+}
+
+.gallery-image:hover {
+  transform: scale(1.05); /* Zvětšení obrázku při najetí */
+  box-shadow: 0 10px 30px var(--shadow-color); /* Zvýšení stínu při hoveru */
+  filter: brightness(1.1); /* Zvýšení jasnosti obrázku při hoveru */
+}
+
+/* Kontaktní sekce */
+.contact a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold; /* Zvýraznění odkazů */
+}
+
+/* Kontaktní sekce */
+.contact {
+  text-align: center; /* Vycentrování textu v sekci Kontaktujte nás */
+  padding: 40px 20px; /* Větší padding kolem textu pro vzdušnější vzhled */
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-bg-color); /* Stejná barva jako sekce */
+  color: var(--primary-color); /* Tmavě hnědá pro text */
+  text-align: center;
+  padding: 20px 0; /* Vyvážení paddingu */
+}
+
+/* Sekce objednání */
+.order-section {
+  background-color: var(--section-bg-color); /* Pozadí sekce */
+  padding: 50px 20px; /* Padding kolem sekce */
+  text-align: center; /* Vycentrování textu */
+  box-shadow: 0 10px 30px var(--shadow-color); /* Stín pro 3D efekt */
+  border-radius: 10px; /* Zaoblení rohů */
+  transition: transform 0.3s ease; /* Plynulý přechod */
+}
+
+.order-section:hover {
+  transform: scale(1.02); /* Efekt zvětšení při najetí */
+}
+
+.order-container {
+  max-width: 800px; /* Maximální šířka kontejneru */
+  margin: 0 auto; /* Vycentrování kontejneru */
+}
+
+.order-container h2 {
+  font-size: 36px; /* Velikost nadpisu */
+  color: var(--primary-color); /* Barva nadpisu */
+  margin-bottom: 20px; /* Mezery pod nadpisem */
+}
+
+.order-container p {
+  font-size: 18px; /* Velikost textu */
+  color: var(--primary-color); /* Barva textu */
+  margin-bottom: 30px; /* Mezery pod textem */
+}
+
+.order-buttons {
+  display: flex; /* Flexbox pro vodorovné uspořádání */
+  justify-content: center; /* Vycentrování tlačítek */
+  gap: 20px; /* Prostor mezi tlačítky */
+}
+
+.order-button {
+  background-color: var(--highlight-color); /* Barva tlačítka */
+  color: #fff; /* Barva textu na tlačítku */
+  padding: 15px 25px; /* Padding kolem textu tlačítka */
+  border: none; /* Bez okraje */
+  border-radius: 5px; /* Zaoblení rohů */
+  font-size: 18px; /* Velikost textu */
+  text-decoration: none; /* Bez podtržení */
+  transition: background-color 0.3s ease; /* Plynulý přechod */
+}
+
+.order-button:hover {
+  background-color: #d69a25; /* Tmavší barva tlačítka při hoveru */
 }
