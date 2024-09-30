@@ -1,4 +1,4 @@
-/* Reset a obecné styly */
+/* Reset a obecné styly */ 
 :root {
   --main-bg-color: #f7e5b5; /* Světlejší zlatavě medová barva pro pozadí */
   --primary-color: #4e3b2d; /* Tmavě hnědá pro text */
@@ -75,6 +75,7 @@ body {
   text-align: center;
 }
 
+/* Nadpisy */
 .text-container h2 {
   border-bottom: 4px solid var(--highlight-color);
   padding-bottom: 10px;
