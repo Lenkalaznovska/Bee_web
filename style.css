@@ -75,7 +75,6 @@ body {
   text-align: center;
 }
 
-/* Nadpisy */
 .text-container h2 {
   border-bottom: 4px solid var(--highlight-color);
   padding-bottom: 10px;
@@ -89,7 +88,7 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.01); /* Zrychlené pulzování */
+    transform: scale(1.01);
   }
   100% {
     transform: scale(1);
@@ -97,7 +96,7 @@ body {
 }
 
 .text-container.pulsing {
-  animation: pulse 2.5s infinite; /* Zrychlené pulzování */
+  animation: pulse 2.5s infinite;
 }
 
 /* Animace pro zobrazení sekcí */
@@ -124,24 +123,33 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px; /* Menší mezera mezi obrázky */
-  padding: 0; /* Zmenšený padding kolem galerie */
+  gap: 5px;
+  padding: 0;
 }
 
 .gallery-image {
-  width: calc(33.333% - 10px); /* Tři fotky vedle sebe */
-  height: 200px; /* Nastavení na stejnou výšku fotek */
-  object-fit: cover; /* Aby byly fotky správně oříznuty */
+  width: calc(33.333% - 10px);
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 5px 15px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  transform: rotateY(0deg);
+  animation: rotateImage 5s infinite linear; /* Otáčení obrázků */
 }
 
 .gallery-image:hover {
-  transform: rotateY(360deg);
+  transform: scale(1.05);
   box-shadow: 0 10px 30px var(--shadow-color);
   filter: brightness(1.1);
+}
+
+@keyframes rotateImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Kontaktní sekce */
@@ -198,22 +206,6 @@ body {
 .scroll-to-top:active {
   animation: none;
   transform: scale(0.9);
-}
-
-.text-container:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Flip card styles */
@@ -274,8 +266,8 @@ body {
   }
 
   .gallery-image {
-    width: 100%; /* Fotky na 100 % šířky na malých obrazovkách */
-    height: auto; /* Zachování poměru stran */
+    width: 100%;
+    height: auto;
   }
 
   .scroll-to-top {
@@ -309,15 +301,6 @@ body {
 .order-section p {
   margin: 20px 0;
   color: var(--primary-color);
-}
-
-@media (max-width: 750px) {
-  .order-section p {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.5;
-    font-size: 16px;
-  }
 }
 
 .order-section a {
