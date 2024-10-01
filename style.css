@@ -4,7 +4,7 @@
   --primary-color: #4e3b2d;
   --section-bg-color: #f5e3c4;
   --footer-bg-color: #f5e3c4;
-  --highlight-color: #e7a83b;
+  --highlight-color: #e7a83b; /* Zlatá barva pro odkazy */
   --link-color: #e7a83b; /* Zlatá barva pro odkazy */
   --shadow-color: rgba(0, 0, 0, 0.15);
 }
@@ -170,6 +170,11 @@ body {
 }
 
 /* Kontaktní sekce */
+.contact {
+  padding: 60px 20px; /* Zvětšení horního paddingu */
+  text-align: center;
+}
+
 .contact a {
   color: var(--link-color);
   text-decoration: none;
@@ -185,7 +190,7 @@ body {
 
 .order-section h2 {
   margin-bottom: 20px;
-  color: var(--highlight-color);
+  color: var(--primary-color); /* Změna barvy nadpisu na stejnou jako ostatní */
   border-bottom: 4px solid var(--highlight-color); /* Podtržení zlatou barvou */
   padding-bottom: 10px;
 }
