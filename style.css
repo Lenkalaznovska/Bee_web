@@ -67,7 +67,9 @@ body {
   padding: 40px 30px; /* Zvýšení paddingu pro sekce */
   max-width: 900px;
   margin: 50px auto; /* Zvýšení mezery kolem sekcí */
-  background: var(--section-bg-color); /* O něco světlejší velmi světlá medově hnědá pro sekce */
+  background: var(
+    --section-bg-color
+  ); /* O něco světlejší velmi světlá medově hnědá pro sekce */
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
   opacity: 0; /* Skryto při načtení */
@@ -122,7 +124,6 @@ body {
   justify-content: space-between; /* Prostor mezi obrázky */
   margin: 0 auto; /* Vycentrování kontejneru */
   width: 90%; /* Šířka kontejneru pro zajištění centrálního zarovnání */
-  flex-wrap: wrap; /* Umožnění zalomení na další řádek */
 }
 
 .flip-card {
@@ -218,26 +219,21 @@ body {
   cursor: pointer;
   width: 60px; /* Šířka tlačítka */
   height: 60px; /* Výška tlačítka */
-  transition: transform 0.3s; /* Plynulý přechod */
+  transition: transform 0.3s ease; /* Plynulý přechod */
+  animation: moveUp 1s infinite alternate; /* Plynulý pohyb nahoru */
 }
 
-/* Responzivní styly */
-@media (max-width: 768px) {
-  .main-heading {
-    font-size: 40px; /* Zmenšení nadpisu pro menší obrazovky */
+/* Plynulý pohyb nahoru */
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
   }
-  
-  .flip-card {
-    width: 100%; /* Šířka karty na 100% pro menší obrazovky */
-    margin-bottom: 20px; /* Mezery mezi kartami */
+  100% {
+    transform: translateY(-30px); /* Pohyb nahoru o 30px */
   }
-  
-  .text-container {
-    padding: 30px 20px; /* Menší padding pro mobilní zařízení */
-  }
-  
-  .scroll-to-top {
-    width: 50px; /* Zmenšení šířky tlačítka pro mobilní zařízení */
-    height: 50px; /* Zmenšení výšky tlačítka pro mobilní zařízení */
-  }
+}
+
+/* Zobrazení tlačítka na hover */
+.scroll-to-top:hover {
+  transform: scale(1.1); /* Zvětšení při hoveru */
 }
