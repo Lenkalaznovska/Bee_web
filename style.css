@@ -175,6 +175,20 @@ body {
   text-align: center;
 }
 
+.contact-info {
+  display: flex;
+  justify-content: center; /* Zarovná všechny položky na střed */
+  margin-top: 10px; /* Přidá prostor nad kontakty */
+}
+
+.contact-item {
+  margin: 0 10px; /* Přidá prostor mezi telefonem a e-mailem */
+}
+
+.contact-separator {
+  margin: 0 10px; /* Přidá prostor kolem oddělovače */
+}
+
 .contact a {
   color: var(--link-color);
   text-decoration: none;
@@ -217,17 +231,6 @@ body {
 
 .order-section button:hover {
   background-color: #d69b2a;
-}
-
-/* Flexbox pro telefon a email v jedné řadě */
-.order-section .contact-info {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px; /* vzdálenost nad kontaktními informacemi */
-}
-
-.order-section .contact-info span {
-  margin: 0 15px; /* Vzdálenost mezi telefonem a e-mailem */
 }
 
 /* Footer */
