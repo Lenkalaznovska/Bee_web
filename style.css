@@ -171,7 +171,7 @@ body {
 
 /* Kontaktní sekce */
 .contact {
-  padding: 30px 30px; /* Stejný padding jako ostatní sekce */
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -202,27 +202,27 @@ body {
 
 /* Sekce o objednání */
 .order-section {
-  padding: 30px 30px; /* Stejný padding jako ostatní sekce */
+  padding: 20px 20px; /* Snizeno z 30px na 20px */
   background: var(--section-bg-color);
   text-align: center;
 }
 
 .order-section h2 {
-  margin-bottom: 20px; /* Standardizováno na 20px */
-  color: var(--primary-color); /* Barva nadpisu stejná jako ostatní sekce */
+  margin-bottom: 10px; /* Zmenšeno z 20px na 10px */
+  color: var(--primary-color); /* Změna barvy nadpisu na stejnou jako ostatní */
   border-bottom: 4px solid var(--highlight-color); /* Podtržení zlatou barvou */
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .order-section p {
-  margin-bottom: 20px; /* Stejné odsazení jako ostatní sekce */
+  margin-bottom: 10px; /* Zmenšeno z 20px na 10px */
 }
 
 .order-section a {
   color: var(--link-color);
   font-weight: bold; /* Tučné odkazy */
   text-decoration: none;
-  margin-bottom: 50px;
+  margin-bottom: 50px; /* Zmenšeno z 100px na 50px */
 }
 
 .order-section button {
@@ -244,7 +244,7 @@ body {
   background-color: var(--footer-bg-color);
   color: var(--primary-color);
   text-align: center;
-  padding: 30px 0; /* Stejný padding jako ostatní sekce */
+  padding: 20px 0;
 }
 
 /* Scroll to top button */
@@ -309,11 +309,15 @@ body {
   }
 
   .order-section h2 {
-    font-size: 24px;
+    font-size: 24px; /* Zmenšeno pro lepší zobrazení */
   }
 
-  .order-section button {
-    width: 90%; /* Zvětší tlačítko na mobilních zařízeních */
-    padding: 15px;
+  .order-section p {
+    font-size: 16px;
+  }
+
+  .scroll-to-top {
+    bottom: 40px; /* Přizpůsobeno pro mobilní zařízení */
+    right: 10px;
   }
 }
