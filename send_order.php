@@ -1,11 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vyzvednutí dat z formuláře
-    $honeyQuantity = $_POST['honeyQuantity'];
+    $honeyQuantity = $_POST['medQuantity']; // Opraveno
     $tinctureQuantity = $_POST['tinctureQuantity'];
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $message = trim($_POST['message']);
+
+    // Validace e-mailu
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Neplatná e-mailová adresa.";
+        exit;
+    }
 
     // Nastavení příjemce a předmětu
     $to = "lenkalaznovska@seznam.cz";
@@ -19,7 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_message .= "Poznámky: $message\n";
 
     // Hlavičky
-    $headers = "From: $email";
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n"; // Přidáno pro snadnou odpověď
 
     // Odeslání emailu
     if (mail($to, $subject, $email_message, $headers)) {
