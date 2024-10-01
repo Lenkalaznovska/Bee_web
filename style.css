@@ -174,7 +174,7 @@ body {
 .contact-info {
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Další snížení mezery mezi kontakty */
+  margin-top: 5px; /* Další snížení mezery mezi kontakty */
   flex-wrap: wrap;
 }
 
@@ -183,7 +183,7 @@ body {
 }
 
 .contact-item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Snížení paddingu mezi kontakty */
 }
 
 .contact-separator {
@@ -211,7 +211,7 @@ body {
 }
 
 .order-section p {
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Snížení mezery mezi textem a kontakty */
 }
 
 .order-section a {
@@ -318,6 +318,6 @@ body {
   }
 
   .order-section .contact-item {
-    margin-bottom: 5px; /* Snížení paddingu mezi kontakty */
+    margin-bottom: 2px; /* Další snížení paddingu mezi kontakty */
   }
 }
