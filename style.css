@@ -218,10 +218,10 @@ body {
   width: 60px; /* Šířka tlačítka */
   height: 60px; /* Výška tlačítka */
   transition: transform 0.3s ease; /* Plynulý přechod */
-  animation: moveUp 1s infinite alternate; /* Plynulý pohyb nahoru */
+  animation: moveUp 1s infinite alternate; /* Efekt pohybu nahoru */
 }
 
-/* Plynulý pohyb nahoru */
+/* Efekt pohybu nahoru pro tlačítko */
 @keyframes moveUp {
   0% {
     transform: translateY(0);
@@ -231,28 +231,28 @@ body {
   }
 }
 
-/* Zobrazit tlačítko při scrollování */
-.show {
-  display: flex; /* Zobrazení tlačítka */
+.scroll-to-top img {
+  width: 100%; /* Šířka obrázku tlačítka */
+  height: 100%; /* Výška obrázku tlačítka */
 }
 
 /* Responzivní styly */
-@media screen and (max-width: 768px) {
-  .text-container {
-    padding: 20px; /* Snížení paddingu na mobilních zařízeních */
-  }
-  
-  .main-heading {
-    font-size: 40px; /* Menší velikost nadpisu na mobilních zařízeních */
-  }
-
+@media (max-width: 768px) {
   .image-container {
-    flex-direction: column; /* Změna směru pro obrázky na mobilních zařízeních */
-    align-items: center; /* Centrovaní obrázků */
+    flex-direction: column; /* Vertikální uspořádání obrázků na mobilu */
   }
-
   .flip-card {
-    width: 90%; /* Šířka pro mobilní zařízení */
-    margin-bottom: 20px; /* Mezery mezi kartami */
+    width: 100%; /* 100% šířka pro mobilní zařízení */
+    height: auto; /* Automatická výška pro přizpůsobení */
+  }
+  .text-container {
+    padding: 20px 15px; /* Menší padding na mobilu */
+    margin: 30px auto; /* Menší mezery na mobilu */
+  }
+  .main-heading {
+    font-size: 40px; /* Zmenšení velikosti nadpisu na mobilu */
+  }
+  .footer {
+    padding: 15px 0; /* Menší padding pro footer na mobilu */
   }
 }
