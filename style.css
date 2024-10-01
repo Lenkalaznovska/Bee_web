@@ -1,302 +1,299 @@
 /* Reset a obecné styly */
 :root {
-    --main-bg-color: #f7e5b5; /* Světle zlatavě medová barva pro pozadí */
-    --primary-color: #4e3b2d; /* Tmavě hnědá pro text */
-    --section-bg-color: #f5e3c4; /* Světlejší medově hnědá pro sekce */
-    --footer-bg-color: #f5e3c4; /* Stejná barva jako sekce pro footer */
-    --highlight-color: #e7a83b; /* Zlatá barva pro zvýraznění */
-    --link-color: #4e3b2d; /* Hnědá pro odkazy */
-    --shadow-color: rgba(0, 0, 0, 0.15); /* Světlejší stín */
+  --main-bg-color: #f7e5b5; /* Světle zlatavě medová barva pro pozadí */
+  --primary-color: #4e3b2d; /* Tmavě hnědá pro text */
+  --section-bg-color: #f5e3c4; /* Světlejší medově hnědá pro sekce */
+  --footer-bg-color: #f5e3c4; /* Stejná barva jako sekce pro footer */
+  --highlight-color: #e7a83b; /* Zlatá barva pro zvýraznění */
+  --link-color: #4e3b2d; /* Hnědá pro odkazy */
+  --shadow-color: rgba(0, 0, 0, 0.15); /* Světlejší stín */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    color: var(--primary-color);
-    background-color: var(--main-bg-color);
-    line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-color);
+  background-color: var(--main-bg-color);
+  line-height: 1.6;
 }
 
 /* Menu */
 .menu-header {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
 .menu-background {
-    background: url("images/menu.jpg") no-repeat center right/cover;
-    width: 100%;
-    height: 365px;
+  background: url("images/menu.jpg") no-repeat center right/cover;
+  width: 100%;
+  height: 365px;
 }
 
 .menu-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main-heading {
-    font-size: 55px;
-    color: #fff;
-    text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.7);
-    animation: slideDown 0.8s ease-out;
-    font-weight: bold;
+  font-size: 55px;
+  color: #fff;
+  text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.7);
+  animation: slideDown 0.8s ease-out;
+  font-weight: bold;
 }
 
 @keyframes slideDown {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Sekce */
 .text-container {
-    padding: 40px 30px;
-    max-width: 900px;
-    margin: 50px auto;
-    background: var(--section-bg-color);
-    border-radius: 10px;
-    box-shadow: 0 10px 30px var(--shadow-color);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    text-align: center;
-    animation: breathing 3s infinite;
+  padding: 40px 30px;
+  max-width: 900px;
+  margin: 50px auto;
+  background: var(--section-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  text-align: center;
+  animation: breathing 3s infinite;
 }
 
 @keyframes breathing {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
 }
 
 .text-container h2 {
-    border-bottom: 4px solid var(--highlight-color);
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    font-weight: bold;
+  border-bottom: 4px solid var(--highlight-color);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .section-visible {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Galerie */
 .image-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .flip-card {
-    width: 31%;
-    height: 400px;
-    perspective: 1000px;
-    margin: 0;
+  width: 31%;
+  height: 400px;
+  perspective: 1000px;
+  margin: 0;
 }
 
 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .flip-card-front,
 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 
 .flip-card-front {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flip-card-back {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0d9a0;
-    color: var(--primary-color);
-    transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0d9a0;
+  color: var(--primary-color);
+  transform: rotateY(180deg);
 }
 
 .gallery-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px var(--shadow-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .gallery-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px var(--shadow-color);
-    filter: brightness(1.1);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  filter: brightness(1.1);
 }
 
 /* Objednávková sekce */
 .order-section {
-    background-color: #fff3e0;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px var(--shadow-color);
+  background-color: var(--section-bg-color);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px var(--shadow-color);
 }
 
 .order-section h3 {
-    font-size: 28px;
-    color: var(--highlight-color);
-    margin-bottom: 15px;
+  font-size: 28px;
+  color: var(--highlight-color);
+  margin-bottom: 15px;
 }
 
 .order-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.order-button {
-    display: inline-block;
-    background-color: var(--highlight-color);
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 5px 15px var(--shadow-color);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.order-button:hover {
-    background-color: #d18a28;
-    transform: translateY(-3px);
+.gold-link {
+  color: var(--highlight-color); /* Zlatá barva pro odkazy */
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 /* Kontaktní sekce */
 .contact a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .contact {
-    text-align: center;
-    padding: 40px 20px;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 /* Footer */
 .footer {
-    background-color: var(--footer-bg-color);
-    color: var(--primary-color);
-    text-align: center;
-    padding: 20px 0;
+  background-color: var(--footer-bg-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* Scroll to top button */
 .scroll-to-top {
-    position: fixed;
-    bottom: 80px;
-    right: 30px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    transition: transform 0.3s ease;
-    animation: moveUp 1s infinite alternate;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+  animation: moveUp 1s infinite alternate;
 }
 
 @keyframes moveUp {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-5px);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
 }
 
 .scroll-to-top img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Responzivní styly */
 @media (min-width: 1024px) {
-    .menu-background {
-        height: 500px;
-    }
-    .main-heading {
-        font-size: 65px;
-    }
-    .flip-card {
-        width: 30%;
-    }
+  .menu-background {
+    height: 500px;
+  }
+  .main-heading {
+    font-size: 65px;
+  }
+  .flip-card {
+    width: 30%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .menu-background {
-        height: 400px;
-    }
-    .main-heading {
-        font-size: 45px;
-    }
-    .flip-card {
-        width: 45%;
-    }
+  .menu-background {
+    height: 400px;
+  }
+  .main-heading {
+    font-size: 45px;
+  }
+  .flip-card {
+    width: 45%;
+  }
 }
 
 @media (max-width: 767px) {
-    .menu-background {
-        height: 300px;
-    }
-    .main-heading {
-        font-size: 35px;
-    }
-    .flip-card {
-        width: 90%;
-    }
-    .image-container {
-        flex-direction: column;
-    }
-    .text-container {
-        padding: 20px 15px;
-        margin: 30px auto;
-    }
-    .footer {
-        padding: 15px 0;
-    }
+  .menu-background {
+    height: 300px;
+  }
+  .main-heading {
+    font-size: 35px;
+  }
+  .flip-card {
+    width: 90%;
+  }
+  .image-container {
+    flex-direction: column;
+  }
+  .text-container {
+    padding: 20px 15px;
+    margin: 30px auto;
+  }
+  .order-section {
+    padding: 20px;
+  }
+  .order-section h3 {
+    font-size: 24px;
+  }
+  .order-section p {
+    font-size: 16px;
+  }
+  .footer {
+    padding: 15px 0;
+  }
 }
