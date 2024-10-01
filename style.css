@@ -67,9 +67,7 @@ body {
   padding: 40px 30px; /* Zvýšení paddingu pro sekce */
   max-width: 900px;
   margin: 50px auto; /* Zvýšení mezery kolem sekcí */
-  background: var(
-    --section-bg-color
-  ); /* O něco světlejší velmi světlá medově hnědá pro sekce */
+  background: var(--section-bg-color); /* O něco světlejší velmi světlá medově hnědá pro sekce */
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
   opacity: 0; /* Skryto při načtení */
@@ -124,6 +122,7 @@ body {
   justify-content: space-between; /* Prostor mezi obrázky */
   margin: 0 auto; /* Vycentrování kontejneru */
   width: 90%; /* Šířka kontejneru pro zajištění centrálního zarovnání */
+  flex-wrap: wrap; /* Umožnění zalomení na další řádek */
 }
 
 .flip-card {
@@ -219,21 +218,52 @@ body {
   cursor: pointer;
   width: 60px; /* Šířka tlačítka */
   height: 60px; /* Výška tlačítka */
-  transition: transform 0.3s ease; /* Plynulý přechod */
-  animation: moveUp 1s infinite alternate; /* Plynulý pohyb nahoru */
+  transition: transform 0.3s; /* Plynulý přechod */
 }
 
-/* Plynulý pohyb nahoru */
-@keyframes moveUp {
-  0% {
-    transform: translateY(0);
+/* Responzivní styly */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 40px; /* Zmenšení nadpisu pro menší obrazovky */
   }
-  100% {
-    transform: translateY(-30px); /* Pohyb nahoru o 30px */
+
+  .text-container {
+    padding: 20px; /* Menší padding pro mobilní zařízení */
+  }
+
+  .flip-card {
+    width: 100%; /* 100% šířka pro mobilní zařízení */
+    margin-bottom: 20px; /* Spodní mezera mezi kartami */
+  }
+
+  .image-container {
+    flex-direction: column; /* Sloupcové uspořádání pro mobilní zařízení */
+    align-items: center; /* Vycentrování obrázků */
   }
 }
 
-/* Zobrazení tlačítka na hover */
-.scroll-to-top:hover {
-  transform: scale(1.1); /* Zvětšení při hoveru */
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 30px; /* Další zmenšení nadpisu pro malé obrazovky */
+  }
+
+  .text-container {
+    padding: 10px; /* Ještě menší padding pro velmi malé obrazovky */
+  }
+}
+
+/* Hover efekt pro tlačítka */
+.button {
+  padding: 15px 30px; /* Zvýšení paddingu pro tlačítka */
+  background-color: var(--highlight-color); /* Barva tlačítek */
+  color: #fff;
+  border: none;
+  border-radius: 5px; /* Zaoblení rohů tlačítek */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Plynulé přechody */
+}
+
+.button:hover {
+  background-color: #e5a02f; /* Tmavší odstín pro hover */
+  transform: translateY(-3px); /* Zvednutí tlačítka při hoveru */
 }
