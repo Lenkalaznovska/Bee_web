@@ -2,9 +2,10 @@
 :root {
   --main-bg-color: #f7e5b5;
   --primary-color: #4e3b2d;
+  --highlight-color: #e7a83b;
+  --gold-color: #d4af37; /* Zlatá barva */
   --section-bg-color: #f5e3c4;
   --footer-bg-color: #f5e3c4;
-  --highlight-color: #e7a83b;
   --link-color: #4e3b2d;
   --shadow-color: rgba(0, 0, 0, 0.15);
 }
@@ -73,16 +74,6 @@ body {
   transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   text-align: center;
-  animation: breathing 3s infinite;
-}
-
-@keyframes breathing {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
 }
 
 .text-container h2 {
@@ -172,7 +163,7 @@ body {
 /* Sekce objednání */
 .order-section {
   background-color: var(--section-bg-color);
-  padding: 60px 20px;
+  padding: 40px;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color);
@@ -183,7 +174,7 @@ body {
 .order-section h2 {
   font-size: 36px;
   color: var(--primary-color);
-  border-bottom: 4px solid var(--highlight-color);
+  border-bottom: 4px solid var(--gold-color); /* Zlaté podtržení */
   display: inline-block;
   padding-bottom: 10px;
   margin-bottom: 30px;
@@ -193,6 +184,11 @@ body {
   font-size: 18px;
   margin-bottom: 30px;
   color: var(--primary-color);
+}
+
+.order-section a {
+  color: var(--gold-color); /* Zlaté odkazy */
+  text-decoration: underline;
 }
 
 .order-button {
@@ -270,9 +266,17 @@ body {
   .menu-background {
     height: 300px;
   }
-  
+
   .main-heading {
     font-size: 45px;
+  }
+
+  .order-section {
+    padding: 30px;
+  }
+
+  .order-section h2 {
+    font-size: 30px; /* Zvětšení písma nadpisu */
   }
 
   .flip-card {
@@ -290,9 +294,17 @@ body {
   .menu-background {
     height: 250px;
   }
-  
+
   .main-heading {
     font-size: 35px;
+  }
+
+  .order-section {
+    padding: 20px;
+  }
+
+  .order-section h2 {
+    font-size: 28px; /* Zvětšení písma nadpisu */
   }
 
   .flip-card {
@@ -315,13 +327,21 @@ body {
     font-size: 25px;
   }
 
+  .order-section {
+    padding: 15px;
+  }
+
+  .order-section h2 {
+    font-size: 24px; /* Zvětšení písma nadpisu */
+  }
+
   .flip-card {
     width: 100%;
     height: 250px;
   }
 
   .text-container {
-    padding: 10px;
-    margin: 10px auto;
+    padding: 15px;
+    margin: 15px auto;
   }
 }
