@@ -67,9 +67,7 @@ body {
   padding: 40px 30px; /* Zvýšení paddingu pro sekce */
   max-width: 900px;
   margin: 50px auto; /* Zvýšení mezery kolem sekcí */
-  background: var(
-    --section-bg-color
-  ); /* O něco světlejší velmi světlá medově hnědá pro sekce */
+  background: var(--section-bg-color); /* O něco světlejší velmi světlá medově hnědá pro sekce */
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color); /* Větší stín pro 3D efekt */
   opacity: 0; /* Skryto při načtení */
@@ -229,11 +227,32 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-30px); /* Pohyb nahoru o 30px */
+    transform: translateY(-5px);
   }
 }
 
-/* Zobrazení tlačítka na hover */
-.scroll-to-top:hover {
-  transform: scale(1.1); /* Zvětšení při hoveru */
+/* Zobrazit tlačítko při scrollování */
+.show {
+  display: flex; /* Zobrazení tlačítka */
+}
+
+/* Responzivní styly */
+@media screen and (max-width: 768px) {
+  .text-container {
+    padding: 20px; /* Snížení paddingu na mobilních zařízeních */
+  }
+  
+  .main-heading {
+    font-size: 40px; /* Menší velikost nadpisu na mobilních zařízeních */
+  }
+
+  .image-container {
+    flex-direction: column; /* Změna směru pro obrázky na mobilních zařízeních */
+    align-items: center; /* Centrovaní obrázků */
+  }
+
+  .flip-card {
+    width: 90%; /* Šířka pro mobilní zařízení */
+    margin-bottom: 20px; /* Mezery mezi kartami */
+  }
 }
