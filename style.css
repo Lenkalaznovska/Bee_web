@@ -48,17 +48,6 @@ body {
     text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.7);
     animation: slideDown 0.8s ease-out; /* Animace pro hlavní nadpis */
     font-weight: bold; /* Zesílení textu pro větší důraz */
-    animation: pulse 2s infinite; /* Efekt pulzování */
-}
-
-/* Pulzování nadpisu */
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
 }
 
 /* Animace pro hlavní nadpis */
@@ -187,17 +176,6 @@ body {
     border-radius: 10px; /* Zaoblení rohů */
     box-shadow: 0 5px 15px var(--shadow-color); /* Stín pro obrázky */
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Plynulý přechod */
-    animation: rotate 8s infinite; /* Otočení obrázků */
-}
-
-/* Otočení obrázků */
-@keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 .gallery-image:hover {
@@ -235,4 +213,62 @@ body {
     display: none; /* Skryto na začátku */
     justify-content: center;
     align-items: center;
-    background: none;
+    background: none; /* Bez pozadí */
+    border: none;
+    cursor: pointer;
+    width: 60px; /* Šířka tlačítka */
+    height: 60px; /* Výška tlačítka */
+    transition: transform 0.3s ease; /* Plynulý přechod */
+    animation: moveUp 1s infinite alternate; /* Plynulý pohyb nahoru */
+}
+
+/* Plynulý pohyb nahoru */
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-30px); /* Pohyb nahoru o 30px */
+    }
+}
+
+/* Zobrazení tlačítka na hover */
+.scroll-to-top:hover {
+    transform: scale(1.1); /* Zvětšení při hoveru */
+}
+
+/* Responzivní design */
+@media (max-width: 1200px) {
+    .flip-card {
+        width: 45%; /* Změna šířky karty pro střední obrazovky */
+        height: auto; /* Automatická výška */
+    }
+    .text-container {
+        padding: 30px 20px; /* Zmenšení paddingu pro menší obrazovky */
+    }
+    .main-heading {
+        font-size: 45px; /* Zmenšení velikosti nadpisu */
+    }
+}
+
+@media (max-width: 768px) {
+    .flip-card {
+        width: 100%; /* Karty na celou šířku pro malé obrazovky */
+        height: auto; /* Automatická výška */
+    }
+    .image-container {
+        flex-direction: column; /* Změna na sloupec pro malé obrazovky */
+        align-items: center; /* Vycentrování obrázků */
+    }
+    .main-heading {
+        font-size: 36px; /* Zmenšení velikosti nadpisu */
+    }
+    .text-container {
+        padding: 20px 15px; /* Zmenšení paddingu */
+        margin: 30px auto; /* Zmenšení mezery kolem sekcí */
+    }
+    .scroll-to-top {
+        width: 50px; /* Zmenšení tlačítka */
+        height: 50px; /* Zmenšení tlačítka */
+    }
+}
