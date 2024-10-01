@@ -223,8 +223,11 @@ body {
 .order-section .contact-info {
   display: flex;
   justify-content: center;
-  gap: 20px; /* mezera mezi telefonem a e-mailem */
   margin-top: 10px; /* vzdálenost nad kontaktními informacemi */
+}
+
+.order-section .contact-info span {
+  margin: 0 15px; /* Vzdálenost mezi telefonem a e-mailem */
 }
 
 /* Footer */
