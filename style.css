@@ -250,8 +250,8 @@ body {
 /* Scroll to top button */
 .scroll-to-top {
   position: fixed;
-  bottom: 60px; /* Změněno pro lepší zarovnání */
-  right: 35px; /* Změněno pro lepší zarovnání */
+  bottom: 100px; /* Změněno pro lepší zarovnání */
+  right: 55px; /* Změněno pro lepší zarovnání */
   display: none;
   justify-content: center;
   align-items: center;
