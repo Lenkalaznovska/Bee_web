@@ -106,7 +106,7 @@ body {
   width: 31%;
   height: 400px;
   perspective: 1000px;
-  margin: 0;
+  margin: 0 0 20px; /* Přidání dolního marginu pro lepší prostor mezi kartami */
 }
 
 .flip-card-inner {
@@ -190,8 +190,9 @@ body {
 }
 
 .order-section a {
-  color: var(--gold-color); /* Zlaté odkazy */
-  text-decoration: underline;
+  color: var(--link-color); /* Odkazy s původní barvou */
+  font-weight: bold; /* Tučné odkazy */
+  text-decoration: underline; /* Podtržení pro odkazy */
 }
 
 .order-button {
@@ -311,40 +312,12 @@ body {
   }
 
   .flip-card {
-    width: 48%;
+    width: 100%; /* Zvětšení pro zajištění dobrého zobrazení */
     height: 300px;
   }
 
   .text-container {
     padding: 20px;
     margin: 20px auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .menu-background {
-    height: 200px;
-  }
-
-  .main-heading {
-    font-size: 25px;
-  }
-
-  .order-section {
-    padding: 15px;
-  }
-
-  .order-section h2 {
-    font-size: 24px; /* Zvětšení písma nadpisu */
-  }
-
-  .flip-card {
-    width: 100%;
-    height: 250px;
-  }
-
-  .text-container {
-    padding: 15px;
-    margin: 15px auto;
   }
 }
