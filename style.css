@@ -300,19 +300,9 @@ body {
   .main-heading {
     font-size: 40px;
   }
-}
 
-@media (max-width: 480px) {
-  .main-heading {
-    font-size: 30px;
-  }
-
-  .order-section h2 {
-    font-size: 24px;
-  }
-
-  .order-section button {
-    width: 100%;
-    padding: 15px;
+  .scroll-to-top {
+    right: 20px;
+    bottom: 60px;
   }
 }
