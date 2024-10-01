@@ -48,7 +48,7 @@
       <!-- Objednávkový formulář -->
       <section class="order-form text-container section3">
         <h2>Objednávka medu a propolisové tinktury</h2>
-        <form action="mailto:lenkalaznovska@seznam.cz" method="post" enctype="text/plain">
+        <form id="orderForm" action="submit_order.php" method="POST">
           <label for="name">Jméno a příjmení:</label>
           <input type="text" id="name" name="name" required />
 
@@ -58,11 +58,17 @@
           <label for="phone">Telefon:</label>
           <input type="tel" id="phone" name="phone" required />
 
-          <label for="product">Vyberte produkt:</label>
-          <select id="product" name="product" required>
-            <option value="med">Med</option>
-            <option value="propolisova-tinktura">Propolisová tinktura</option>
-          </select>
+          <fieldset>
+            <legend>Vyberte produkty:</legend>
+            <label>
+              <input type="checkbox" name="product[]" value="med" />
+              Med
+            </label>
+            <label>
+              <input type="checkbox" name="product[]" value="propolisova-tinktura" />
+              Propolisová tinktura
+            </label>
+          </fieldset>
 
           <label for="quantity">Množství (ks):</label>
           <input type="number" id="quantity" name="quantity" min="1" required />
