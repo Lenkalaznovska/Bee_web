@@ -226,22 +226,19 @@ body {
   .main-heading {
     font-size: 40px; /* Zmenšení nadpisu pro menší obrazovky */
   }
-
-  .text-container {
-    padding: 20px; /* Zmenšení paddingu pro menší obrazovky */
-  }
-
-  .gallery-image {
-    height: auto; /* Přizpůsobení výšky pro menší obrazovky */
-  }
-
+  
   .flip-card {
-    width: 100%; /* Úplná šířka pro menší obrazovky */
-    margin-bottom: 20px; /* Spodní mezera mezi kartami */
+    width: 45%; /* Změněná šířka karet pro mobilní zařízení */
+    margin: 10px; /* Přidání marginu pro mobilní zařízení */
   }
 }
 
-/* Tlačítko pro scrollování nahoru */
-.show {
-  display: flex; /* Zobrazení tlačítka při scrollování */
+@media (max-width: 480px) {
+  .text-container {
+    padding: 20px; /* Menší padding pro menší obrazovky */
+  }
+  
+  .main-heading {
+    font-size: 30px; /* Zmenšení nadpisu pro menší obrazovky */
+  }
 }
