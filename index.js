@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".text-container");
   const scrollToTopButton = document.getElementById("scrollToTop");
+  const orderForm = document.getElementById("order-form");
 
   const options = {
     root: null,
@@ -44,5 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
       top: 0,
       behavior: "smooth", // Plynulý scroll
     });
+  });
+
+  // Odeslání formuláře
+  orderForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Zabránění výchozímu chování odeslání
+    alert('Objednávka byla odeslána!'); // Oznámení po odeslání
+    orderForm.reset(); // Resetování formuláře po odeslání
   });
 });
