@@ -108,6 +108,7 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   width: 90%;
+  flex-wrap: wrap;
 }
 
 .flip-card {
@@ -214,6 +215,26 @@ body {
 }
 
 /* Responzivní design */
+@media (max-width: 1024px) {
+  .menu-background {
+    height: 300px;
+  }
+  
+  .main-heading {
+    font-size: 45px;
+  }
+
+  .flip-card {
+    width: 48%;
+    height: 350px;
+  }
+
+  .text-container {
+    padding: 30px;
+    margin: 30px auto;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-background {
     height: 250px;
@@ -226,10 +247,6 @@ body {
   .flip-card {
     width: 48%;
     height: 300px;
-  }
-
-  .image-container {
-    flex-wrap: wrap;
   }
 
   .text-container {
