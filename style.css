@@ -1,10 +1,10 @@
 /* Reset a obecné styly */
 :root {
-  --main-bg-color: #f7e5b5; /* Ještě světlejší zlatavě medová barva pro pozadí */
+  --main-bg-color: #f7e5b5; /* Světle zlatavě medová barva pro pozadí */
   --primary-color: #4e3b2d; /* Tmavě hnědá pro text */
-  --section-bg-color: #f5e3c4; /* Světlejší velmi světlá medově hnědá pro sekce */
+  --section-bg-color: #f5e3c4; /* Světlejší medově hnědá pro sekce */
   --footer-bg-color: #f5e3c4; /* Stejná barva jako sekce pro footer */
-  --highlight-color: #e7a83b; /* Zlatá barva pro podtržení */
+  --highlight-color: #e7a83b; /* Zlatá barva pro zvýraznění */
   --link-color: #4e3b2d; /* Hnědá pro odkazy */
   --shadow-color: rgba(0, 0, 0, 0.15); /* Světlejší stín */
 }
@@ -165,6 +165,26 @@ body {
 }
 
 /* Objednávková sekce */
+.order-section {
+  background-color: #fff3e0;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px var(--shadow-color);
+}
+
+.order-section h3 {
+  font-size: 28px;
+  color: var(--highlight-color);
+  margin-bottom: 15px;
+}
+
+.order-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
 .order-button {
   display: inline-block;
   background-color: var(--highlight-color);
