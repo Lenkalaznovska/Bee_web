@@ -178,7 +178,7 @@ body {
 .contact-info {
   display: flex;
   justify-content: center; /* Zarovná všechny položky na střed */
-  margin-top: 10px; /* Přidá prostor nad kontakty */
+  margin-top: 20px; /* Přidá prostor nad kontakty */
 }
 
 .contact-item {
@@ -276,6 +276,11 @@ body {
   .flip-card {
     width: calc(50% - 20px); /* Dvě karty vedle sebe */
   }
+
+  .order-section .contact-info {
+    flex-direction: row; /* Horizontální uspořádání pro větší obrazovky */
+    justify-content: space-around; /* Udržuje prostor mezi kontakty */
+  }
 }
 
 @media (max-width: 768px) {
@@ -304,5 +309,15 @@ body {
   .scroll-to-top {
     right: 20px;
     bottom: 60px;
+  }
+
+  /* Kontakty v sekci objednání */
+  .order-section .contact-info {
+    flex-direction: column; /* Vertikální uspořádání pro menší obrazovky */
+    align-items: center;
+  }
+
+  .order-section .contact-item {
+    margin-bottom: 10px; /* Větší prostor mezi položkami */
   }
 }
