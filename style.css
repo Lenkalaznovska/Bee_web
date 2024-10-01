@@ -228,17 +228,16 @@ body {
   }
   
   .flip-card {
-    width: 45%; /* Změněná šířka karet pro mobilní zařízení */
-    margin: 10px; /* Přidání marginu pro mobilní zařízení */
-  }
-}
-
-@media (max-width: 480px) {
-  .text-container {
-    padding: 20px; /* Menší padding pro menší obrazovky */
+    width: 100%; /* Šířka karty na 100% pro menší obrazovky */
+    margin-bottom: 20px; /* Mezery mezi kartami */
   }
   
-  .main-heading {
-    font-size: 30px; /* Zmenšení nadpisu pro menší obrazovky */
+  .text-container {
+    padding: 30px 20px; /* Menší padding pro mobilní zařízení */
+  }
+  
+  .scroll-to-top {
+    width: 50px; /* Zmenšení šířky tlačítka pro mobilní zařízení */
+    height: 50px; /* Zmenšení výšky tlačítka pro mobilní zařízení */
   }
 }
