@@ -2,10 +2,9 @@
 :root {
   --main-bg-color: #f7e5b5;
   --primary-color: #4e3b2d;
-  --highlight-color: #e7a83b;
-  --gold-color: #d4af37; /* Zlatá barva */
   --section-bg-color: #f5e3c4;
   --footer-bg-color: #f5e3c4;
+  --highlight-color: #e7a83b;
   --link-color: #4e3b2d;
   --shadow-color: rgba(0, 0, 0, 0.15);
 }
@@ -74,6 +73,16 @@ body {
   transform: translateY(50px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   text-align: center;
+  animation: breathing 3s infinite;
+}
+
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
 }
 
 .text-container h2 {
@@ -81,6 +90,10 @@ body {
   padding-bottom: 15px;
   margin-bottom: 20px;
   font-weight: bold;
+}
+
+.text-container h2 span {
+  border-bottom: 2px solid var(--highlight-color); /* Zlaté podtržení */
 }
 
 .section1 { transition-delay: 0.1s; }
@@ -106,7 +119,7 @@ body {
   width: 31%;
   height: 400px;
   perspective: 1000px;
-  margin: 0 0 20px; /* Přidání dolního marginu pro lepší prostor mezi kartami */
+  margin: 0;
 }
 
 .flip-card-inner {
@@ -160,66 +173,6 @@ body {
   filter: brightness(1.1);
 }
 
-/* Sekce objednání */
-.order-section {
-  background-color: var(--section-bg-color);
-  padding: 40px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px var(--shadow-color);
-  margin: 50px auto;
-  max-width: 900px; /* Zajištění stejné šířky jako ostatní sekce */
-  opacity: 0; /* Přidání efektu dýchání */
-  transform: translateY(50px); /* Přidání efektu dýchání */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Přidání efektu dýchání */
-}
-
-.order-section h2 {
-  font-size: 36px;
-  color: var(--primary-color);
-  border-bottom: 4px solid var(--gold-color); /* Zlaté podtržení */
-  display: inline-block;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-}
-
-.order-section p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: var(--primary-color);
-}
-
-.order-section a {
-  color: var(--link-color); /* Odkazy s původní barvou */
-  font-weight: bold; /* Tučné odkazy */
-  text-decoration: underline; /* Podtržení pro odkazy */
-}
-
-.order-button {
-  display: inline-block;
-  padding: 15px 30px;
-  background-color: var(--highlight-color);
-  color: #fff;
-  font-size: 18px;
-  border-radius: 50px;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 5px 15px var(--shadow-color);
-}
-
-.order-button:hover {
-  background-color: darken(var(--highlight-color), 10%);
-  transform: translateY(-5px);
-}
-
-/* Efekt při najetí na sekci objednání */
-.order-section:hover {
-  box-shadow: 0 15px 40px var(--shadow-color);
-  transform: scale(1.02);
-  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
-}
-
 /* Kontaktní sekce */
 .contact a {
   color: var(--link-color);
@@ -270,17 +223,9 @@ body {
   .menu-background {
     height: 300px;
   }
-
+  
   .main-heading {
     font-size: 45px;
-  }
-
-  .order-section {
-    padding: 30px;
-  }
-
-  .order-section h2 {
-    font-size: 30px; /* Zvětšení písma nadpisu */
   }
 
   .flip-card {
@@ -298,26 +243,38 @@ body {
   .menu-background {
     height: 250px;
   }
-
+  
   .main-heading {
     font-size: 35px;
   }
 
-  .order-section {
-    padding: 20px;
-  }
-
-  .order-section h2 {
-    font-size: 28px; /* Zvětšení písma nadpisu */
-  }
-
   .flip-card {
-    width: 100%; /* Zvětšení pro zajištění dobrého zobrazení */
+    width: 48%;
     height: 300px;
   }
 
   .text-container {
     padding: 20px;
     margin: 20px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-background {
+    height: 200px;
+  }
+
+  .main-heading {
+    font-size: 25px;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 250px;
+  }
+
+  .text-container {
+    padding: 10px;
+    margin: 10px auto;
   }
 }
