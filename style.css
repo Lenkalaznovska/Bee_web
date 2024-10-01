@@ -171,7 +171,7 @@ body {
 
 /* Kontaktní sekce */
 .contact {
-  padding: 20px 20px;
+  padding: 30px 30px; /* Stejný padding jako ostatní sekce */
   text-align: center;
 }
 
@@ -202,27 +202,27 @@ body {
 
 /* Sekce o objednání */
 .order-section {
-  padding: 20px 20px; /* Snizeno z 30px na 20px */
+  padding: 30px 30px; /* Stejný padding jako ostatní sekce */
   background: var(--section-bg-color);
   text-align: center;
 }
 
 .order-section h2 {
-  margin-bottom: 10px; /* Zmenšeno z 20px na 10px */
-  color: var(--primary-color); /* Změna barvy nadpisu na stejnou jako ostatní */
+  margin-bottom: 20px; /* Standardizováno na 20px */
+  color: var(--primary-color); /* Barva nadpisu stejná jako ostatní sekce */
   border-bottom: 4px solid var(--highlight-color); /* Podtržení zlatou barvou */
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .order-section p {
-  margin-bottom: 10px; /* Zmenšeno z 20px na 10px */
+  margin-bottom: 20px; /* Stejné odsazení jako ostatní sekce */
 }
 
 .order-section a {
   color: var(--link-color);
   font-weight: bold; /* Tučné odkazy */
   text-decoration: none;
-  margin-bottom: 50px; /* Zmenšeno z 100px na 50px */
+  margin-bottom: 50px;
 }
 
 .order-section button {
@@ -244,7 +244,7 @@ body {
   background-color: var(--footer-bg-color);
   color: var(--primary-color);
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 0; /* Stejný padding jako ostatní sekce */
 }
 
 /* Scroll to top button */
@@ -309,33 +309,11 @@ body {
   }
 
   .order-section h2 {
-    font-size: 24px; /* Zmenšeno pro lepší zobrazení */
+    font-size: 24px;
   }
 
-  .order-section p {
-    font-size: 16px; /* Zmenšeno pro lepší zobrazení */
-  }
-}
-
-@media (max-width: 480px) {
-  .menu-background {
-    height: 200px; /* Zmenšeno na 200px */
-  }
-
-  .main-heading {
-    font-size: 30px; /* Zmenšeno pro mobilní zobrazení */
-  }
-
-  .order-section h2 {
-    font-size: 20px; /* Zmenšeno pro mobilní zobrazení */
-  }
-
-  .order-section p {
-    font-size: 14px; /* Zmenšeno pro mobilní zobrazení */
-  }
-
-  .scroll-to-top {
-    width: 25px; /* Zmenšeno na 25px */
-    height: 25px; /* Zmenšeno na 25px */
+  .order-section button {
+    width: 90%; /* Zvětší tlačítko na mobilních zařízeních */
+    padding: 15px;
   }
 }
