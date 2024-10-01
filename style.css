@@ -251,7 +251,7 @@ body {
 .scroll-to-top {
   position: fixed;
   bottom: 60px; /* Změněno pro lepší zarovnání */
-  right: 20px; /* Změněno pro lepší zarovnání */
+  right: 10px; /* Změněno pro lepší zarovnání */
   display: none;
   justify-content: center;
   align-items: center;
