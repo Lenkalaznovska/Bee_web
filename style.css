@@ -4,8 +4,8 @@
   --primary-color: #4e3b2d;
   --section-bg-color: #f5e3c4;
   --footer-bg-color: #f5e3c4;
-  --highlight-color: #e7a83b; /* Zlatá barva pro odkazy */
-  --link-color: #e7a83b; /* Zlatá barva pro odkazy */
+  --highlight-color: #e7a83b;
+  --link-color: #e7a83b;
   --shadow-color: rgba(0, 0, 0, 0.15);
 }
 
@@ -27,6 +27,7 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
+  margin-bottom: 40px; /* Odsazení od další sekce */
 }
 
 .menu-background {
@@ -63,7 +64,7 @@ body {
 
 /* Sekce */
 .text-container {
-  padding: 40px 30px;
+  padding: 50px 40px; /* Stejný padding ve všech sekcích */
   max-width: 900px;
   margin: 50px auto;
   background: var(--section-bg-color);
@@ -91,11 +92,6 @@ body {
   margin-bottom: 20px;
   font-weight: bold;
 }
-
-.section1 { transition-delay: 0.1s; }
-.section2 { transition-delay: 0.2s; }
-.section3 { transition-delay: 0.3s; }
-.section4 { transition-delay: 0.4s; }
 
 .section-visible {
   opacity: 1;
@@ -171,27 +167,27 @@ body {
 
 /* Kontaktní sekce */
 .contact {
-  padding: 20px 20px;
+  padding: 50px 40px; /* Stejné paddingy a odsazení */
   text-align: center;
 }
 
 .contact-info {
   display: flex;
-  justify-content: center; /* Zarovná všechny položky na střed */
-  margin-top: 20px; /* Přidá prostor nad kontakty */
-  flex-wrap: wrap; /* Umožňuje zalamování kontaktních informací */
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .contact-item {
-  margin: 0 10px; /* Přidá prostor mezi telefonem a e-mailem */
+  margin: 0 15px; /* Větší prostor mezi kontaktními údaji */
 }
 
 .contact-item:not(:last-child) {
-  margin-bottom: 10px; /* Přidá prostor mezi jednotlivými kontakty */
+  margin-bottom: 10px;
 }
 
 .contact-separator {
-  margin: 0 10px; /* Přidá prostor kolem oddělovače */
+  margin: 0 10px;
 }
 
 .contact a {
@@ -202,15 +198,15 @@ body {
 
 /* Sekce o objednání */
 .order-section {
-  padding: 10px 20px;
+  padding: 50px 40px;
   background: var(--section-bg-color);
   text-align: center;
 }
 
 .order-section h2 {
   margin-bottom: 20px;
-  color: var(--primary-color); /* Změna barvy nadpisu na stejnou jako ostatní */
-  border-bottom: 4px solid var(--highlight-color); /* Podtržení zlatou barvou */
+  color: var(--primary-color);
+  border-bottom: 4px solid var(--highlight-color);
   padding-bottom: 10px;
 }
 
@@ -220,9 +216,8 @@ body {
 
 .order-section a {
   color: var(--link-color);
-  font-weight: bold; /* Tučné odkazy */
+  font-weight: bold;
   text-decoration: none;
-  margin-bottom: 100px;
 }
 
 .order-section button {
@@ -280,12 +275,12 @@ body {
   }
 
   .flip-card {
-    width: calc(50% - 20px); /* Dvě karty vedle sebe */
+    width: calc(50% - 20px);
   }
 
   .order-section .contact-info {
-    flex-direction: row; /* Horizontální uspořádání pro větší obrazovky */
-    justify-content: space-around; /* Udržuje prostor mezi kontakty */
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
@@ -296,7 +291,7 @@ body {
   }
 
   .flip-card {
-    width: 90%; /* Jedna karta na řádek */
+    width: 90%;
     margin-bottom: 20px;
   }
 
@@ -317,13 +312,12 @@ body {
     bottom: 60px;
   }
 
-  /* Kontakty v sekci objednání */
   .order-section .contact-info {
-    flex-direction: column; /* Vertikální uspořádání pro menší obrazovky */
+    flex-direction: column;
     align-items: center;
   }
 
   .order-section .contact-item {
-    margin-bottom: 10px; /* Větší prostor mezi položkami */
+    margin-bottom: 10px;
   }
 }
