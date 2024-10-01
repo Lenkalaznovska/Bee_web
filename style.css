@@ -6,6 +6,7 @@
   --footer-bg-color: #f5e3c4; /* Stejná barva jako sekce pro footer */
   --highlight-color: #e7a83b; /* Zlatá barva pro zvýraznění */
   --link-color: #4e3b2d; /* Hnědá pro odkazy */
+  --gold-color: #e7a83b; /* Zlatá barva pro odkazy */
   --shadow-color: rgba(0, 0, 0, 0.15); /* Světlejší stín */
 }
 
@@ -32,7 +33,7 @@ body {
 .menu-background {
   background: url("images/menu.jpg") no-repeat center right/cover;
   width: 100%;
-  height: 365px;
+  height: 300px; /* Zmenšená výška */
 }
 
 .menu-content {
@@ -69,21 +70,7 @@ body {
   background: var(--section-bg-color);
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   text-align: center;
-  animation: breathing 3s infinite;
-}
-
-@keyframes breathing {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
 }
 
 .text-container h2 {
@@ -93,9 +80,31 @@ body {
   font-weight: bold;
 }
 
-.section-visible {
-  opacity: 1;
-  transform: translateY(0);
+.order-section {
+  background-color: var(--section-bg-color);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px var(--shadow-color);
+}
+
+/* Objednávková sekce */
+.order-section h3 {
+  font-size: 28px;
+  color: var(--highlight-color);
+  margin-bottom: 15px;
+}
+
+.order-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.gold-link {
+  color: var(--gold-color); /* Odkazy ve zlaté barvě */
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Galerie */
@@ -161,34 +170,6 @@ body {
 .gallery-image:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px var(--shadow-color);
-  filter: brightness(1.1);
-}
-
-/* Objednávková sekce */
-.order-section {
-  background-color: var(--section-bg-color);
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 20px var(--shadow-color);
-}
-
-.order-section h3 {
-  font-size: 28px;
-  color: var(--highlight-color);
-  margin-bottom: 15px;
-}
-
-.order-section p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.gold-link {
-  color: var(--highlight-color); /* Zlatá barva pro odkazy */
-  text-decoration: underline;
-  font-weight: bold;
 }
 
 /* Kontaktní sekce */
@@ -225,16 +206,6 @@ body {
   width: 60px;
   height: 60px;
   transition: transform 0.3s ease;
-  animation: moveUp 1s infinite alternate;
-}
-
-@keyframes moveUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
 }
 
 .scroll-to-top img {
@@ -245,7 +216,7 @@ body {
 /* Responzivní styly */
 @media (min-width: 1024px) {
   .menu-background {
-    height: 500px;
+    height: 400px;
   }
   .main-heading {
     font-size: 65px;
@@ -257,7 +228,7 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .menu-background {
-    height: 400px;
+    height: 350px;
   }
   .main-heading {
     font-size: 45px;
@@ -269,7 +240,7 @@ body {
 
 @media (max-width: 767px) {
   .menu-background {
-    height: 300px;
+    height: 250px; /* Další zmenšení pro mobilní zařízení */
   }
   .main-heading {
     font-size: 35px;
@@ -283,15 +254,6 @@ body {
   .text-container {
     padding: 20px 15px;
     margin: 30px auto;
-  }
-  .order-section {
-    padding: 20px;
-  }
-  .order-section h3 {
-    font-size: 24px;
-  }
-  .order-section p {
-    font-size: 16px;
   }
   .footer {
     padding: 15px 0;
