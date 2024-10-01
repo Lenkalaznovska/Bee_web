@@ -312,30 +312,30 @@ body {
     font-size: 24px; /* Zmenšeno pro lepší zobrazení */
   }
 
-  .scroll-to-top {
-    bottom: 30px; /* Posunuto výše */
-    right: 15px; /* Posunuto výše */
+  .order-section p {
+    font-size: 16px; /* Zmenšeno pro lepší zobrazení */
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 14px; /* Zmenšeno pro mobilní zařízení */
+  .menu-background {
+    height: 200px; /* Zmenšeno na 200px */
   }
 
   .main-heading {
-    font-size: 32px; /* Zmenšeno pro mobilní zařízení */
-  }
-
-  .flip-card {
-    height: 300px; /* Zmenšeno pro mobilní zařízení */
-  }
-
-  .gallery-image {
-    height: 200px; /* Zmenšeno pro mobilní zařízení */
+    font-size: 30px; /* Zmenšeno pro mobilní zobrazení */
   }
 
   .order-section h2 {
-    font-size: 20px; /* Zmenšeno pro mobilní zařízení */
+    font-size: 20px; /* Zmenšeno pro mobilní zobrazení */
+  }
+
+  .order-section p {
+    font-size: 14px; /* Zmenšeno pro mobilní zobrazení */
+  }
+
+  .scroll-to-top {
+    width: 25px; /* Zmenšeno na 25px */
+    height: 25px; /* Zmenšeno na 25px */
   }
 }
