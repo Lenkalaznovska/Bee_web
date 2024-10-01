@@ -168,7 +168,10 @@ body {
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color);
   margin: 50px auto;
-  max-width: 800px;
+  max-width: 900px; /* Zajištění stejné šířky jako ostatní sekce */
+  opacity: 0; /* Přidání efektu dýchání */
+  transform: translateY(50px); /* Přidání efektu dýchání */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Přidání efektu dýchání */
 }
 
 .order-section h2 {
