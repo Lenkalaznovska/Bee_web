@@ -40,7 +40,7 @@
                 na vitamíny, minerály a antioxidanty, které prospívají našemu zdraví.
             </p>
             <p>
-                Kromě medu vyrábíme i propolisovou tinkturu, která je ceněná pro své
+                Vyrábíme také propolisovou tinkturu, která je ceněná pro své
                 silné antibakteriální, antivirové a protizánětlivé vlastnosti.
             </p>
         </section>
@@ -61,17 +61,20 @@
                 <fieldset>
                     <legend>Vyberte produkty:</legend>
                     <label>
-                        <input type="checkbox" name="products[]" value="med" />
+                        <input type="checkbox" id="medCheckbox" name="products[]" value="med" />
                         Med
                     </label>
                     <label>
-                        <input type="checkbox" name="products[]" value="propolisova-tinktura" />
+                        <input type="checkbox" id="tinctureCheckbox" name="products[]" value="propolisova-tinktura" />
                         Propolisová tinktura
                     </label>
                 </fieldset>
 
-                <label for="quantity">Množství (ks):</label>
-                <input type="number" id="quantity" name="quantity" min="1" required />
+                <label for="medQuantity">Množství medu (ks):</label>
+                <input type="number" id="medQuantity" name="medQuantity" min="0" value="0" />
+
+                <label for="tinctureQuantity">Množství propolisové tinktury (ks):</label>
+                <input type="number" id="tinctureQuantity" name="tinctureQuantity" min="0" value="0" />
 
                 <label for="message">Poznámky:</label>
                 <textarea id="message" name="message"></textarea>
