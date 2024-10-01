@@ -179,10 +179,15 @@ body {
   display: flex;
   justify-content: center; /* Zarovná všechny položky na střed */
   margin-top: 20px; /* Přidá prostor nad kontakty */
+  flex-wrap: wrap; /* Umožňuje zalamování kontaktních informací */
 }
 
 .contact-item {
   margin: 0 10px; /* Přidá prostor mezi telefonem a e-mailem */
+}
+
+.contact-item:not(:last-child) {
+  margin-bottom: 10px; /* Přidá prostor mezi jednotlivými kontakty */
 }
 
 .contact-separator {
