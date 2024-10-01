@@ -122,6 +122,7 @@ body {
     justify-content: space-between; /* Prostor mezi obrázky */
     margin: 0 auto; /* Vycentrování kontejneru */
     width: 90%; /* Šířka kontejneru pro zajištění centrálního zarovnání */
+    flex-wrap: wrap; /* Povolení zalomení řádků */
 }
 
 .flip-card {
@@ -234,4 +235,40 @@ body {
 /* Zobrazení tlačítka na hover */
 .scroll-to-top:hover {
     transform: scale(1.1); /* Zvětšení při hoveru */
+}
+
+/* Responzivní design */
+@media (max-width: 1200px) {
+    .flip-card {
+        width: 45%; /* Změna šířky karty pro střední obrazovky */
+        height: auto; /* Automatická výška */
+    }
+    .text-container {
+        padding: 30px 20px; /* Zmenšení paddingu pro menší obrazovky */
+    }
+    .main-heading {
+        font-size: 45px; /* Zmenšení velikosti nadpisu */
+    }
+}
+
+@media (max-width: 768px) {
+    .flip-card {
+        width: 100%; /* Karty na celou šířku pro malé obrazovky */
+        height: auto; /* Automatická výška */
+    }
+    .image-container {
+        flex-direction: column; /* Změna na sloupec pro malé obrazovky */
+        align-items: center; /* Vycentrování obrázků */
+    }
+    .main-heading {
+        font-size: 36px; /* Zmenšení velikosti nadpisu */
+    }
+    .text-container {
+        padding: 20px 15px; /* Zmenšení paddingu */
+        margin: 30px auto; /* Zmenšení mezery kolem sekcí */
+    }
+    .scroll-to-top {
+        width: 50px; /* Zmenšení tlačítka */
+        height: 50px; /* Zmenšení tlačítka */
+    }
 }
