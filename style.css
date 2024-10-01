@@ -64,7 +64,7 @@ body {
 
 /* Sekce */
 .text-container {
-  padding: 30px 20px; /* Další snížení paddingu o 10px */
+  padding: 20px 20px; /* Horní a spodní padding snížen na 20px */
   max-width: 900px;
   margin: 40px auto;
   background: var(--section-bg-color);
@@ -167,14 +167,14 @@ body {
 
 /* Kontaktní sekce */
 .contact {
-  padding: 30px 20px; /* Další snížení paddingu */
+  padding: 20px 20px; /* Horní a spodní padding snížen na 20px */
   text-align: center;
 }
 
 .contact-info {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px; /* Další snížení mezery mezi kontakty */
   flex-wrap: wrap;
 }
 
@@ -198,7 +198,7 @@ body {
 
 /* Sekce o objednání */
 .order-section {
-  padding: 30px 20px; /* Další snížení paddingu */
+  padding: 20px 20px; /* Horní a spodní padding snížen na 20px */
   background: var(--section-bg-color);
   text-align: center;
 }
@@ -296,11 +296,11 @@ body {
   }
 
   .text-container {
-    padding: 20px 15px; /* Přizpůsobení menším zařízením */
+    padding: 20px 20px; /* Přizpůsobení menším zařízením */
   }
 
   .order-section {
-    padding: 20px 15px;
+    padding: 20px 20px; /* Přizpůsobení menším zařízením */
   }
 
   .main-heading {
@@ -318,6 +318,6 @@ body {
   }
 
   .order-section .contact-item {
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Snížení paddingu mezi kontakty */
   }
 }
