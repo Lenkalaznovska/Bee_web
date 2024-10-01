@@ -169,6 +169,57 @@ body {
   filter: brightness(1.1);
 }
 
+/* Sekce objednání */
+.order-section {
+  background-color: var(--section-bg-color);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.order-section h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  border-bottom: 4px solid var(--highlight-color);
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.order-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.order-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: var(--highlight-color);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.order-button:hover {
+  background-color: darken(var(--highlight-color), 10%);
+  transform: translateY(-5px);
+}
+
+/* Efekt při najetí na sekci objednání */
+.order-section:hover {
+  box-shadow: 0 15px 40px var(--shadow-color);
+  transform: scale(1.02);
+  transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+}
+
 /* Kontaktní sekce */
 .contact a {
   color: var(--link-color);
