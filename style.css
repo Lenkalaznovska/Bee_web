@@ -317,7 +317,7 @@ body {
   }
 
   .scroll-to-top {
-    bottom: 40px; /* Přizpůsobeno pro mobilní zařízení */
-    right: 10px;
+    bottom: 70px; /* Přizpůsobeno pro mobilní zařízení */
+    right: 30px;
   }
 }
