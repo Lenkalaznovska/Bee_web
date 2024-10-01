@@ -1,35 +1,33 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = htmlspecialchars($_POST['name']);
-  $email = htmlspecialchars($_POST['email']);
-  $phone = htmlspecialchars($_POST['phone']);
-  $product = htmlspecialchars($_POST['product']);
-  $quantity = htmlspecialchars($_POST['quantity']);
-  $message = htmlspecialchars($_POST['message']);
+    // Vyzvednutí dat z formuláře
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $products = $_POST['products'];
+    $quantity = $_POST['quantity'];
+    $message = $_POST['message'];
 
-  $to = "lenkalaznovska@seznam.cz";
-  $subject = "Nová objednávka z webu";
-  $headers = "From: $email" . "\r\n" .
-             "Reply-To: $email" . "\r\n" .
-             "Content-Type: text/html; charset=UTF-8";
+    // Nastavení příjemce a předmětu
+    $to = "lenkalaznovska@seznam.cz";
+    $subject = "Nová objednávka z webu Včelařství Pletený Újezd";
 
-  $body = "<h2>Nová objednávka</h2>";
-  $body .= "<p><strong>Jméno a příjmení:</strong> $name</p>";
-  $body .= "<p><strong>E-mail:</strong> $email</p>";
-  $body .= "<p><strong>Telefon:</strong> $phone</p>";
-  $body .= "<p><strong>Produkt:</strong> $product</p>";
-  $body .= "<p><strong>Množství:</strong> $quantity</p>";
-  if (!empty($message)) {
-    $body .= "<p><strong>Poznámka:</strong> $message</p>";
-  }
+    // Zpráva emailu
+    $email_message = "Jméno: $name\n";
+    $email_message .= "E-mail: $email\n";
+    $email_message .= "Telefon: $phone\n";
+    $email_message .= "Produkty: $products\n";
+    $email_message .= "Množství: $quantity\n";
+    $email_message .= "Poznámky: $message\n";
 
-  // Odeslání e-mailu
-  if (mail($to, $subject, $body, $headers)) {
-    echo "<p>Vaše objednávka byla úspěšně odeslána. Děkujeme!</p>";
-  } else {
-    echo "<p>Odeslání objednávky se nezdařilo. Zkuste to prosím znovu.</p>";
-  }
-} else {
-  echo "<p>Neplatný požadavek.</p>";
+    // Hlavičky
+    $headers = "From: $email";
+
+    // Odeslání emailu
+    if (mail($to, $subject, $email_message, $headers)) {
+        echo "Objednávka byla úspěšně odeslána!";
+    } else {
+        echo "Chyba při odesílání objednávky, zkuste to prosím znovu.";
+    }
 }
 ?>
