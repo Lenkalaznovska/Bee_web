@@ -228,42 +228,20 @@ body {
   }
 
   .text-container {
-    padding: 20px; /* Menší padding pro mobilní zařízení */
+    padding: 20px; /* Zmenšení paddingu pro menší obrazovky */
+  }
+
+  .gallery-image {
+    height: auto; /* Přizpůsobení výšky pro menší obrazovky */
   }
 
   .flip-card {
-    width: 100%; /* 100% šířka pro mobilní zařízení */
+    width: 100%; /* Úplná šířka pro menší obrazovky */
     margin-bottom: 20px; /* Spodní mezera mezi kartami */
   }
-
-  .image-container {
-    flex-direction: column; /* Sloupcové uspořádání pro mobilní zařízení */
-    align-items: center; /* Vycentrování obrázků */
-  }
 }
 
-@media (max-width: 480px) {
-  .main-heading {
-    font-size: 30px; /* Další zmenšení nadpisu pro malé obrazovky */
-  }
-
-  .text-container {
-    padding: 10px; /* Ještě menší padding pro velmi malé obrazovky */
-  }
-}
-
-/* Hover efekt pro tlačítka */
-.button {
-  padding: 15px 30px; /* Zvýšení paddingu pro tlačítka */
-  background-color: var(--highlight-color); /* Barva tlačítek */
-  color: #fff;
-  border: none;
-  border-radius: 5px; /* Zaoblení rohů tlačítek */
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s; /* Plynulé přechody */
-}
-
-.button:hover {
-  background-color: #e5a02f; /* Tmavší odstín pro hover */
-  transform: translateY(-3px); /* Zvednutí tlačítka při hoveru */
+/* Tlačítko pro scrollování nahoru */
+.show {
+  display: flex; /* Zobrazení tlačítka při scrollování */
 }
