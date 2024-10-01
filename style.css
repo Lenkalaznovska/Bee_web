@@ -1,4 +1,4 @@
-/* Reset a obecné styly */
+/* Základní nastavení barev */
 :root {
   --main-bg-color: #f7e5b5;
   --primary-color: #4e3b2d;
@@ -9,6 +9,7 @@
   --shadow-color: rgba(0, 0, 0, 0.15);
 }
 
+/* Resety a základní stylování */
 * {
   margin: 0;
   padding: 0;
@@ -22,99 +23,91 @@ body {
   line-height: 1.6;
 }
 
-/* Menu */
-.menu-header {
-  position: relative;
-  overflow: hidden;
+/* Hlavní nadpisy */
+h1, h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
   text-align: center;
+  margin-bottom: 30px;
 }
 
-.menu-background {
-  background: url("images/menu.jpg") no-repeat center right/cover;
-  width: 100%;
-  height: 365px;
+h1 {
+  font-size: 3rem;
+  padding-bottom: 20px;
 }
 
-.menu-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.main-heading {
-  font-size: 55px;
-  color: #fff;
-  text-shadow: 1px 1px 40px rgba(0, 0, 0, 0.7);
-  animation: slideDown 0.8s ease-out;
-  font-weight: bold;
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+
+  h2 {
+    font-size: 2rem;
   }
 }
 
-/* Sekce */
-.text-container {
-  padding: 40px 30px;
-  max-width: 900px;
-  margin: 50px auto;
-  background: var(--section-bg-color);
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Sekce koupě medu a tinktury */
+.purchase-section {
+  padding: 50px 20px;
+  background-color: var(--section-bg-color);
   border-radius: 10px;
   box-shadow: 0 10px 30px var(--shadow-color);
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  text-align: center;
-  animation: breathing 3s infinite;
+  max-width: 900px;
+  margin: 50px auto;
 }
 
-@keyframes breathing {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-}
-
-.text-container h2 {
+.purchase-section h2 {
+  font-weight: bold;
   border-bottom: 4px solid var(--highlight-color);
   padding-bottom: 15px;
+}
+
+.purchase-section p {
+  font-size: 1.25rem;
   margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.purchase-section a {
+  color: var(--highlight-color);
   font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section1 { transition-delay: 0.1s; }
-.section2 { transition-delay: 0.2s; }
-.section3 { transition-delay: 0.3s; }
-.section4 { transition-delay: 0.4s; }
-
-.section-visible {
-  opacity: 1;
-  transform: translateY(0);
+.purchase-section a:hover {
+  background-color: var(--highlight-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
 }
 
-/* Galerie */
+/* Galerie a otočení karet */
 .image-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  width: 90%;
+  margin: 50px auto;
+  flex-wrap: wrap;
 }
 
 .flip-card {
   width: 31%;
   height: 400px;
   perspective: 1000px;
-  margin: 0;
+  margin: 15px 0;
 }
 
 .flip-card-inner {
@@ -123,9 +116,10 @@ body {
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card-inner.flipped {
   transform: rotateY(180deg);
 }
 
@@ -135,21 +129,19 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flip-card-front {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #fff;
+  color: black;
 }
 
 .flip-card-back {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0d9a0;
-  color: var(--primary-color);
+  background-color: var(--highlight-color);
+  color: white;
   transform: rotateY(180deg);
 }
 
@@ -165,95 +157,69 @@ body {
 .gallery-image:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 30px var(--shadow-color);
-  filter: brightness(1.1);
 }
 
-/* Kontaktní sekce */
-.contact a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Footer */
-.footer {
-  background-color: var(--footer-bg-color);
-  color: var(--primary-color);
-  text-align: center;
-  padding: 20px 0;
-}
-
-/* Scroll to top button */
-.scroll-to-top {
-  position: fixed;
-  bottom: 80px;
-  right: 30px;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease;
-  animation: moveUp 1s infinite alternate;
-}
-
-@keyframes moveUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-30px);
-  }
-}
-
-.scroll-to-top:hover {
-  transform: scale(1.1);
-}
-
-/* Responzivní design */
-@media (max-width: 768px) {
-  .menu-background {
-    height: 250px;
-  }
-  
-  .main-heading {
-    font-size: 35px;
+/* Responsivní úpravy */
+@media (max-width: 1024px) {
+  .image-container {
+    justify-content: space-around;
   }
 
   .flip-card {
     width: 48%;
+    height: 350px;
+  }
+
+  .purchase-section {
+    padding: 40px 15px;
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-card {
+    width: 100%;
     height: 300px;
   }
 
   .image-container {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .text-container {
-    padding: 20px;
-    margin: 20px auto;
+  .purchase-section p {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .menu-background {
-    height: 200px;
+  .purchase-section {
+    padding: 30px 10px;
   }
 
-  .main-heading {
-    font-size: 25px;
+  .purchase-section p {
+    font-size: 1rem;
   }
 
   .flip-card {
     width: 100%;
     height: 250px;
   }
+}
 
-  .text-container {
-    padding: 10px;
-    margin: 10px auto;
-  }
+/* Otočení karet */
+.flip-card-inner {
+  transform: rotateY(0);
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner.flipped-back {
+  transform: rotateY(0);
+}
+
+.flip-card-inner:hover {
+  transform: rotateY(180deg);
 }
