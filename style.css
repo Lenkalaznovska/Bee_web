@@ -339,7 +339,7 @@ body {
   }
 
   .scroll-to-top {
-    bottom: 80px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
-    right: 30px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
+    bottom: 100px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
+    right: 50px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
   }
 }
