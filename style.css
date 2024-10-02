@@ -178,7 +178,7 @@ body {
 .contact-info {
     display: flex;
     justify-content: center; /* Zarovná všechny položky na střed */
-    margin-top: 20px; /* Přidá prostor nad kontakty */
+    margin: 20px; /* Přidá prostor nad kontakty */
     flex-wrap: wrap; /* Umožňuje zalamování kontaktních informací */
 }
 
