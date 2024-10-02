@@ -308,14 +308,23 @@ body {
         margin-bottom: 20px; /* Prostor mezi kartami */
     }
 
-    .main-heading {
-        font-size: 40px; /* Zmenšeno na 40px pro mobil */
+    .order-section .contact-info {
+        flex-direction: column; /* Vertikální uspořádání pro menší obrazovky */
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-background {
+        height: 200px; /* Zmenšeno na 250px */
     }
 
-    .scroll-to-top {
-        bottom: 140px; /* Posunuto ještě výše na menších obrazovkách */
-        right: 80px; /* Zajišťuje, že je tlačítko na pravé straně */
-        width: 20px; /* Zmenšeno pro lepší přizpůsobení */
-        height: 20px; /* Zmenšeno pro lepší přizpůsobení */
+    .flip-card {
+        width: 100%; /* Plná šířka na velmi malých obrazovkách */
+    }
+
+    .order-section .contact-info {
+        margin-top: 10px; /* Menší mezera na velmi malých obrazovkách */
     }
 }
