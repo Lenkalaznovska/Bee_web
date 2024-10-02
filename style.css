@@ -250,8 +250,8 @@ body {
 /* Scroll to top button */
 .scroll-to-top {
     position: fixed;
-    bottom: 120px; /* Změněno pro lepší zarovnání */
-    right: 20px; /* Změněno pro lepší zarovnání */
+    bottom: 100px; /* Posunuto blíže k footeru */
+    right: 30px; /* Posunuto více do strany */
     display: none;
     justify-content: center;
     align-items: center;
@@ -305,15 +305,12 @@ body {
 
     .flip-card {
         width: 90%; /* Jedna karta na řádek */
-        margin-bottom: 20px;
-    }
-
-    .order-section h2 {
-        font-size: 1.5rem; /* Zmenšena velikost písma */
+        margin-bottom: 20px; /* Prostor mezi kartami */
     }
 
     .scroll-to-top {
         bottom: 80px; /* Upravena pozice pro menší obrazovky */
+        right: 20px; /* Upravena pozice pro menší obrazovky */
     }
 }
 
@@ -329,5 +326,6 @@ body {
     .scroll-to-top {
         width: 35px; /* Zmenšena velikost */
         height: 35px; /* Zmenšena velikost */
+        right: 10px; /* Posunuto více do strany */
     }
 }
