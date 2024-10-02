@@ -250,8 +250,8 @@ body {
 /* Scroll to top button */
 .scroll-to-top {
     position: fixed;
-    bottom: 100px; /* Posunuto blíže k footeru */
-    right: 30px; /* Posunuto více do strany */
+    bottom: 80px; /* Umístěno nad footerem */
+    left: 30px; /* Posunuto více do leva */
     display: none;
     justify-content: center;
     align-items: center;
@@ -309,23 +309,22 @@ body {
     }
 
     .scroll-to-top {
-        bottom: 80px; /* Upravena pozice pro menší obrazovky */
-        right: 50px; /* Upravena pozice pro menší obrazovky */
+        bottom: 60px; /* Snížené z 80px na 60px */
+        left: 10px; /* Dále na levé straně */
     }
 }
 
 @media (max-width: 480px) {
-    .menu-background {
-        height: 200px; /* Zmenšeno na 200px */
+    .main-heading {
+        font-size: 40px; /* Zmenšeno pro menší obrazovky */
     }
 
-    .main-heading {
-        font-size: 30px; /* Zmenšena velikost nadpisu */
+    .text-container {
+        padding: 20px;
     }
 
     .scroll-to-top {
-        width: 35px; /* Zmenšena velikost */
-        height: 35px; /* Zmenšena velikost */
-        right: 50px; /* Posunuto více do strany */
+        bottom: 40px; /* Snížené z 60px na 40px */
+        left: 5px; /* Dále na levé straně */
     }
 }
