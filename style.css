@@ -295,7 +295,7 @@ body {
 
 @media (max-width: 768px) {
     .menu-background {
-        height: 220px; /* Zmenšeno na 250px */
+        height: 240px; /* Zmenšeno na 250px */
     }
 
     .image-container {
