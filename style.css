@@ -314,7 +314,7 @@ body {
 
     .scroll-to-top {
         bottom: 140px; /* Posunuto ještě výše na menších obrazovkách */
-        right: 100px; /* Zajišťuje, že je tlačítko na pravé straně */
+        right: 80px; /* Zajišťuje, že je tlačítko na pravé straně */
         width: 25px; /* Zmenšeno pro lepší přizpůsobení */
         height: 25px; /* Zmenšeno pro lepší přizpůsobení */
     }
