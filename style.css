@@ -312,34 +312,23 @@ body {
     font-size: 24px; /* Zmenšeno pro lepší zobrazení */
   }
 
-  .order-section p {
-    font-size: 16px; /* Zmenšeno pro lepší zobrazení */
-  }
-
-  .order-section a {
-    font-size: 16px; /* Zmenšeno pro lepší zobrazení */
+  .scroll-to-top {
+    right: 20px; /* Přesunuto blíže k okraji */
   }
 }
 
+/* Styly pro obrazovky do 480px */
 @media (max-width: 480px) {
   .main-heading {
-    font-size: 30px; /* Zmenšeno pro mobilní zařízení */
+    font-size: 35px; /* Zmenšeno pro lepší zobrazení */
   }
 
-  .order-section h2 {
-    font-size: 20px; /* Zmenšeno pro mobilní zařízení */
-  }
-
-  .order-section p {
-    font-size: 14px; /* Zmenšeno pro mobilní zařízení */
-  }
-
-  .order-section a {
-    font-size: 14px; /* Zmenšeno pro mobilní zařízení */
+  .text-container {
+    padding: 20px; /* Zmenšeno na 20px */
   }
 
   .scroll-to-top {
-    bottom: 100px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
-    right: 50px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
+    width: 25px; /* Zmenšeno na 25px */
+    height: 25px; /* Zmenšeno na 25px */
   }
 }
