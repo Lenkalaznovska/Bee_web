@@ -251,17 +251,17 @@ body {
 .scroll-to-top {
   position: fixed;
   bottom: 130px; /* Uloženo nad footer */
-  right: 30px; /* Přizpůsobeno pro lepší zarovnání */
+  right: 15px; /* Posunuto o 15px doleva */
   display: none;
   justify-content: center;
   align-items: center;
   background: none;
   border: none;
   cursor: pointer;
-  width: 40px; /* Zvětšeno pro lepší viditelnost */
-  height: 40px; /* Zvětšeno pro lepší viditelnost */
+  width: 30px; /* Zmenšeno pro lepší viditelnost */
+  height: 30px; /* Zmenšeno pro lepší viditelnost */
   transition: transform 0.3s ease;
-  animation: moveUp 1s infinite alternate;
+  animation: moveUp 0.7s infinite alternate; /* Rychlejší pohyb */
 }
 
 @keyframes moveUp {
@@ -269,7 +269,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-5px);
+    transform: translateY(-8px); /* Zvětšeno pro větší efekt */
   }
 }
 
@@ -298,18 +298,8 @@ body {
     height: 250px; /* Zmenšeno na 250px */
   }
 
-  .image-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .flip-card {
-    width: 90%; /* Jedna karta na řádek */
-    margin-bottom: 20px; /* Prostor mezi kartami */
-  }
-
   .main-heading {
-    font-size: 45px; /* Zmenšeno pro mobilní zařízení */
+    font-size: 40px; /* Zmenšeno pro mobilní zařízení */
   }
 
   .order-section h2 {
@@ -326,9 +316,9 @@ body {
 
   .scroll-to-top {
     bottom: 90px; /* Přizpůsobeno pro lepší zarovnání */
-    right: 20px; /* Přizpůsobeno pro lepší zarovnání */
-    width: 35px; /* Zmenšeno pro lepší zobrazení */
-    height: 35px; /* Zmenšeno pro lepší zobrazení */
+    right: 15px; /* Přizpůsobeno pro lepší zarovnání */
+    width: 30px; /* Zmenšeno pro lepší zobrazení */
+    height: 30px; /* Zmenšeno pro lepší zobrazení */
   }
 }
 
