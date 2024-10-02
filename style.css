@@ -250,16 +250,16 @@ body {
 /* Scroll to top button */
 .scroll-to-top {
   position: fixed;
-  bottom: 150px; /* Změněno pro lepší zarovnání */
-  right: 70px; /* Změněno pro lepší zarovnání */
+  bottom: 130px; /* Uloženo nad footer */
+  right: 30px; /* Přizpůsobeno pro lepší zarovnání */
   display: none;
   justify-content: center;
   align-items: center;
   background: none;
   border: none;
   cursor: pointer;
-  width: 30px; /* Zmenšeno na 30px */
-  height: 30px; /* Zmenšeno na 30px */
+  width: 40px; /* Zvětšeno pro lepší viditelnost */
+  height: 40px; /* Zvětšeno pro lepší viditelnost */
   transition: transform 0.3s ease;
   animation: moveUp 1s infinite alternate;
 }
@@ -305,19 +305,30 @@ body {
 
   .flip-card {
     width: 90%; /* Jedna karta na řádek */
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Prostor mezi kartami */
+  }
+
+  .main-heading {
+    font-size: 45px; /* Zmenšeno pro mobilní zařízení */
   }
 
   .order-section h2 {
-    font-size: 24px; /* Zmenšeno pro lepší zobrazení */
+    font-size: 22px; /* Zmenšeno pro mobilní zařízení */
   }
 
   .order-section p {
-    font-size: 16px; /* Zmenšeno pro lepší zobrazení */
+    font-size: 16px; /* Zmenšeno pro mobilní zařízení */
   }
 
   .order-section a {
-    font-size: 16px; /* Zmenšeno pro lepší zobrazení */
+    font-size: 16px; /* Zmenšeno pro mobilní zařízení */
+  }
+
+  .scroll-to-top {
+    bottom: 90px; /* Přizpůsobeno pro lepší zarovnání */
+    right: 20px; /* Přizpůsobeno pro lepší zarovnání */
+    width: 35px; /* Zmenšeno pro lepší zobrazení */
+    height: 35px; /* Zmenšeno pro lepší zobrazení */
   }
 }
 
@@ -340,6 +351,6 @@ body {
 
   .scroll-to-top {
     bottom: 80px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
-    right: 30px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
+    right: 15px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
   }
 }
