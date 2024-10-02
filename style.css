@@ -202,27 +202,27 @@ body {
 
 /* Sekce o objednání */
 .order-section {
-    padding: 20px 20px; /* Snizeno z 30px na 20px */
+    padding: 10px 20px; /* Sníženo z 20px na 10px pro horní a dolní padding */
     background: var(--section-bg-color);
     text-align: center;
 }
 
 .order-section h2 {
-    margin-bottom: 10px; /* Zmenšeno z 20px na 10px */
+    margin-bottom: 5px; /* Sníženo z 10px na 5px */
     color: var(--primary-color); /* Změna barvy nadpisu na stejnou jako ostatní */
     border-bottom: 4px solid var(--highlight-color); /* Podtržení zlatou barvou */
     padding-bottom: 10px;
 }
 
 .order-section p {
-    margin-bottom: 10px; /* Zmenšeno z 20px na 10px */
+    margin-bottom: 5px; /* Sníženo z 10px na 5px */
 }
 
 .order-section a {
     color: var(--link-color);
     font-weight: bold; /* Tučné odkazy */
     text-decoration: none;
-    margin-bottom: 50px; /* Zmenšeno z 100px na 50px */
+    margin-bottom: 30px; /* Sníženo z 50px na 30px */
 }
 
 .order-section button {
