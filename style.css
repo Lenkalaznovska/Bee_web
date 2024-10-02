@@ -250,7 +250,7 @@ body {
 /* Scroll to top button */
 .scroll-to-top {
     position: fixed;
-    bottom: 150px; /* Posunuto výše nad footer */
+    bottom: 120px; /* Posunuto o dalších 15px výše nad footer */
     right: 30px; /* Zajišťuje, že je tlačítko na pravé straně */
     display: none;
     justify-content: center;
@@ -313,7 +313,7 @@ body {
     }
 
     .scroll-to-top {
-        bottom: 100px; /* Posunuto ještě výše na menších obrazovkách */
+        bottom: 150px; /* Posunuto ještě výše na menších obrazovkách */
         width: 30px; /* Zmenšeno pro lepší přizpůsobení */
         height: 30px; /* Zmenšeno pro lepší přizpůsobení */
     }
