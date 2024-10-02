@@ -251,7 +251,7 @@ body {
 .scroll-to-top {
   position: fixed;
   bottom: 130px; /* Uloženo nad footer */
-  right: 15px; /* Posunuto o 15px doleva */
+  right: 30px; /* Posunuto o 15px doleva */
   display: none;
   justify-content: center;
   align-items: center;
@@ -316,7 +316,7 @@ body {
 
   .scroll-to-top {
     bottom: 90px; /* Přizpůsobeno pro lepší zarovnání */
-    right: 15px; /* Přizpůsobeno pro lepší zarovnání */
+    right: 30px; /* Přizpůsobeno pro lepší zarovnání */
     width: 30px; /* Zmenšeno pro lepší zobrazení */
     height: 30px; /* Zmenšeno pro lepší zobrazení */
   }
@@ -341,6 +341,6 @@ body {
 
   .scroll-to-top {
     bottom: 80px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
-    right: 15px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
+    right: 30px; /* Změněno pro lepší zarovnání na mobilních zařízeních */
   }
 }
