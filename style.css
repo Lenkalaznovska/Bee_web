@@ -310,7 +310,7 @@ body {
 
     .scroll-to-top {
         bottom: 80px; /* Upravena pozice pro menší obrazovky */
-        right: 30px; /* Upravena pozice pro menší obrazovky */
+        right: 50px; /* Upravena pozice pro menší obrazovky */
     }
 }
 
@@ -326,6 +326,6 @@ body {
     .scroll-to-top {
         width: 35px; /* Zmenšena velikost */
         height: 35px; /* Zmenšena velikost */
-        right: 30px; /* Posunuto více do strany */
+        right: 50px; /* Posunuto více do strany */
     }
 }
