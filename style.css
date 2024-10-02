@@ -309,15 +309,16 @@ body {
   }
 
   .order-section h2 {
-    font-size: 24px; /* Zmenšeno pro lepší zobrazení */
+    font-size: 24px; /* Zmenšeno pro lepší přehlednost */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-background {
+    height: 200px; /* Zmenšeno na 200px */
   }
 
-  .order-section p {
-    font-size: 16px;
-  }
-
-  .scroll-to-top {
-    bottom: 100px; /* Přizpůsobeno pro mobilní zařízení */
-    right: 70px;
+  .order-section h2 {
+    font-size: 20px; /* Ještě menší text pro lepší přehlednost na malých zařízeních */
   }
 }
