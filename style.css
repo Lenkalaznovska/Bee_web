@@ -250,16 +250,16 @@ body {
 /* Scroll to top button */
 .scroll-to-top {
     position: fixed;
-    bottom: 120px; /* Posunuto o dalších 15px výše nad footer */
-    right: 60px; /* Zajišťuje, že je tlačítko na pravé straně */
+    bottom: 110px; /* Posunuto o dalších 15px výše nad footer */
+    right: 55px; /* Zajišťuje, že je tlačítko na pravé straně */
     display: none;
     justify-content: center;
     align-items: center;
     background: none;
     border: none;
     cursor: pointer;
-    width: 35px; /* Změněno pro lepší viditelnost */
-    height: 35px; /* Změněno pro lepší viditelnost */
+    width: 30px; /* Změněno pro lepší viditelnost */
+    height: 30px; /* Změněno pro lepší viditelnost */
     transition: transform 0.3s ease;
     animation: moveUp 1s infinite alternate;
 }
@@ -276,7 +276,7 @@ body {
 /* Responzivní design */
 @media (max-width: 1200px) {
     .menu-background {
-        height: 300px; /* Zmenšeno na 300px */
+        height: 290px; /* Zmenšeno na 300px */
     }
 
     .image-container {
@@ -295,7 +295,7 @@ body {
 
 @media (max-width: 768px) {
     .menu-background {
-        height: 240px; /* Zmenšeno na 250px */
+        height: 220px; /* Zmenšeno na 250px */
     }
 
     .image-container {
@@ -315,7 +315,7 @@ body {
     .scroll-to-top {
         bottom: 140px; /* Posunuto ještě výše na menších obrazovkách */
         right: 80px; /* Zajišťuje, že je tlačítko na pravé straně */
-        width: 25px; /* Zmenšeno pro lepší přizpůsobení */
-        height: 25px; /* Zmenšeno pro lepší přizpůsobení */
+        width: 20px; /* Zmenšeno pro lepší přizpůsobení */
+        height: 20px; /* Zmenšeno pro lepší přizpůsobení */
     }
 }
