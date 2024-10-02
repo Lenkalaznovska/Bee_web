@@ -1,4 +1,4 @@
-/* Reset a obecné styly */
+ /* Reset a obecné styly */
 :root {
     --main-bg-color: #f7e5b5;
     --primary-color: #4e3b2d;
@@ -178,7 +178,7 @@ body {
 .contact-info {
     display: flex;
     justify-content: center; /* Zarovná všechny položky na střed */
-    margin: 30px; /* Přidá prostor nad kontakty */
+    margin-top: 20px; /* Přidá prostor nad kontakty */
     flex-wrap: wrap; /* Umožňuje zalamování kontaktních informací */
 }
 
@@ -202,27 +202,27 @@ body {
 
 /* Sekce o objednání */
 .order-section {
-    padding: 10px 20px; /* Sníženo z 20px na 10px pro horní a dolní padding */
+    padding: 20px 20px; /* Snizeno z 30px na 20px */
     background: var(--section-bg-color);
     text-align: center;
 }
 
 .order-section h2 {
-    margin-bottom: 5px; /* Sníženo z 10px na 5px */
+    margin-bottom: 10px; /* Zmenšeno z 20px na 10px */
     color: var(--primary-color); /* Změna barvy nadpisu na stejnou jako ostatní */
     border-bottom: 4px solid var(--highlight-color); /* Podtržení zlatou barvou */
     padding-bottom: 10px;
 }
 
 .order-section p {
-    margin-bottom: 5px; /* Sníženo z 10px na 5px */
+    margin-bottom: 10px; /* Zmenšeno z 20px na 10px */
 }
 
 .order-section a {
     color: var(--link-color);
     font-weight: bold; /* Tučné odkazy */
     text-decoration: none;
-    margin-bottom: 30px; /* Sníženo z 50px na 30px */
+    margin-bottom: 50px; /* Zmenšeno z 100px na 50px */
 }
 
 .order-section button {
@@ -308,23 +308,14 @@ body {
         margin-bottom: 20px; /* Prostor mezi kartami */
     }
 
-    .order-section .contact-info {
-        flex-direction: column; /* Vertikální uspořádání pro menší obrazovky */
-        justify-content: center;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .menu-background {
-        height: 200px; /* Zmenšeno na 250px */
+    .main-heading {
+        font-size: 40px; /* Zmenšeno na 40px pro mobil */
     }
 
-    .flip-card {
-        width: 100%; /* Plná šířka na velmi malých obrazovkách */
-    }
-
-    .order-section .contact-info {
-        margin-top: 10px; /* Menší mezera na velmi malých obrazovkách */
+    .scroll-to-top {
+        bottom: 140px; /* Posunuto ještě výše na menších obrazovkách */
+        right: 80px; /* Zajišťuje, že je tlačítko na pravé straně */
+        width: 20px; /* Zmenšeno pro lepší přizpůsobení */
+        height: 20px; /* Zmenšeno pro lepší přizpůsobení */
     }
 }
