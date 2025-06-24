@@ -13,7 +13,9 @@ A custom QR code linking to the website is included in the visuals.
 This QR code was created using the free generator [QRCode Monkey](https://www.qrcode-monkey.com/#), which allows you to customize colors, shapes, and logos.
 
 
+
 ![image](https://github.com/user-attachments/assets/2e106ceb-ec9d-42fb-b607-000f4c0d9501)
+
 
 ---
 
